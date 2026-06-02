@@ -1,0 +1,259 @@
+# Modul 7 — Apache Airflow + Apache Atlas (stack metadata, selaras Data-Lakehouse-Metadata)
+# Komputasi data (HDFS/Spark/Hive) tetap di kontainer bigdata-spark (Modul 9).
+
+networks:
+  modul7-net:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  zookeeper-data:
+  kafka-data:
+  solr-data:
+  hbase-data:
+  atlas-data:
+
+x-airflow-common-env: &airflow-common-env
+  AIRFLOW__CORE__EXECUTOR: LocalExecutor
+  AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin123@postgres:5432/airflow_db
+  AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+  AIRFLOW__CORE__FERNET_KEY: "81HqDtbqAywKSOumSha3BhWNOdQ26slT6K0YaZeZyPs="
+  AIRFLOW__WEBSERVER__SECRET_KEY: "modul7_secret_key_2024"
+  AIRFLOW__SCHEDULER__ZOMBIE_TASK_THRESHOLD: "3600"
+  AIRFLOW__SCHEDULER__TASK_INSTANCE_HEARTBEAT_TIMEOUT: "3600"
+  BIGDATA_CONTAINER: bigdata-spark
+
+services:
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: modul7-zookeeper
+    hostname: zookeeper
+    networks: [modul7-net]
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo ruok | nc localhost 2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: modul7-kafka
+    hostname: kafka
+    networks: [modul7-net]
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+      KAFKA_MIN_INSYNC_REPLICAS: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+  solr:
+    image: solr:8.11.2
+    container_name: modul7-solr
+    hostname: solr
+    networks: [modul7-net]
+    environment:
+      SOLR_HEAP: 1024m
+      SOLR_ULIMIT_CHECKS: "false"
+    volumes:
+      - solr-data:/var/solr
+    ports:
+      - "${MOD7_SOLR_PORT:-18987}:8983"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -T 5 -O /dev/null 'http://127.0.0.1:8983/solr/admin/info/system?wt=json'"]
+      interval: 5s
+      timeout: 8s
+      retries: 30
+      start_period: 60s
+
+  solr-atlas-init:
+    image: solr:8.11.2
+    container_name: modul7-solr-atlas-init
+    networks: [modul7-net]
+    user: root
+    depends_on:
+      solr:
+        condition: service_healthy
+    volumes:
+      - solr-data:/var/solr
+      - ./solr/atlas-config:/atlas-solr:ro
+      - ./scripts/solr-atlas-init.sh:/solr-atlas-init.sh:ro
+    entrypoint: ["/bin/bash", "/solr-atlas-init.sh"]
+    restart: "no"
+
+  hbase:
+    image: harisekhon/hbase:2.1
+    container_name: modul7-hbase
+    hostname: hbase
+    networks: [modul7-net]
+    entrypoint: ["/bin/bash", "/opt/lakehouse/hbase-docker-entrypoint-wrap.sh"]
+    volumes:
+      - ./hbase-conf/hbase-site.xml:/opt/lakehouse/hbase-site-template.xml:ro
+      - ./hbase-conf/hbase-docker-entrypoint-wrap.sh:/opt/lakehouse/hbase-docker-entrypoint-wrap.sh:ro
+      - hbase-data:/hbase-data
+    ports:
+      - "${MOD7_HBASE_MASTER_PORT:-19017}:16010"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pgrep -f org.apache.hadoop.hbase.master >/dev/null && pgrep -f org.apache.hadoop.hbase.regionserver >/dev/null && echo \"status 'simple'\" | hbase shell 2>/dev/null | grep -q 'active master'",
+        ]
+      interval: 20s
+      timeout: 55s
+      retries: 20
+      start_period: 180s
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: modul7-postgres
+    hostname: postgres
+    networks: [modul7-net]
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: metastore_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./scripts/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d metastore_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "${MOD7_POSTGRES_PORT:-15437}:5432"
+
+  atlas:
+    image: sburn/apache-atlas:2.3.0
+    container_name: modul7-atlas
+    hostname: atlas
+    networks: [modul7-net]
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      hbase:
+        condition: service_healthy
+      solr:
+        condition: service_healthy
+      solr-atlas-init:
+        condition: service_completed_successfully
+    environment:
+      ATLAS_OPTS: "-server -XX:SoftRefLRUPolicyMSPerMB=0 -XX:+CMSClassUnloadingEnabled"
+    volumes:
+      - atlas-data:/apache-atlas/data
+      - ./atlas-conf/atlas-application.properties:/apache-atlas/conf/atlas-application.properties
+      - ./atlas-conf/hbase-site.xml:/apache-atlas/hbase/conf/hbase-site.xml:ro
+    ports:
+      - "${MOD7_ATLAS_PORT:-22100}:21000"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "bash -c '(command -v wget>/dev/null&&wget -qO/dev/null -T 14 --user=admin --password=admin http://127.0.0.1:21000/api/atlas/v2/types/typedefs)||(command -v curl>/dev/null&&curl -sf -u admin:admin http://127.0.0.1:21000/api/atlas/v2/types/typedefs)||exec 3<>/dev/tcp/127.0.0.1/21000'",
+        ]
+      interval: 30s
+      timeout: 18s
+      retries: 25
+      start_period: 180s
+
+  airflow-init:
+    build: ./airflow
+    container_name: modul7-airflow-init
+    networks: [modul7-net]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      <<: *airflow-common-env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-999}"
+    entrypoint: >
+      /bin/bash -c "
+        chmod +x /opt/airflow/scripts/*.sh &&
+        airflow db migrate &&
+        airflow users create --username airflow --password airflow --firstname Air --lastname Flow --role Admin --email airflow@lab.local || true &&
+        bash /opt/airflow/scripts/airflow_connections_init.sh &&
+        echo 'Airflow init selesai'
+      "
+
+  airflow-webserver:
+    build: ./airflow
+    container_name: modul7-airflow-webserver
+    hostname: airflow-webserver
+    networks: [modul7-net]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    command: webserver
+    environment:
+      <<: *airflow-common-env
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-999}"
+    ports:
+      - "${MOD7_AIRFLOW_WEB_PORT:-18681}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+  airflow-scheduler:
+    build: ./airflow
+    container_name: modul7-airflow-scheduler
+    hostname: airflow-scheduler
+    networks: [modul7-net]
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      airflow-webserver:
+        condition: service_healthy
+    command: scheduler
+    environment:
+      <<: *airflow-common-env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-999}"

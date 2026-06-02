@@ -1,0 +1,79 @@
+# Bab 16 — Spark + Jupyter (Apache Sedona) + MinIO
+services:
+
+  spark-master:
+    image: bitnami/spark:3.5.5
+    container_name: ch16-spark-master
+    environment:
+      SPARK_MODE: master
+      SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+      SPARK_RPC_ENCRYPTION_ENABLED: "no"
+    ports:
+      - "8081:8080"
+      - "7077:7077"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  spark-worker:
+    image: bitnami/spark:3.5.5
+    container_name: ch16-spark-worker
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_MEMORY: 4G
+      SPARK_WORKER_CORES: 2
+    depends_on:
+      spark-master:
+        condition: service_healthy
+
+  jupyter:
+    image: apache/sedona:latest
+    container_name: ch16-sedona-jupyter
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    environment:
+      SPARK_MASTER: local[*]
+      DRIVER_MEM: 6g
+      EXECUTOR_MEM: 4g
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./data:/home/jovyan/work/data
+      - ./output:/home/jovyan/work/output
+      - ./scripts:/home/jovyan/work/scripts
+    command: >
+      jupyter notebook --ip=0.0.0.0 --port=8888
+        --no-browser --allow-root
+        --NotebookApp.token=sedona123
+
+  minio:
+    image: minio/minio:latest
+    container_name: ch16-minio
+    ports:
+      - "9020:9000"
+      - "9021:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  mc:
+    image: minio/mc:latest
+    container_name: ch16-mc
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  minio-data:

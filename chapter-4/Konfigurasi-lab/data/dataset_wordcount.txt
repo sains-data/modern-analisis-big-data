@@ -1,0 +1,6 @@
+hadoop hdfs mapreduce yarn hadoop
+namenode datanode hadoop hdfs blok
+mapreduce mapper reducer hadoop yarn
+hdfs replikasi blok namenode hadoop
+yarn resourcemanager nodemanager hadoop
+mapreduce hadoop hdfs paralel terdistribusi

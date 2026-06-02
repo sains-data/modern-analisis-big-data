@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+datalake/bronze/**/*
+datalake/silver/**/*
+datalake/gold/*.parquet

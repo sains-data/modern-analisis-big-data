@@ -1,0 +1,51 @@
+# Bab 13 §13.6.2 — empat alert rules dasar
+groups:
+  - name: bigdata_infrastructure
+    rules:
+      - alert: CPUUsageTinggi
+        expr: >
+          100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU usage tinggi: {{ $value }}%"
+          description: >
+            Node {{ $labels.instance }}: CPU usage {{ $value }}%
+            melebihi threshold 80% selama lebih dari 5 menit.
+
+      - alert: MemoriKritis
+        expr: >
+          (1 - (node_memory_MemAvailable_bytes /
+                node_memory_MemTotal_bytes)) * 100 > 90
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Memori kritis: {{ $value }}%"
+          description: >
+            Memory usage {{ $value }}% melebihi threshold 90%.
+            Risiko OOM pada proses Spark.
+
+      - alert: DiskHampirPenuh
+        expr: >
+          (node_filesystem_size_bytes{fstype!="tmpfs"}
+           - node_filesystem_avail_bytes{fstype!="tmpfs"})
+          / node_filesystem_size_bytes{fstype!="tmpfs"} * 100 > 85
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Disk hampir penuh: {{ $value }}%"
+          description: >
+            Filesystem {{ $labels.mountpoint }}: penggunaan {{ $value }}%.
+
+      - alert: TargetDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Target down: {{ $labels.instance }}"
+          description: >
+            Target {{ $labels.job }}/{{ $labels.instance }} tidak dapat dijangkau.

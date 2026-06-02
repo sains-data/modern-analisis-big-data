@@ -1,0 +1,6 @@
+.env
+vendor/
+data/gold/
+.venv/
+__pycache__/
+*.pyc

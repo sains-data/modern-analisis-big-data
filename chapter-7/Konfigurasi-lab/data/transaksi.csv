@@ -1,0 +1,16 @@
+id_transaksi,id_pelanggan,tanggal,kategori,produk,jumlah,kuantitas,kota
+TRX001,C001,2024-01-05,Elektronik,Laptop,8500000,1,Jakarta
+TRX002,C002,2024-01-07,Fashion,Kemeja,350000,2,Surabaya
+TRX003,C001,2024-01-10,Elektronik,Mouse,250000,3,Jakarta
+TRX004,C003,2024-02-03,Makanan,Kopi,75000,5,Bandung
+TRX005,C004,2024-02-14,Elektronik,Headphone,1200000,1,Medan
+TRX006,C002,2024-02-20,Fashion, Sepatu ,450000,1,Surabaya
+TRX007,C005,2024-03-01,Makanan,Teh,60000,10,yogyakarta
+TRX008,C003,2024-03-15,Elektronik,Tablet,3200000,1,Bandung
+TRX009,C001,2024-03-22,Fashion,Celana,275000,2,JAKARTA
+TRX010,C006,2024-04-01,Makanan,Kopi,75000,3,Semarang
+TRX011,,2024-04-05,Elektronik,Kabel,-150000,2,Jakarta
+TRX012,C004,2024-04-10,Elektronik,Charger,350000,0,Medan
+TRX001,C001,2024-01-05,Elektronik,Laptop,8500000,1,Jakarta
+TRX013,C007,2024-05-01,Fashion,Tas,800000,1,Makassar
+TRX014,C005,2024-05-20,Makanan,Snack,45000,6,Yogyakarta

@@ -1,0 +1,6 @@
+Hadoop adalah framework big data terdistribusi.
+HDFS menyimpan data dalam blok berukuran 128MB.
+MapReduce memproses data secara paralel di klaster.
+YARN mengelola sumber daya pada setiap node.
+NameNode menyimpan metadata sistem berkas HDFS.
+DataNode menyimpan blok data aktual di setiap node.

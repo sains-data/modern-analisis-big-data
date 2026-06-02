@@ -1,0 +1,2 @@
+# Dipasang di dalam kontainer (scripts/install_happybase.sh)
+happybase>=2.0

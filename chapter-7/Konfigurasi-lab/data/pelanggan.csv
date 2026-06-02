@@ -1,0 +1,8 @@
+id_pelanggan,nama,email,segmen,tanggal_daftar
+C001,Andi Saputra,andi@email.com,Premium,2023-01-15
+C002,Budi Hartono,budi@email.com,Regular,2023-03-20
+C003,Citra Dewi,citra@email.com,Premium,2023-02-10
+C004,Dimas Pratama,dimas@email.com,Regular,2023-06-01
+C005,Eka Rahayu,eka@email.com,Premium,2023-04-25
+C006,Fajar Nugroho,fajar@email.com,Regular,2023-08-12
+C007,Gita Lestari,gita@email.com,VIP,2022-11-30

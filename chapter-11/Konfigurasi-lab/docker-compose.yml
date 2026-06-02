@@ -1,0 +1,21 @@
+services:
+  bigdata-spark:
+    build: .
+    container_name: bigdata-spark
+    hostname: localhost
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "4040:4040"
+      - "9000:9000"
+      - "8032:8032"
+    volumes:
+      - bigdata-hdfs:/opt/hdfs
+      - ./scripts:/opt/modul9/scripts:ro
+      - ../Data:/opt/modul9/data:ro
+    mem_limit: 6g
+    restart: unless-stopped
+
+volumes:
+  bigdata-hdfs:
+    driver: local

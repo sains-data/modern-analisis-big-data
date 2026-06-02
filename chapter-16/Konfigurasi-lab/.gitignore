@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/hotspot*.csv
+data/batas_kecamatan_sumatera.geoparquet
+output/bronze/**/*
+output/silver/**/*
+output/gold/**/*
+output/checkpoints/**/*
+!output/**/.gitkeep
+!data/.gitkeep
