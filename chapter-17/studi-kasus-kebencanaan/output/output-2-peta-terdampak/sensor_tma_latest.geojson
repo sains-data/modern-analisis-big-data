@@ -1,0 +1,112 @@
+[
+  {
+    "stasiun_id":"KAYU_AGUNG",
+    "nama_stasiun":"Kayu Agung",
+    "tma_cm":1043.8,
+    "ts":1779882300000,
+    "hujan_3jam_mm":85.0,
+    "siaga":"MERAH",
+    "siaga_order":3,
+    "lon":104.82,
+    "lat":-3.42
+  },
+  {
+    "stasiun_id":"PALEMBANG_KOTA",
+    "nama_stasiun":"Palembang Kota",
+    "tma_cm":611.6,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.75,
+    "lat":-2.99
+  },
+  {
+    "stasiun_id":"SUNGAI_PINANG",
+    "nama_stasiun":"Sungai Pinang",
+    "tma_cm":580.2,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.78,
+    "lat":-3.05
+  },
+  {
+    "stasiun_id":"BANYUASIN_HULU",
+    "nama_stasiun":"Banyuasin Hulu",
+    "tma_cm":646.0,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.9,
+    "lat":-2.88
+  },
+  {
+    "stasiun_id":"OGAN_ILIR",
+    "nama_stasiun":"Ogan Ilir",
+    "tma_cm":659.1,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"KUNING",
+    "siaga_order":1,
+    "lon":104.7,
+    "lat":-3.12
+  },
+  {
+    "stasiun_id":"MUARA_KELINGI",
+    "nama_stasiun":"Muara Kelingi",
+    "tma_cm":599.2,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.85,
+    "lat":-3.2
+  },
+  {
+    "stasiun_id":"PANGKALAN_BALAI",
+    "nama_stasiun":"Pangkalan Balai",
+    "tma_cm":617.9,
+    "ts":1779882300000,
+    "hujan_3jam_mm":15.3,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.95,
+    "lat":-2.75
+  },
+  {
+    "stasiun_id":"TALANG_KELAPA",
+    "nama_stasiun":"Talang Kelapa",
+    "tma_cm":562.9,
+    "ts":1779882300000,
+    "hujan_3jam_mm":0.0,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.72,
+    "lat":-3.08
+  },
+  {
+    "stasiun_id":"SEKAYU",
+    "nama_stasiun":"Sekayu",
+    "tma_cm":608.4,
+    "ts":1779882300000,
+    "hujan_3jam_mm":21.3,
+    "siaga":"HIJAU",
+    "siaga_order":0,
+    "lon":104.88,
+    "lat":-2.82
+  },
+  {
+    "stasiun_id":"LAHAT_HULU",
+    "nama_stasiun":"Lahat Hulu",
+    "tma_cm":671.3,
+    "ts":1779882300000,
+    "hujan_3jam_mm":32.8,
+    "siaga":"KUNING",
+    "siaga_order":1,
+    "lon":104.68,
+    "lat":-3.25
+  }
+]

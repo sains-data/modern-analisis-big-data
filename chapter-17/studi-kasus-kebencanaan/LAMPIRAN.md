@@ -1,26 +1,30 @@
 # Lampiran Praktikum — Studi Kasus Kebencanaan
 
-Dokumen ini menjadi **placeholder** hingga Lampiran resmi buku diterbitkan. Isi yang akan dipindahkan ke repositori (atau diacu dari buku):
+Implementasi teknis tersedia di repositori (bukan hanya placeholder).
 
-## Rencana isi Lampiran
+## Isi Lampiran
 
-| Komponen | Target folder |
+| Komponen | Lokasi |
 |---|---|
-| `docker-compose.yml` + `.env.example` | `arsitektur-lab/` |
-| Generator sensor TMA + subset GeoTIFF | `data/sumber/` |
-| Skrip `streaming/`, `batch/`, `sql/` | `analitik/` |
-| Template Kepler, PDF logistik, notifikasi | `output/output-*/` |
-| Notebook validasi end-to-end | `analitik/notebooks/` |
+| `docker-compose.yml` | `arsitektur-lab/` |
+| Generator data sintetis | `data/scripts/` |
+| Ingest Bronze/Silver | `analitik/batch/ingest_static.py` |
+| Agregasi siaga TMA | `analitik/streaming/tma_siaga_stream.py` |
+| Spatial join populasi | `analitik/batch/populasi_terdampak.py` |
+| Routing shelter (KNN) | `analitik/batch/routing_evakuasi.py` |
+| SQL Sedona (referensi) | `analitik/sql/` |
+| Output 1–4 | `output/scripts/` |
 
-## Cara tim menggunakan folder sebelum Lampiran lengkap
+## Menjalankan
 
-1. Baca [README.md](README.md) dan empat panduan detail di subfolder.  
-2. Sprint 1: unduh data menurut [data/KATALOG-DATA.md](data/KATALOG-DATA.md).  
-3. Sprint 2–3: implementasi mengikuti [analitik/PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md).  
-4. Kumpulkan artefak demo ke [output/](output/) sesuai [output/PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md).  
+```bash
+cd arsitektur-lab && bash start.sh
+```
+
+Atau pipeline Python saja: lihat [arsitektur-lab/README.md](arsitektur-lab/README.md).
 
 ## Versi
 
 | Versi | Tanggal | Catatan |
 |---|---|---|
-| 0.1 | 2026-05 | Kerangka dokumentasi saja |
+| 1.0 | 2026-05 | Kode lab lengkap + data sintetis |

@@ -30,6 +30,17 @@ semua gold + timeline kejadian  ──► output-4 (laporan evaluasi)
 - [ ] Empat folder berisi contoh artefak (bukan hanya README)  
 - [ ] Retrospective terdokumentasi (terpisah, bisa di root studi kasus)  
 
+## Menghasilkan artefak
+
+```bash
+cd ../arsitektur-lab && bash scripts/run_pipeline.sh
+```
+
 ## Status
 
-Artefak contoh akan dilampirkan di **Lampiran** praktikum; subfolder siap menerima export tim.
+| Output | Skrip | Status |
+|---|---|---|
+| 1 Siaga | `output/scripts/output_01_level_siaga.py` | ✅ |
+| 2 Peta | `output/scripts/output_02_export_peta.py` | ✅ |
+| 3 Logistik | `output/scripts/output_03_logistik.py` | ✅ |
+| 4 After-action | `output/scripts/output_04_after_action.py` | ✅ |

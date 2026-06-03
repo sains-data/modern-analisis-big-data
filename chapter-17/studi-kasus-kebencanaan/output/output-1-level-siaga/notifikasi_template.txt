@@ -1,0 +1,10 @@
+[BPBD Sumsel — Peringatan Dini Banjir DAS Musi]
+Waktu: 2026-06-03 03:28 UTC
+Stasiun referensi: KAYU_AGUNG (Kayu Agung)
+TMA maksimum: 1043.8 cm
+Hujan 3 jam: 85.0 mm
+LEVEL SIAGA: MERAH
+
+Tindakan:
+- Evakuasi masif
+- Tutup jalan terdampak

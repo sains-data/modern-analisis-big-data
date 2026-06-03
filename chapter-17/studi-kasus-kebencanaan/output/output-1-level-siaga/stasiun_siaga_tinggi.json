@@ -1,0 +1,10 @@
+[
+  {
+    "stasiun_id":"KAYU_AGUNG",
+    "tma_cm":1043.8,
+    "ts":1779882300000,
+    "hujan_3jam_mm":85.0,
+    "siaga":"MERAH",
+    "siaga_order":3
+  }
+]

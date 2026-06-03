@@ -1,0 +1,85 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "layers": [
+        {
+          "id": "kelurahan_terdampak",
+          "type": "geojson",
+          "config": {
+            "dataId": "terdampak",
+            "label": "Populasi terdampak",
+            "color": [
+              200,
+              30,
+              30
+            ],
+            "columns": {
+              "geojson": "geometry"
+            },
+            "visConfig": {
+              "opacity": 0.7,
+              "filled": true,
+              "strokeColor": [
+                80,
+                20,
+                20
+              ]
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "estimasi_terdampak",
+              "type": "integer"
+            },
+            "colorScale": "quantize"
+          }
+        },
+        {
+          "id": "sensor_tma",
+          "type": "point",
+          "config": {
+            "dataId": "sensor",
+            "label": "Sensor TMA",
+            "columns": {
+              "lat": "lat",
+              "lng": "lon"
+            },
+            "visConfig": {
+              "radius": 12
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "siaga_order",
+              "type": "integer"
+            },
+            "colorScale": "ordinal"
+          }
+        },
+        {
+          "id": "genangan",
+          "type": "geojson",
+          "config": {
+            "dataId": "genangan",
+            "label": "Genangan aktif",
+            "color": [
+              30,
+              100,
+              200
+            ],
+            "visConfig": {
+              "opacity": 0.4,
+              "filled": true
+            }
+          }
+        }
+      ]
+    },
+    "mapState": {
+      "latitude": -2.99,
+      "longitude": 104.75,
+      "zoom": 10
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "genangan_20260603_0328",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "genangan_id": "G1", "snapshot_ts": "2026-05-27T10:00:00Z" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 104.72, -3.01 ], [ 104.78, -3.0 ], [ 104.79, -2.97 ], [ 104.74, -2.96 ], [ 104.71, -2.99 ], [ 104.72, -3.01 ] ] ] } },
+{ "type": "Feature", "properties": { "genangan_id": "G2", "snapshot_ts": "2026-05-27T10:00:00Z" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 104.8, -2.95 ], [ 104.86, -2.94 ], [ 104.87, -2.9 ], [ 104.82, -2.89 ], [ 104.79, -2.92 ], [ 104.8, -2.95 ] ] ] } }
+]
+}

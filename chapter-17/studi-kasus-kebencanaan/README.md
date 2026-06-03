@@ -39,14 +39,21 @@ Tim ditugaskan **BPBD Provinsi Sumatera Selatan** merancang prototipe sistem per
 
 Detail user story: *Product backlog* tiga sprint di `chapter-17.tex` (lihat [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md)).
 
-## Lampiran praktikum
+## Lab praktikum
 
-Skrip, `docker-compose.yml`, notebook, dan data sampel operasional akan ditempatkan di **Lampiran** buku (belum di folder ini). Rencana pemetaan: [LAMPIRAN.md](LAMPIRAN.md). Gunakan dokumentasi subfolder sebagai **peta kerja** tim sebelum implementasi.
+Kode, Docker, dan data sintetis: **[arsitektur-lab/](arsitektur-lab/README.md)** · [LAMPIRAN.md](LAMPIRAN.md)
+
+```bash
+cd arsitektur-lab && bash start.sh   # Docker + pipeline penuh
+# atau tanpa Docker:
+bash scripts/prepare_data.sh && export PYTHONPATH=.. && bash scripts/run_pipeline.sh
+```
 
 ## Status repositori
 
 | Komponen | Status |
 |---|---|
 | Dokumentasi Markdown | ✅ |
-| `docker-compose` / skrip | 🔜 Lampiran |
-| Data operasional | 🔜 unduh tim (lihat [data/KATALOG-DATA.md](data/KATALOG-DATA.md)) |
+| Skrip analitik + output 1–4 | ✅ |
+| `docker-compose` (Kafka, MinIO) | ✅ |
+| Data produksi (BMKG, Sentinel) | Unduh tim — lihat [data/KATALOG-DATA.md](data/KATALOG-DATA.md) |

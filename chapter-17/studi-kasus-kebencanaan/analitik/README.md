@@ -1,34 +1,40 @@
 # Analitik — Studi Kasus Kebencanaan
 
-Folder **analitik** menampung definisi pipeline, query, notebook, dan model yang menjawab tiga pertanyaan bisnis (kapan / siapa / ke mana).
+Pipeline **streaming** (TMA → siaga) dan **batch/geospasial** (genangan, populasi, routing).
 
-## Isi yang direncanakan (Lampiran)
+## Struktur
 
 ```
 analitik/
-├── streaming/           # Spark Structured Streaming — agregasi TMA + siaga
-├── batch/               # Airflow + Sedona — SAR, DEM, statis
-├── model/               # LSTM prediksi TMA (opsional sprint 2+)
-├── sql/                 # Spatial join populasi, routing KNN
-└── notebooks/           # Eksplorasi dan validasi hasil
+├── lib/                    # config, siaga, spatial
+├── batch/
+│   ├── ingest_static.py
+│   ├── aggregate_tma.py
+│   ├── populasi_terdampak.py
+│   └── routing_evakuasi.py
+├── streaming/
+│   ├── tma_siaga_stream.py
+│   └── kafka_producer_tma.py
+├── sql/                    # referensi Sedona/Spark SQL
+└── PANDUAN-ANALITIK.md
 ```
 
-Saat ini: dokumentasi dan pemetaan sprint; kode menyusul di Lampiran.
+## Menjalankan (dari root studi kasus)
 
-## Dokumentasi
+```bash
+export PYTHONPATH="$(pwd)"
+python analitik/batch/ingest_static.py
+python analitik/streaming/tma_siaga_stream.py --source file
+python analitik/batch/populasi_terdampak.py
+```
 
-→ **[PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)** — alur job, cuplikan kode buku, metrik sukses, pemetaan peran Scrum.
+Atau: `arsitektur-lab/scripts/run_pipeline.sh`
 
-## Metrik sukses (contoh Product Owner)
+## Status
 
-| Pertanyaan | Metrik | Target lab |
-|---|---|---|
-| Kapan? | RMSE prediksi TMA 6 jam | &lt; ambang disepakati tim + BPBD |
-| Siapa? | Waktu spatial join populasi | &lt; 60 detik |
-| Ke mana? | Rute shelter valid (tidak tergenang) | 100% shelter terhubung jalan Silver |
+| Komponen | Status |
+|---|---|
+| Skrip Python lab | ✅ |
+| PySpark cluster | Opsional (porting dari `sql/`) |
 
-## Dependensi
-
-- Lingkungan: [../arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md](../arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md)  
-- Input: tabel Gold/Silver di [../data/](../data/)  
-- Keluaran: artefak di [../output/](../output/)  
+→ **[PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)**

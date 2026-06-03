@@ -1,0 +1,10 @@
+arsitektur-lab/.venv/
+data/bronze/
+data/silver/
+data/gold/
+data/sumber/**/*.geojson
+data/sumber/**/*.jsonl
+data/sumber/**/*.csv
+!data/sumber/manifest.json
+__pycache__/
+*.pyc
