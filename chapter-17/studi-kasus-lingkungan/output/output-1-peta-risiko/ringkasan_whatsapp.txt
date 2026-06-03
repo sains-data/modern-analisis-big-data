@@ -1,0 +1,4 @@
+[BPBD Riau — Peta Risiko Karhutla 2026-06-03]
+Sel Tinggi+: 555
+Sel Sangat Tinggi: 11
+Total sel H3: 1890

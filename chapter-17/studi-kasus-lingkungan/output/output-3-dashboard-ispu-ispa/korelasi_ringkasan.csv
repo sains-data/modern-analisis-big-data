@@ -1,0 +1,11 @@
+kecamatan,lag_hari_optimal,korelasi_pearson,signifikan
+Kecamatan_01,0,0.563,True
+Kecamatan_02,0,0.407,False
+Kecamatan_03,0,0.545,True
+Kecamatan_04,0,0.512,True
+Kecamatan_05,0,0.424,False
+Kecamatan_06,0,0.451,False
+Kecamatan_07,0,0.513,True
+Kecamatan_08,0,0.503,True
+Kecamatan_09,0,0.591,True
+Kecamatan_10,0,0.728,True

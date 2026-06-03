@@ -7,9 +7,9 @@ Bab ini menyajikan **studi kasus berbasis masalah nyata** (PBL + Scrum 3 sprint)
 | Folder | Domain | Judul (ringkas) |
 |---|---|---|
 | [studi-kasus-kebencanaan](studi-kasus-kebencanaan/README.md) | Kebencanaan | Peringatan dini banjir DAS Musi — **[instruksi eksperimen](studi-kasus-kebencanaan/eksperimen/README.md)** ✅ kode |
-| [studi-kasus-lingkungan](studi-kasus-lingkungan/README.md) | Lingkungan | Monitoring karhutla & akuntabilitas konsesi Riau |
+| [studi-kasus-lingkungan](studi-kasus-lingkungan/README.md) | Lingkungan | Karhutla Riau — **[eksperimen](studi-kasus-lingkungan/eksperimen/README.md)** ✅ kode |
 | [studi-kasus-kesehatan](studi-kasus-kesehatan/README.md) | Kesehatan | Stunting Sumut — **[instruksi eksperimen](studi-kasus-kesehatan/eksperimen/README.md)** ✅ kode |
-| [studi-kasus-konservasi](studi-kasus-konservasi/README.md) | Konservasi | Pemantauan KEL, edge ML, konflik gajah–manusia |
+| [studi-kasus-konservasi](studi-kasus-konservasi/README.md) | Konservasi | KEL Leuser — **[eksperimen](studi-kasus-konservasi/eksperimen/README.md)** ✅ kode |
 | [studi-kasus-smart-city](studi-kasus-smart-city/README.md) | Smart city | ATCS, IQU, TMD & emisi — Kota Medan |
 | [studi-kasus-edukasi](studi-kasus-edukasi/README.md) | Edukasi | Big data manajemen akademik & learning analytics PT |
 

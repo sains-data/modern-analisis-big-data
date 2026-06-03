@@ -15,11 +15,16 @@
 | 3 | **Di mana** konflik berpotensi? | Gi* kejadian historis × pergerakan GPS |
 | 4 | **Area patroli** prioritas hari ini? | Coverage gap SMART + indeks tekanan grid 1 km² |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** · Eksekusi: **`arsitektur-lab/`**
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
-| [arsitektur-lab](arsitektur-lab/README.md) | Edge + cloud, Kafka, MinIO | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
+| **[eksperimen](eksperimen/README.md)** | Instruksi praktikum | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
+| [arsitektur-lab](arsitektur-lab/README.md) | Edge + Kafka + MinIO | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog Tabel 17.14 + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | KDE, streaming GPS, NDVI batch | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
 | [output](output/README.md) | Empat artefak multi-skala waktu | [PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md) |
@@ -39,13 +44,18 @@ Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` 
 - **Edge computing** di stasiun lapangan (YOLOv8-nano, CNN chainsaw)—hanya data terklasifikasi ke cloud.  
 - Data **terbatas** secara etis (GPS collar, tidak semua rekaman kamera mentah).
 
-## Lampiran
+## Lab
 
-[Rencana Lampiran](LAMPIRAN.md)
+```bash
+cd arsitektur-lab && bash start.sh
+```
+
+[LAMPIRAN.md](LAMPIRAN.md)
 
 ## Status
 
 | Komponen | Status |
 |---|---|
 | Dokumentasi | ✅ |
-| Implementasi | 🔜 Lampiran |
+| Skrip + pipeline | ✅ |
+| Data collar produksi | Terbatas / etika |

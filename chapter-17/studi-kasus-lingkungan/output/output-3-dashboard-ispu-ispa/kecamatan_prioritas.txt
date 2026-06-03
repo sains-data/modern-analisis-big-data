@@ -1,0 +1,7 @@
+Kecamatan_01: lag 0 hari, r=0.563
+Kecamatan_03: lag 0 hari, r=0.545
+Kecamatan_04: lag 0 hari, r=0.512
+Kecamatan_07: lag 0 hari, r=0.513
+Kecamatan_08: lag 0 hari, r=0.503
+Kecamatan_09: lag 0 hari, r=0.591
+Kecamatan_10: lag 0 hari, r=0.728

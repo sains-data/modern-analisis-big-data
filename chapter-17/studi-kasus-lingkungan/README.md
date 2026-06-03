@@ -14,11 +14,16 @@ Tim lembaga riset (mitra **KLHK**) membangun sistem analitik untuk pertanyaan hu
 | 2 | **Konsesi mana** dengan hotspot terverifikasi? | `ST_Contains` hotspot × poligon konsesi |
 | 3 | **Berapa emisi** dan **dampak kesehatan**? | Burned area × faktor emisi IPCC; korelasi lag ISPU–ISPA |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** · Eksekusi: **`arsitektur-lab/`**
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
-| [arsitektur-lab](arsitektur-lab/README.md) | Kafka, Airflow, Sedona, MinIO/Iceberg | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
+| **[eksperimen](eksperimen/README.md)** | Instruksi praktikum | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
+| [arsitektur-lab](arsitektur-lab/README.md) | Kafka, MinIO — jalankan skrip | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog Tabel 17.6 + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | Batch NBR, streaming FIRMS, akuntabilitas | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
 | [output](output/README.md) | Empat artefak multi-audiens | [PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md) |
@@ -33,13 +38,18 @@ Tim lembaga riset (mitra **KLHK**) membangun sistem analitik untuk pertanyaan hu
 
 Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) dan `chapter-17.tex` §Studi Kasus Lingkungan.
 
-## Lampiran praktikum
+## Lab praktikum
 
-Skrip operasional menyusul di **Lampiran** buku. Rencana pemetaan: [LAMPIRAN.md](LAMPIRAN.md).
+```bash
+cd arsitektur-lab && bash start.sh
+```
+
+[LAMPPIRAN.md](LAMPIRAN.md)
 
 ## Status repositori
 
 | Komponen | Status |
 |---|---|
-| Dokumentasi Markdown | ✅ |
-| `docker-compose` / skrip | 🔜 Lampiran |
+| Dokumentasi | ✅ |
+| Skrip + pipeline | ✅ |
+| Data FIRMS/SIGAP produksi | Unduh tim |

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="FKL Lab">
+  <trk><name>Prioritas Patroli</name><trkseg>
+    <trkpt lat="3.2" lon="96.8"></trkpt>
+    <trkpt lat="3.2" lon="97.0"></trkpt>
+    <trkpt lat="3.2" lon="97.8"></trkpt>
+    <trkpt lat="3.3" lon="97.6"></trkpt>
+    <trkpt lat="3.3" lon="97.7"></trkpt>
+    <trkpt lat="3.3" lon="98.0"></trkpt>
+    <trkpt lat="3.4" lon="96.9"></trkpt>
+    <trkpt lat="3.4" lon="97.2"></trkpt>
+    <trkpt lat="3.4" lon="97.6"></trkpt>
+    <trkpt lat="3.4" lon="98.1"></trkpt>
+  </trkseg></trk>
+</gpx>

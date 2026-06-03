@@ -1,26 +1,11 @@
-# Analitik — Studi Kasus Konservasi
+# Analitik — KEL Leuser
 
-NDVI multitemporal, KDE home range, streaming alert GPS, Gi* konflik, coverage gap patroli.
-
-## Isi yang direncanakan (Lampiran)
-
-```
-analitik/
-├── batch/           # deforestasi, KDE, coverage_gap
-├── streaming/       # alert konflik, chainsaw forward
-├── edge/            # inferensi YOLO/CNN (referensi)
-├── model/           # Random Forest prediksi deforestasi
-└── notebooks/       # Visualisasi trajektori, Gi*
-```
-
-## Dokumentasi
-
-→ **[PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md)**
-
-## Metrik
-
-| Analitik | Target |
+| Modul | File |
 |---|---|
-| Alert gajah → desa | &lt; 5 menit |
-| Lag streaming simulasi | &lt; 3 menit |
-| KDE overlap konsesi | Terhitung per individu |
+| GPS + interpolasi | `batch/interpolasi_gps.py` |
+| ΔNDVI deforestasi | `batch/deteksi_deforestasi.py` |
+| KDE home range | `batch/kde_home_range.py` |
+| Indeks tekanan | `batch/indeks_tekanan.py` |
+| Alert streaming | `streaming/alert_konflik_stream.py` |
+
+→ [PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)

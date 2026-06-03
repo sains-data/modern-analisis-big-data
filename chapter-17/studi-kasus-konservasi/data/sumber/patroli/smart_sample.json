@@ -1,0 +1,67 @@
+[
+  {
+    "patrol_id": "PAT0001",
+    "segments": [
+      {
+        "patrol_id": "PAT0001",
+        "ranger": "Ranger_2",
+        "durasi_jam": 5.1,
+        "latitude": 97.22516,
+        "longitude": 3.53492,
+        "tanggal": "2026-04-27"
+      }
+    ]
+  },
+  {
+    "patrol_id": "PAT0002",
+    "segments": [
+      {
+        "patrol_id": "PAT0002",
+        "ranger": "Ranger_1",
+        "durasi_jam": 4.6,
+        "latitude": 97.77445,
+        "longitude": 4.32658,
+        "tanggal": "2026-04-08"
+      }
+    ]
+  },
+  {
+    "patrol_id": "PAT0003",
+    "segments": [
+      {
+        "patrol_id": "PAT0003",
+        "ranger": "Ranger_7",
+        "durasi_jam": 7.5,
+        "latitude": 97.7661,
+        "longitude": 4.30404,
+        "tanggal": "2026-04-20"
+      }
+    ]
+  },
+  {
+    "patrol_id": "PAT0004",
+    "segments": [
+      {
+        "patrol_id": "PAT0004",
+        "ranger": "Ranger_2",
+        "durasi_jam": 6.0,
+        "latitude": 97.28273,
+        "longitude": 3.69086,
+        "tanggal": "2026-04-23"
+      }
+    ]
+  },
+  {
+    "patrol_id": "PAT0005",
+    "segments": [
+      {
+        "patrol_id": "PAT0005",
+        "ranger": "Ranger_2",
+        "durasi_jam": 7.5,
+        "latitude": 97.27,
+        "longitude": 3.87851,
+        "tanggal": "2026-05-03"
+      }
+    ]
+  }
+]

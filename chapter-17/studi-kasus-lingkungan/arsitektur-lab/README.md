@@ -1,27 +1,10 @@
-# Arsitektur Lab — Studi Kasus Lingkungan
+# Arsitektur Lab — Karhutla Riau
 
-Folder untuk **lingkungan komputasi** monitoring karhutla Riau: ingest multi-sumber (FIRMS, Sentinel-2, KLHK, Dinkes), lakehouse Iceberg, dan orkestrasi batch/streaming.
+Kafka **9095** · MinIO **9050/9051** · H3 res-7 · formula \(I = 0{,}25G + 0{,}25F + 0{,}20H + 0{,}15(1-N) + 0{,}15(1-D)\)
 
-## Isi yang direncanakan (Lampiran)
+> [../eksperimen/README.md](../eksperimen/README.md) — instruksi praktikum
 
+```bash
+export PYTHONPATH="$(cd .. && pwd)"
+bash scripts/run_pipeline.sh
 ```
-arsitektur-lab/
-├── docker-compose.yml
-├── .env.example
-├── kafka/                    # hotspot.firms.riau, ispa.kecamatan.riau
-├── airflow/dags/             # karhutla_riau_daily (02:00 WIB)
-└── spark/                    # Structured Streaming
-```
-
-## Dokumentasi
-
-→ **[PANDUAN-ARSITEKTUR-LAB.md](PANDUAN-ARSITEKTUR-LAB.md)**
-
-## Prasyarat host
-
-- Docker ≥ 24, RAM ≥ 16 GB  
-- Akun Copernicus (Sentinel-2) dan FIRMS API key untuk data produksi  
-
-## Rujukan buku
-
-`chapter-17.tex` — §Studi Kasus Lingkungan, **Arsitektur Sistem** (Gambar lima lapisan karhutla).

@@ -1,0 +1,9 @@
+arsitektur-lab/.venv/
+data/bronze/
+data/silver/
+data/gold/
+data/sumber/**/*.csv
+data/sumber/**/*.geojson
+data/sumber/**/*.jsonl
+data/sumber/**/*.gpx
+__pycache__/

@@ -23,3 +23,13 @@ gold.hotspot_konsesi_agg        → output-2 (PDF + SIGAP)
 gold.korelasi_ispu_ispa         → output-3 (Superset)
 gold.emisi_karbon_konsesi       → output-4 (tabel + laporan kejadian)
 ```
+
+## Menghasilkan artefak
+
+```bash
+cd ../arsitektur-lab && bash scripts/run_pipeline.sh
+```
+
+| Output | Status |
+|---|---|
+| 1–4 | ✅ `output/scripts/` |
