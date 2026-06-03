@@ -56,7 +56,7 @@ $$
 U_{ij} = \hat{F}_j(X_{ij}), \quad i = 1,\ldots,n
 $$
 
-Gunakan **rank-based transform** (mis. $U = \text{rank}(x)/(n+1)$) agar nilai tepi tidak menghasilkan $\pm\infty$ saat probit.
+Gunakan **rank-based transform** (mis. $U = rank(x)/(n+1)$) agar nilai tepi tidak menghasilkan $\pm\infty$ saat probit.
 
 **Langkah 3 — Probit transform**
 
