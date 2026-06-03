@@ -1,4 +1,4 @@
-# Konfigurasi Lab Modul 9
+# Konfigurasi Lab Chapter 11
 
 Stack ini menyiapkan satu kontainer `bigdata-spark` untuk HDFS + YARN + Spark MLlib, lalu menjalankan script latihan dari folder repo.
 
