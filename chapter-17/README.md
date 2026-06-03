@@ -10,17 +10,17 @@ Bab ini menyajikan **studi kasus berbasis masalah nyata** (PBL + Scrum 3 sprint)
 | [studi-kasus-lingkungan](studi-kasus-lingkungan/README.md) | Lingkungan | Karhutla Riau — **[eksperimen](studi-kasus-lingkungan/eksperimen/README.md)** ✅ kode |
 | [studi-kasus-kesehatan](studi-kasus-kesehatan/README.md) | Kesehatan | Stunting Sumut — **[instruksi eksperimen](studi-kasus-kesehatan/eksperimen/README.md)** ✅ kode |
 | [studi-kasus-konservasi](studi-kasus-konservasi/README.md) | Konservasi | KEL Leuser — **[eksperimen](studi-kasus-konservasi/eksperimen/README.md)** ✅ kode |
-| [studi-kasus-smart-city](studi-kasus-smart-city/README.md) | Smart city | ATCS, IQU, TMD & emisi — Kota Medan |
-| [studi-kasus-edukasi](studi-kasus-edukasi/README.md) | Edukasi | Big data manajemen akademik & learning analytics PT |
+| [studi-kasus-smart-city](studi-kasus-smart-city/README.md) | Smart city | ATCS Medan — **[eksperimen](studi-kasus-smart-city/eksperimen/README.md)** ✅ kode |
+| [studi-kasus-edukasi](studi-kasus-edukasi/README.md) | Edukasi | Big data PT — **[eksperimen](studi-kasus-edukasi/eksperimen/README.md)** ✅ kode |
 
-Saat ini tersedia: **enam studi kasus** (dokumentasi lengkap; implementasi teknis di Lampiran).
+Saat ini tersedia: **enam studi kasus** lengkap dengan kode lab.
 
 ## Struktur standar per studi kasus
 
 ```
 studi-kasus-<domain>/
 ├── README.md                 # Halaman utama studi kasus
-├── eksperimen/               # Instruksi praktikum (mulai di sini) — kebencanaan ✅
+├── eksperimen/               # Instruksi praktikum (mulai di sini) — semua studi kasus ✅
 ├── arsitektur-lab/           # Eksekusi kode / Docker / Kafka
 ├── data/                     # Katalog sumber data + medallion Bronze/Silver/Gold
 ├── analitik/                 # Pipeline streaming/batch, model, query

@@ -1,32 +1,10 @@
-# Analitik — Studi Kasus Edukasi
+# Analitik — Big Data PT
 
-Pipeline **batch** (fitur LA, model risiko, skill gap) dan **streaming** (LMS + alert absensi).
-
-## Struktur
-
-```
-analitik/
-├── README.md
-├── PANDUAN-ANALITIK.md
-├── streaming/       # Kafka → fitur harian, alert absen
-├── batch/           # fitur_la, model_risiko, skill_gap
-├── model/           # artefak XGBoost (Lampiran)
-├── sql/             # agregasi kinerja MK, utilisasi
-└── notebooks/       # eksplorasi SHAP, klaster MK
-```
-
-## Skrip referensi (buku)
-
-| File | Fungsi |
+| Modul | File |
 |---|---|
-| `analitik_01_fitur_la.py` | 47 fitur learning analytics |
-| `analitik_02_model_risiko.py` | Train/inferensi XGBoost + SHAP |
-| `analitik_03_skill_gap.py` | NLP TF-IDF lowongan vs kurikulum |
+| 47 fitur LA | `batch/fitur_la.py` |
+| Model risiko | `batch/model_risiko.py` |
+| Skill gap NLP | `batch/skill_gap.py` |
+| Alert absensi | `streaming/alert_absensi_pa.py` |
 
-## Dokumentasi
-
-→ **[PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)**
-
-## Status
-
-Dokumentasi ✅ · Kode 🔜 Lampiran
+→ [PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)

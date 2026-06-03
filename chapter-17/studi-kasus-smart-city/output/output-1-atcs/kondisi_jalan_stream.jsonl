@@ -1,0 +1,6 @@
+{"ruas_id": "R001", "avg_kecepatan": 17.3, "n_probe": 10, "level_kemacetan": "MACET", "warna": "#f44336", "ts_emit": "2026-05-27T10:00:15Z"}
+{"ruas_id": "R002", "avg_kecepatan": 28.4, "n_probe": 10, "level_kemacetan": "PADAT", "warna": "#ffeb3b", "ts_emit": "2026-05-27T10:00:15Z"}
+{"ruas_id": "R003", "avg_kecepatan": 36.6, "n_probe": 5, "level_kemacetan": "PADAT", "warna": "#ffeb3b", "ts_emit": "2026-05-27T10:00:15Z"}
+{"ruas_id": "R004", "avg_kecepatan": 47.7, "n_probe": 5, "level_kemacetan": "LANCAR", "warna": "#4caf50", "ts_emit": "2026-05-27T10:00:15Z"}
+{"ruas_id": "R005", "avg_kecepatan": 44.4, "n_probe": 10, "level_kemacetan": "LANCAR", "warna": "#4caf50", "ts_emit": "2026-05-27T10:00:15Z"}
+{"ruas_id": "R006", "avg_kecepatan": 35.1, "n_probe": 10, "level_kemacetan": "PADAT", "warna": "#ffeb3b", "ts_emit": "2026-05-27T10:00:15Z"}

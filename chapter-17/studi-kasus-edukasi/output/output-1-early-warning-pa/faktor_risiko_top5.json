@@ -1,0 +1,9 @@
+{
+  "faktor_utama_shap": [
+    "f19_hari_telat_bayar",
+    "f21_rasio_bayar_tepat_waktu",
+    "f18_tunggakan_rp",
+    "f40_skor_engagement_index",
+    "f01_total_lms_events"
+  ]
+}

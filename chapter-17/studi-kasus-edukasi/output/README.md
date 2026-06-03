@@ -26,4 +26,4 @@ Empat **deliverable** ke pemangku kebijakan perguruan tinggi (Warek Akademik, PA
 
 ## Status
 
-Dokumentasi ✅ · Implementasi 🔜 Lampiran
+Dokumentasi ✅ · Implementasi ✅ (Lampiran)

@@ -1,0 +1,19 @@
+[
+  {
+    "ruas_macet": "R001",
+    "nama_ruas": "Jl. Thamrin",
+    "alternatif": [
+      {
+        "ruas_id": "R011",
+        "nama_ruas": "Jl. Sei Deli",
+        "avg_kecepatan": 40.3
+      },
+      {
+        "ruas_id": "R017",
+        "nama_ruas": "Jl. Sei Deli",
+        "avg_kecepatan": 41.6
+      }
+    ],
+    "rekomendasi_dtk": 15
+  }
+]

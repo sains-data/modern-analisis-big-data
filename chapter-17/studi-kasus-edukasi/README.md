@@ -15,10 +15,15 @@ Rektor membutuhkan jawaban: *mahasiswa mana yang akan berhenti kuliah semester d
 | 3 | **Optimasi** jadwal & ruang? | Utilisasi aktual vs kapasitas; ILP/heuristik |
 | 4 | **Skill gap** lulusan vs industri? | NLP TF-IDF lowongan × kurikulum CPL |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** · Eksekusi: **`arsitektur-lab/`**
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
+| **[eksperimen](eksperimen/README.md)** | Instruksi praktikum | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
 | [arsitektur-lab](arsitektur-lab/README.md) | Lakehouse, Kafka LMS/absensi | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog Tabel 17 + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | Fitur LA, model, NLP | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
@@ -38,7 +43,11 @@ Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` 
 
 **Privacy by design**: hash NIM, RBAC `profil_risiko`, tidak menampilkan nama di sprint board publik.
 
-## Lampiran
+## Lab
+
+```bash
+cd arsitektur-lab && bash start.sh
+```
 
 [LAMPIRAN.md](LAMPIRAN.md)
 
@@ -47,4 +56,5 @@ Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` 
 | Komponen | Status |
 |---|---|
 | Dokumentasi | ✅ |
-| Implementasi | 🔜 Lampiran |
+| Skrip + pipeline | ✅ |
+| Data SIA produksi | Sintetis / anonim |

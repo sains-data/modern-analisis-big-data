@@ -1,17 +1,11 @@
-# Analitik — Studi Kasus Smart City
+# Analitik — Medan
 
-Streaming probe speed, interpolasi IDW PM₂.₅, korelasi lintas-sumber, dan gap analysis TMD.
+| Modul | File |
+|---|---|
+| Map-match probe | `batch/map_match_probe.py` |
+| Agregat lalu lintas | `batch/agregasi_lalu_lintas.py` |
+| IDW PM2.5 | `batch/idw_pm25.py` |
+| Gap TMD | `batch/gap_tmd.py` |
+| Streaming ATCS | `streaming/probe_kecepatan_ruas.py` |
 
-## Isi yang direncanakan (Lampiran)
-
-```
-analitik/
-├── streaming/     # 3 query Spark + output.kondisi.jalan
-├── batch/         # pola_historis, emisi, gap_tmd, kecelakaan
-├── model/         # LSTM prediksi kemacetan
-└── notebooks/     # Gi*, validasi korelasi
-```
-
-## Dokumentasi
-
-→ **[PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md)**
+→ [PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)

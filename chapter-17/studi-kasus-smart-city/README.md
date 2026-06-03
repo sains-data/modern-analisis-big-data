@@ -14,11 +14,16 @@ Gugus tugas **Bappeda** (Dishub, DLH, BPBD) membutuhkan satu sistem yang menyatu
 | 2 | **Korelasi** volume kendaraan ↔ PM₂.₅? | Join stream; korelasi Pearson window 4 jam |
 | 3 | **Kelurahan mana** kekurangan layanan TMD? | Gap analysis demand vs coverage halte (radius 400 m) |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** · Eksekusi: **`arsitektur-lab/`**
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
-| [arsitektur-lab](arsitektur-lab/README.md) | Kafka multi-topik, streaming dominan | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
+| **[eksperimen](eksperimen/README.md)** | Instruksi praktikum | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
+| [arsitektur-lab](arsitektur-lab/README.md) | Kafka multi-topik, streaming | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog Tabel 17.17 + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | Probe speed, IDW PM2.5, gap TMD | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
 | [output](output/README.md) | ATCS, IQU, rute TMD, emisi | [PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md) |
@@ -38,7 +43,11 @@ Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` 
 - **Streaming-first** (latensi ms → detik → 10 menit).  
 - SLO kritis: kondisi jalan **&lt;5 menit**; output probe tiap **15 detik**.
 
-## Lampiran
+## Lab
+
+```bash
+cd arsitektur-lab && bash start.sh
+```
 
 [LAMPIRAN.md](LAMPIRAN.md)
 
@@ -47,4 +56,5 @@ Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` 
 | Komponen | Status |
 |---|---|
 | Dokumentasi | ✅ |
-| Implementasi | 🔜 Lampiran |
+| Skrip + pipeline | ✅ |
+| CCTV produksi | Metadata saja (edge) |

@@ -1,0 +1,16 @@
+skill,frekuensi_pct,matkul_rekomendasi,cosine_relevansi
+analytics,15.8,IF101,0.0
+blockchain,15.8,IF101,0.0
+contract,15.8,IF101,0.0
+dashboard,15.8,IF101,0.0
+azure,15.0,IF101,0.0
+bert,15.0,IF101,0.0
+classification,15.0,IF101,0.0
+computer,15.0,IF101,0.0
+devops,15.0,IF101,0.0
+gcp,15.0,IF101,0.0
+image,15.0,IF101,0.0
+language,15.0,IF101,0.0
+llm,15.0,IF101,0.0
+natural,15.0,IF101,0.0
+mobile,13.3,IF101,0.0

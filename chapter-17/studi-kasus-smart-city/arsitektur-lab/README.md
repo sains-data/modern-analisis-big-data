@@ -1,27 +1,15 @@
-# Arsitektur Lab — Studi Kasus Smart City
+# Arsitektur Lab — Medan Smart City
 
-Lingkungan **streaming-first** untuk integrasi CCTV (edge), GPS TMD, sensor udara, probe kendaraan, dan media sosial ke satu lakehouse.
+Kafka **9097** · MinIO **9070/9071** · streaming-first (probe 15 dtk, IQU 10 mnt).
 
-## Isi yang direncanakan (Lampiran)
+> [../eksperimen/README.md](../eksperimen/README.md)
 
-```
-arsitektur-lab/
-├── docker-compose.yml
-├── kafka/                 # 5 topik + producer simulasi
-├── spark/                 # Structured Streaming
-├── edge/                  # detektor CCTV (opsional)
-└── superset/              # dashboard ATCS / IQU
+```bash
+export PYTHONPATH="$(cd .. && pwd)"
+bash scripts/run_pipeline.sh
 ```
 
-## Dokumentasi
-
-→ **[PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md)**
-
-## Prasyarat
-
-- Bab 9–10 (Kafka, Spark Streaming)  
-- Bab 12 (Superset) untuk dashboard  
-
-## Rujukan
-
-`chapter-17.tex` — §Studi Kasus Smart City.
+| Komponen | Port |
+|---|---|
+| Kafka | 9097 |
+| MinIO | 9070/9071 |
