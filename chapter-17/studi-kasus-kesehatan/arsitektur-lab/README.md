@@ -1,27 +1,27 @@
-# Arsitektur Lab — Studi Kasus Kesehatan
+# Arsitektur Lab — Stunting Sumatera Utara
 
-Lingkungan untuk analitik **stunting Sumatera Utara**: ingest e-PPGBM (Kafka), batch bulanan (Airflow+Sedona), routing **OSRM**, lakehouse Iceberg.
+Kafka **9094** · MinIO **9040/9041** · pipeline Python (z-score WHO, indeks 5 dimensi, alert streaming).
 
-## Isi yang direncanakan (Lampiran)
+> Panduan praktikum: [../eksperimen/README.md](../eksperimen/README.md)  
+> **Eksekusi kode di folder ini.**
 
+```bash
+chmod +x *.sh scripts/*.sh
+bash scripts/prepare_data.sh
+export PYTHONPATH="$(cd .. && pwd)"
+bash scripts/run_pipeline.sh
 ```
-arsitektur-lab/
-├── docker-compose.yml
-├── kafka/                    # balita.upload.sumut, output.alert.kader
-├── airflow/dags/             # stunting_sumut_monthly (tgl 5)
-├── osrm/                     # graph Sumatera Utara
-└── .env.example
-```
 
-## Dokumentasi
+Atau: `bash start.sh` (termasuk Docker jika tersedia).
 
-→ **[PANDUAN-ARSITEKTUR-LAB.md](PANDUAN-ARSITEKTUR-LAB.md)**
+## Port
 
-## Prasyarat
+| Layanan | Port |
+|---|---|
+| Kafka | 9094 |
+| MinIO | 9040 / 9041 |
 
-- RAM ≥ 16 GB (OSRM extract)  
-- Bab 12 Superset opsional untuk Output 2  
+## Catatan lab
 
-## Rujukan
-
-`chapter-17.tex` — §Studi Kasus Kesehatan, **Arsitektur Sistem**.
+- Aksesibilitas memakai **haversine** (bukan OSRM penuh); produksi: build graph OSM Sumut.  
+- LMS WHO disederhanakan untuk latihan — validasi konsep, bukan replika tabel resmi.

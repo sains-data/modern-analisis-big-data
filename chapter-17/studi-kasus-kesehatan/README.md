@@ -14,11 +14,16 @@
 | 2 | **Faktor apa** paling dominan antardesa? | Regresi spasial multidimensi |
 | 3 | **Desa mana** sulit dijangkau Puskesmas? | Isokron OSRM/OSM (30/60/90 menit) |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** — instruksi & checklist. Eksekusi kode: **`arsitektur-lab/`**.
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
-| [arsitektur-lab](arsitektur-lab/README.md) | Kafka, Airflow, OSRM, MinIO/Iceberg | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
+| **[eksperimen](eksperimen/README.md)** | Instruksi langkah praktikum | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
+| [arsitektur-lab](arsitektur-lab/README.md) | Kafka, MinIO — **jalankan skrip** | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog Tabel 17.10 + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | Batch bulanan, alert streaming, z-score WHO | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
 | [output](output/README.md) | Empat artefak ke Dinkes/TPPS/kader | [PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md) |
@@ -33,13 +38,19 @@
 
 Detail: [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) · `chapter-17.tex` §Studi Kasus Kesehatan.
 
-## Lampiran praktikum
+## Lab praktikum
 
-Rencana pemetaan: [LAMPIRAN.md](LAMPIRAN.md).
+```bash
+cd arsitektur-lab && bash start.sh
+```
+
+Detail: [LAMPIRAN.md](LAMPIRAN.md) · [arsitektur-lab/README.md](arsitektur-lab/README.md)
 
 ## Status repositori
 
 | Komponen | Status |
 |---|---|
 | Dokumentasi Markdown | ✅ |
-| Implementasi teknis | 🔜 Lampiran |
+| Skrip analitik + output 1–4 | ✅ |
+| Instruksi eksperimen | ✅ |
+| Data e-PPGBM produksi | Unduh tim — [KATALOG-DATA.md](data/KATALOG-DATA.md) |

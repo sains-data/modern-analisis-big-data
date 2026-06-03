@@ -1,0 +1,30 @@
+[MERAH] Balita B249a5d945f — Desa 12021021
+  z TB/U: -3.849 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita Bb527938419 — Desa 12011038
+  z TB/U: -3.135 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita Bff1ed2d229 — Desa 12021027
+  z TB/U: 2.386 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita B9ea2be32aa — Desa 12011001
+  z TB/U: -0.911 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita Baa9da51151 — Desa 12021011
+  z TB/U: 1.369 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita B1b318f53bb — Desa 12011002
+  z TB/U: -4.478 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita B05df804223 — Desa 12021021
+  z TB/U: -0.224 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita B57970ed37d — Desa 12011014
+  z TB/U: 0.528 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita B9b9fda1a4b — Desa 12011003
+  z TB/U: 1.526 | Kunjungan 24 jam, rujuk Puskesmas
+
+[MERAH] Balita Bf76ecd9b00 — Desa 12021026
+  z TB/U: -0.673 | Kunjungan 24 jam, rujuk Puskesmas
+

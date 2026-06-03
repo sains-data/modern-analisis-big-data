@@ -23,3 +23,13 @@ gold.prevalensi_stunting + aksesibilitas → output-2 (Superset)
 streaming alert                          → output-3
 gold.skor_aksesibilitas + kapasitas Puskesmas → output-4
 ```
+
+## Menghasilkan artefak
+
+```bash
+cd ../arsitektur-lab && bash scripts/run_pipeline.sh
+```
+
+| Output | Status |
+|---|---|
+| 1–4 | ✅ skrip di `output/scripts/` |

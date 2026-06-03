@@ -1,26 +1,22 @@
-# Analitik — Studi Kasus Kesehatan
-
-Batch bulanan (z-score WHO, indeks risiko), streaming alert kader, analisis spasial (DBSCAN, Moran's I), dan isokron OSRM.
-
-## Isi yang direncanakan (Lampiran)
+# Analitik — Stunting Sumatera Utara
 
 ```
 analitik/
-├── batch/           # DAG tasks: zscore, agregasi, indeks_risiko
-├── streaming/       # output_03_alert_kader.py
-├── model/           # XGBoost prediksi risiko (opsional)
-├── sql/             # Prevalensi desa, regresi spasial
-└── notebooks/       # Validasi LMS, Moran's I
+├── lib/          config, who_lms, alert, indeks
+├── batch/        ingest, zscore, prevalensi, akses, indeks, DBSCAN
+├── streaming/    alert_kader_stream, kafka_producer_upload
+└── sql/          zscore_prevalensi_desa.sql
 ```
 
-## Dokumentasi
+```bash
+export PYTHONPATH="$(cd .. && pwd)"
+# atau: arsitektur-lab/scripts/run_pipeline.sh
+```
 
-→ **[PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md)**
-
-## Metrik
-
-| Analitik | Target |
+| Skrip buku | Implementasi lab |
 |---|---|
-| Alert upload → kader | &lt; 30 detik |
-| Consumer lag | &lt; 5 event |
-| Isokron | 100% desa, tidak null |
+| `output_01_prioritas_desa.py` | `output/scripts/output_01_prioritas_desa.py` |
+| `output_02_dashboard_tpps.py` | `output/scripts/output_02_dashboard_tpps.py` |
+| `output_03_alert_kader.py` | `analitik/streaming/alert_kader_stream.py` |
+
+→ [PANDUAN-ANALITIK.md](PANDUAN-ANALITIK.md)
