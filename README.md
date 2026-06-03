@@ -12,7 +12,7 @@ Seluruh kode praktikum, skrip konfigurasi lingkungan (Docker, Hadoop, Spark, Kaf
 
 | Repositori | Peran |
 |---|---|
-| **[github.com/sains-data/praktikum-analisis-big-data](https://github.com/sains-data/praktikum-analisis-big-data)** | **Praktikum** — folder `sesi-praktikum/` (repositori ini) |
+| **[github.com/sains-data/praktikum-analisis-big-data](https://github.com/sains-data/praktikum-analisis-big-data)** | **Praktikum** — folder 10 modul praktikum |
 | **[github.com/sains-data/modern-analisis-big-data](https://github.com/sains-data/modern-analisis-big-data)** | **Buku** — sumber sesi praktik |
 
 Clone praktikum:
