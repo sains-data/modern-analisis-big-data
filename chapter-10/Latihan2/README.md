@@ -20,6 +20,18 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Latihan 1 sudah selesai dan stack Kafka berjalan
 - [ ] `docker compose ps` (dari `Konfigurasi-lab/`) menampilkan `modul8-kafka-broker` status `Up (healthy)`
 - [ ] Virtual environment aktif: `source ../Konfigurasi-lab/.venv/bin/activate`
+- [ ] Schema event — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md): `event_id`, `user_id`, `product`, `channel`, `amount`, `event_time`
+
+---
+
+## Referensi data
+
+| File | Volume | Penggunaan |
+|------|--------|------------|
+| `data/sample_events.json` | 10 | Inspeksi format sebelum producer live |
+| `data/transaksi_historis.json` | **100** | Seed historis via `seed_kafka.py` |
+
+Mapping kanonik: `user_id` ↔ `PK-0001`, `product` ↔ `kelas_layanan`, `amount` ↔ `nilai_total`.
 
 ---
 

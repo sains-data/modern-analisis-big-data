@@ -4,19 +4,33 @@
 ## Tujuan
 
 - Membaca data bersih dari Silver
-- Melakukan agregasi analitik
+- Melakukan agregasi analitik per kota
 - Menyimpan output business-ready ke Gold
 
 ## Prasyarat
 
 - [ ] Latihan 3 selesai
-- [ ] File `silver/users/users_clean.parquet` tersedia
+- [ ] File `silver/users/users_clean.parquet` tersedia (**50 baris**)
+
+## Referensi agregasi
+
+Skrip `aggregate.py` menghitung per kolom `city`:
+
+| Metrik Gold | Kolom sumber |
+|-------------|--------------|
+| `avg_salary` | rata-rata `salary` |
+| `total_karyawan` | jumlah baris per kota |
+| `avg_usia` | rata-rata `age` |
+
+Dataset Silver mencakup **10 kota**: Jakarta, Surabaya, Bandung, Medan, Semarang, Makassar, Palembang, Denpasar, Yogyakarta, Balikpapan.
+
+Gold layer diharapkan berisi **10 baris** (satu ringkasan per kota).
 
 ## Langkah Kerja
 
 ### 1) Skrip agregasi
 
-File: `Konfigurasi-lab/app/aggregate.py` (ringkasan per kota → Parquet Gold).
+File: `Konfigurasi-lab/app/aggregate.py`
 
 ### 2) Jalankan script
 
@@ -24,6 +38,8 @@ File: `Konfigurasi-lab/app/aggregate.py` (ringkasan per kota → Parquet Gold).
 cd ../Konfigurasi-lab
 docker exec -it bigdata-compute python aggregate.py
 ```
+
+Perhatikan tabel ringkasan 10 kota yang dicetak ke terminal.
 
 ### 3) Verifikasi output Gold
 
@@ -33,8 +49,10 @@ docker exec -it bigdata-mc mc ls local/gold --recursive
 
 ## Hasil yang Dicatat
 
-- Tabel ringkasan per kota
+- Tabel ringkasan per kota (salin 2–3 baris contoh)
 - Key object Gold: `summary/city_summary.parquet`
+- Kota dengan `total_karyawan` terbanyak
+- Kota dengan `avg_salary` tertinggi
 
 ---
 

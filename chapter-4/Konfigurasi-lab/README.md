@@ -2,6 +2,8 @@
 
 Praktik chapter ini menjalankan klaster Hadoop **pseudo-distributed** berbasis Docker (repo [`sains-data/bigdata-hadoop`](https://github.com/sains-data/bigdata-hadoop)) untuk HDFS dan MapReduce.
 
+Dataset teks **`latihan.txt`** dan **`dataset_wordcount.txt`** dihasilkan generator sintesis — kosakata selaras Bab 3+ (`partisipan`, `aktivitas`, `saluran`). Detail: [KATALOG-DATA.md](KATALOG-DATA.md).
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -19,9 +21,10 @@ Praktik chapter ini menjalankan klaster Hadoop **pseudo-distributed** berbasis D
 Konfigurasi-lab/
 ├── build.sh / start.sh / login.sh / stop.sh
 ├── .env.example
+├── KATALOG-DATA.md          ← isi teks & frekuensi WordCount harapan
 ├── data/
-│   ├── latihan.txt
-│   └── dataset_wordcount.txt
+│   ├── latihan.txt          ← 7 kalimat (HDFS + kosakata platform)
+│   └── dataset_wordcount.txt ← 6 baris token MapReduce
 ├── scripts/
 │   ├── ensure_hadoop_repo.sh
 │   ├── verify_cluster.sh
@@ -33,6 +36,15 @@ Konfigurasi-lab/
 │   └── hdfs_management.sh
 └── vendor/bigdata-hadoop/   ← hasil git clone (gitignored)
 ```
+
+## Data latihan (ringkas)
+
+| File | Isi |
+|------|-----|
+| `latihan.txt` | Narasi HDFS + pipeline medallion + partisipan/saluran/geografis |
+| `dataset_wordcount.txt` | Token: partisipan, aktivitas, saluran, mobile, hadoop, hdfs, … |
+
+Frekuensi kata tertinggi setelah WordCount: **`partisipan`** dan **`aktivitas`** (masing-masing 6×) — lihat tabel lengkap di KATALOG-DATA.
 
 ## 1) Prasyarat
 
@@ -84,13 +96,29 @@ bash login.sh
 
 | Path | Isi |
 |---|---|
-| `/user/latihan/latihan.txt` | File teks latihan HDFS |
-| `/user/latihan/input/dataset_wordcount.txt` | Input WordCount |
+| `/user/latihan/latihan.txt` | 7 kalimat teks latihan |
+| `/user/latihan/input/dataset_wordcount.txt` | 6 baris input WordCount |
 | `/user/latihan/output/part-r-00000` | Hasil reduce |
 | `/user/latihan/arsip/` | Backup setelah latihan 5 |
 
-## 5) Hentikan klaster
+## 5) Regenerasi data sintesis
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch04_hadoop
+bash scripts/sync_to_chapters.sh
+```
+
+## 6) Hentikan klaster
 
 ```bash
 bash stop.sh
 ```
+
+## Troubleshooting
+
+| Gejala | Solusi |
+|---|---|
+| File teks tidak ditemukan di kontainer | Pastikan `data/` terisi; jalankan sync dari `synthetic-data/` |
+| WordCount frekuensi tidak sesuai | Regenerasi `ch04_hadoop`; pastikan input HDFS ter-overwrite (`prepare_wordcount_input.sh`) |
+| Output directory already exists | `bash scripts/hdfs_management.sh` hapus output sebelum re-run |

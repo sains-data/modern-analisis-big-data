@@ -1,19 +1,25 @@
 # Keterangan File Data — Chapter 10
 
-File data latihan tersedia di dua lokasi (isi sama):
-- `Data/` — referensi dan dokumentasi
-- `Konfigurasi-lab/data/` — dipakai saat menjalankan lab
+File data latihan tersedia di dua lokasi (isi legacy JSON sama):
+- `Data/` — salinan referensi
+- `Konfigurasi-lab/data/` — dipakai saat menjalankan lab (+ file kanonik)
+
+Dokumentasi lengkap mapping, anomali, dan volume: **[KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)**.
 
 ## Daftar File
 
 | File | Jumlah Record | Digunakan Di | Keterangan |
 |---|---|---|---|
-| `sample_events.json` | 10 | Latihan 1, 2 | Referensi schema dan contoh format event transaksi |
-| `transaksi_historis.json` | 500 | Latihan 2, 3 | Data seed untuk topic `transaksi-stream` sebelum latihan dimulai |
-| `sensor_iot_historis.json` | 300 | Latihan 5 (eksplorasi) | Data seed untuk topic `sensor-iot` |
-| `transaksi_duplikat_test.json` | 50 (40 unik) | Latihan 5 Bagian B | 50 event dengan 10 `event_id` duplikat untuk uji delivery semantics |
-| `referensi_schema.json` | — | Semua latihan | Dokumentasi lengkap schema semua topic Kafka |
-| `seed_kafka.py` | — | Setup awal | Script Python untuk mengirim data historis ke Kafka |
+| `sample_events.json` | **10** | Latihan 1, 2 | Contoh format event `transaksi-stream` |
+| `transaksi_historis.json` | **100** | Latihan 2, 3 | Seed topic `transaksi-stream` (out-of-order) |
+| `sensor_iot_historis.json` | **100** | Latihan 5 | Seed topic `sensor-iot` |
+| `transaksi_duplikat_test.json` | **50** (**40 unik**) | Latihan 5 Bagian B | 10 `event_id` duplikat |
+| `referensi_schema.json` | — | Semua latihan | Schema topic Kafka |
+| `seed_kafka.py` | — | Setup awal | Salinan di `Konfigurasi-lab/scripts/` |
+
+File kanonik (hanya di `Konfigurasi-lab/data/`):
+- `catatan_aktivitas_streaming.json` — 100 record
+- `pembacaan_sensor.json` — 100 record
 
 ## Cara Menggunakan
 
@@ -24,13 +30,13 @@ cd Konfigurasi-lab
 source .venv/bin/activate
 ```
 
-### Seed topic `transaksi-stream` (untuk Latihan 2 & 3):
+### Seed topic `transaksi-stream` (Latihan 2 & 3):
 
 ```bash
 python scripts/seed_kafka.py --file data/transaksi_historis.json
 ```
 
-### Seed topic `sensor-iot` (untuk Latihan 5):
+### Seed topic `sensor-iot` (Latihan 5):
 
 ```bash
 python scripts/seed_kafka.py \
@@ -38,7 +44,7 @@ python scripts/seed_kafka.py \
   --file data/sensor_iot_historis.json
 ```
 
-### Seed topic untuk uji delivery semantics (Latihan 5 Bagian B):
+### Seed uji delivery semantics (Latihan 5 Bagian B):
 
 ```bash
 python scripts/seed_kafka.py \
@@ -47,9 +53,17 @@ python scripts/seed_kafka.py \
   --delay 0.0
 ```
 
+## Regenerasi data referensi
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch10_streaming
+bash scripts/sync_to_chapters.sh
+```
+
 ## Catatan Penting
 
 - Semua `event_time` menggunakan format **ISO 8601 UTC** (`+00:00`)
-- `transaksi_historis.json` mengandung sebagian event out-of-order untuk mensimulasikan late data
-- `transaksi_duplikat_test.json` memiliki **10 dari 50 event_id yang duplikat**
+- `transaksi_historis.json` mengandung event **out-of-order** untuk uji watermark Spark
+- `transaksi_duplikat_test.json`: baris 41–50 memakai ulang `event_id` baris 1–10
 - Pastikan Kafka sudah berjalan (`bash start.sh`) sebelum menjalankan seed

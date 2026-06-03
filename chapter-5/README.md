@@ -2,6 +2,8 @@
 
 Praktik PySpark pada klaster **Hadoop + Spark** (YARN): Monte Carlo π, DataFrame, Spark SQL, Parquet di HDFS.
 
+Dataset **`mahasiswa.csv`** (10 baris skor kompetensi) dihasilkan generator sintesis [`synthetic-data/`](../synthetic-data/README.md) — selaras entitas partisipan Bab 3+.
+
 ## Alur cepat
 
 ```bash
@@ -16,7 +18,7 @@ bash scripts/compare_hdfs_sizes.sh
 bash stop.sh
 ```
 
-Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
 
 ## Latihan
 
@@ -27,3 +29,21 @@ Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
 | [Latihan 3](Latihan3/README.md) | `analisis_nilai.py` — DataFrame & SQL |
 | [Latihan 4](Latihan4/README.md) | Spark UI, YARN UI, ukuran file |
 | [Latihan 5](Latihan5/README.md) | Partisi & cache RDD |
+
+## Data latihan
+
+| File | Volume | Fungsi |
+|------|--------|--------|
+| `data/mahasiswa.csv` | 10 baris | Input analisis nilai (format legacy) |
+| `data/skor_kompetensi.csv` | 10 baris | Schema kanonik (`id_partisipan`, `skor_modul_*`) |
+
+Kolom skor di-generate via **Gaussian Copula Blok C** (korelasi antar modul terjaga).
+
+## File eksekusi (di `Konfigurasi-lab/`)
+
+| Path | Fungsi |
+|---|---|
+| `data/mahasiswa.csv` | CSV input HDFS |
+| `KATALOG-DATA.md` | Schema, mapping ID, distribusi grade |
+| `app/analisis_nilai.py` | DataFrame + SQL → Parquet |
+| `scripts/setup_hdfs_mahasiswa.sh` | Upload ke HDFS |

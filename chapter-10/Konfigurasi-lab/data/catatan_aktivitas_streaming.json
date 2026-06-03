@@ -1,0 +1,902 @@
+[
+  {
+    "id_aktivitas": "ACT-a1f04a35",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 12759222.36,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-02-08T02:30:56+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-c817df48",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "fashion",
+    "nilai_total": 8303799.62,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-06-23T11:27:11+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-6e3b169b",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 8912129.81,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-07-09T12:31:29+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-25f5c727",
+    "id_partisipan": "PK-0017",
+    "kelas_layanan": "makanan",
+    "nilai_total": 1485112.71,
+    "saluran": "web",
+    "unit_geografis": "Medan",
+    "event_time": "2024-08-22T15:25:11+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-364a078c",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 72502631.44,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-04-08T06:27:21+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-41b5b0ab",
+    "id_partisipan": "PK-0009",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 24436575.55,
+    "saluran": "atm",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-02-26T03:41:52+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-0c5f6c20",
+    "id_partisipan": "PK-0019",
+    "kelas_layanan": "fashion",
+    "nilai_total": 7489950.69,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-01-15T00:57:44+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-f7e29613",
+    "id_partisipan": "PK-0012",
+    "kelas_layanan": "makanan",
+    "nilai_total": 342502.24,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-12-15T22:58:59+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-a66ce7ef",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 20428044.75,
+    "saluran": "teller",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-11-02T20:09:03+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-15d62c4c",
+    "id_partisipan": "PK-0027",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 1882549.73,
+    "saluran": "web",
+    "unit_geografis": "Medan",
+    "event_time": "2024-08-24T15:33:59+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ae343529",
+    "id_partisipan": "PK-0020",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 6310133.5,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-07-25T13:32:52+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-407c5b5c",
+    "id_partisipan": "PK-0022",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 837673.13,
+    "saluran": "teller",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-07-29T13:51:29+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-69ebed2c",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2060356.13,
+    "saluran": "web",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-06-13T10:47:15+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-488d272f",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 1548807.47,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-01-24T01:32:50+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-2baa60a9",
+    "id_partisipan": "PK-0041",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 7198069.45,
+    "saluran": "atm",
+    "unit_geografis": "Balikpapan",
+    "event_time": "2024-03-23T05:24:52+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-4caa94f8",
+    "id_partisipan": "PK-0005",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 3853209.2,
+    "saluran": "web",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-04-17T07:03:48+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-0dcb28b9",
+    "id_partisipan": "PK-0003",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 42182258.9,
+    "saluran": "mobile",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-11-29T21:57:07+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-da63aa30",
+    "id_partisipan": "PK-0008",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 5429839.03,
+    "saluran": "atm",
+    "unit_geografis": "Balikpapan",
+    "event_time": "2024-06-06T10:21:30+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-06d2e45c",
+    "id_partisipan": "PK-0016",
+    "kelas_layanan": "fashion",
+    "nilai_total": 8034324.06,
+    "saluran": "web",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-11-25T21:38:21+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-860e98e6",
+    "id_partisipan": "PK-0044",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 1710486.56,
+    "saluran": "teller",
+    "unit_geografis": "Surabaya",
+    "event_time": "2024-11-30T21:59:12+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-06c06f96",
+    "id_partisipan": "PK-0003",
+    "kelas_layanan": "fashion",
+    "nilai_total": 927718.86,
+    "saluran": "mobile",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-08-31T16:01:22+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-0ba5155f",
+    "id_partisipan": "PK-0040",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 62435384.29,
+    "saluran": "teller",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-04-09T06:32:41+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-4a0e63e5",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 237575.08,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-09-18T17:13:36+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-99a40416",
+    "id_partisipan": "PK-0011",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 7900970.08,
+    "saluran": "atm",
+    "unit_geografis": "Bandung",
+    "event_time": "2024-09-21T17:24:26+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-28a25ade",
+    "id_partisipan": "PK-0015",
+    "kelas_layanan": "fashion",
+    "nilai_total": 2809735.5,
+    "saluran": "mobile",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-04-15T06:57:34+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-68103744",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 12622859.49,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-07-23T13:26:22+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-3923e62c",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 6335804.67,
+    "saluran": "web",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-06-24T11:33:20+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-f62285c7",
+    "id_partisipan": "PK-0006",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 9889537.99,
+    "saluran": "atm",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-10-01T18:04:27+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-fc0ba958",
+    "id_partisipan": "PK-0046",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 24696337.76,
+    "saluran": "teller",
+    "unit_geografis": "Surabaya",
+    "event_time": "2024-11-06T20:23:09+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-6aec7861",
+    "id_partisipan": "PK-0013",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 335901.3,
+    "saluran": "mobile",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-05-16T08:57:26+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-a814f1fe",
+    "id_partisipan": "PK-0041",
+    "kelas_layanan": "makanan",
+    "nilai_total": 743385.89,
+    "saluran": "mobile",
+    "unit_geografis": "Balikpapan",
+    "event_time": "2024-01-01T00:00:01+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-dbdbb501",
+    "id_partisipan": "PK-0027",
+    "kelas_layanan": "makanan",
+    "nilai_total": 243543.77,
+    "saluran": "mobile",
+    "unit_geografis": "Medan",
+    "event_time": "2024-03-05T04:14:41+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ed130f0c",
+    "id_partisipan": "PK-0008",
+    "kelas_layanan": "fashion",
+    "nilai_total": 269255.58,
+    "saluran": "atm",
+    "unit_geografis": "Balikpapan",
+    "event_time": "2024-11-12T20:47:19+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-62809bc1",
+    "id_partisipan": "PK-0025",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 11326763.06,
+    "saluran": "teller",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-07-21T13:19:19+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-1a30dabc",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2403600.99,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-07-28T13:47:06+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-83bd3bcb",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "fashion",
+    "nilai_total": 554688.36,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-02-28T03:50:09+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-9dd4a44d",
+    "id_partisipan": "PK-0030",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 13153569.92,
+    "saluran": "web",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-04-18T07:07:18+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-85e71b40",
+    "id_partisipan": "PK-0027",
+    "kelas_layanan": "fashion",
+    "nilai_total": 4356759.39,
+    "saluran": "teller",
+    "unit_geografis": "Medan",
+    "event_time": "2024-12-17T23:05:14+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-5f0cb132",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 3345231.7,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-05-24T09:29:50+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-35604fb8",
+    "id_partisipan": "PK-0010",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 18395924.25,
+    "saluran": "atm",
+    "unit_geografis": "Surabaya",
+    "event_time": "2024-05-23T09:27:35+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-dc9e8080",
+    "id_partisipan": "PK-0013",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2132439.59,
+    "saluran": "web",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-02-01T02:05:41+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-168ee6e5",
+    "id_partisipan": "PK-0034",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 345260.76,
+    "saluran": "mobile",
+    "unit_geografis": "Jakarta",
+    "event_time": "2024-02-12T02:49:14+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-5d050d99",
+    "id_partisipan": "PK-0013",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 2355656.33,
+    "saluran": "web",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-09-13T16:50:07+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-5cce7416",
+    "id_partisipan": "PK-0006",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 10916188.94,
+    "saluran": "mobile",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-02-03T02:10:40+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ccc8c9cd",
+    "id_partisipan": "PK-0005",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 646890.66,
+    "saluran": "web",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-10-19T19:15:42+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-bfdb2a2c",
+    "id_partisipan": "PK-0006",
+    "kelas_layanan": "fashion",
+    "nilai_total": 432591.42,
+    "saluran": "mobile",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-06-07T10:23:48+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-bac24b82",
+    "id_partisipan": "PK-0016",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 10415889.37,
+    "saluran": "mobile",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-07-03T12:06:37+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-38e45f78",
+    "id_partisipan": "PK-0033",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 985662.36,
+    "saluran": "web",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-07-21T13:16:57+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-502e2466",
+    "id_partisipan": "PK-0007",
+    "kelas_layanan": "fashion",
+    "nilai_total": 494746.21,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-10-11T18:42:18+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-a480e49c",
+    "id_partisipan": "PK-0003",
+    "kelas_layanan": "fashion",
+    "nilai_total": 1407046.36,
+    "saluran": "atm",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-03-20T05:13:42+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-15d0538a",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 8418537.62,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-06-10T10:36:29+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-77c1f9a3",
+    "id_partisipan": "PK-0022",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 25768202.26,
+    "saluran": "teller",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-11-18T21:12:18+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-42e66452",
+    "id_partisipan": "PK-0028",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 22418237.26,
+    "saluran": "mobile",
+    "unit_geografis": "Bandung",
+    "event_time": "2024-12-20T23:18:53+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-634d50bf",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "fashion",
+    "nilai_total": 10144101.37,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-02-05T02:19:02+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-6f284318",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 1362900.94,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-03-01T03:59:49+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-f09e5a89",
+    "id_partisipan": "PK-0013",
+    "kelas_layanan": "makanan",
+    "nilai_total": 1155736.61,
+    "saluran": "teller",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-04-08T06:30:21+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-a01fb1f2",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 890597.02,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-10-04T18:13:01+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-f55f14bb",
+    "id_partisipan": "PK-0029",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 67807672.69,
+    "saluran": "mobile",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-06-23T11:29:51+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ad6b4175",
+    "id_partisipan": "PK-0004",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 4452203.43,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-11-24T21:34:12+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-c898687a",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 5098340.27,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-05-03T08:07:47+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-6608a7ba",
+    "id_partisipan": "PK-0040",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 20635933.63,
+    "saluran": "mobile",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-10-01T18:01:21+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-e0deeedd",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 2205970.29,
+    "saluran": "mobile",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-12-17T23:06:58+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ab2c0b77",
+    "id_partisipan": "PK-0003",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2684766.22,
+    "saluran": "web",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-03-26T05:37:18+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-8161a159",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 61833754.15,
+    "saluran": "teller",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-07-13T12:47:02+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-dd65b493",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 2655044.77,
+    "saluran": "web",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-04-26T07:40:15+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-24114bfc",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "makanan",
+    "nilai_total": 78118.43,
+    "saluran": "web",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-05-17T09:03:23+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-1a93bd7a",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "fashion",
+    "nilai_total": 971763.16,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-04-06T06:21:22+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-fff2107a",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "makanan",
+    "nilai_total": 918894.66,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-12-17T23:08:29+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-dc99955d",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 29857596.27,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-11-26T21:43:52+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-4aa10c30",
+    "id_partisipan": "PK-0013",
+    "kelas_layanan": "makanan",
+    "nilai_total": 311949.09,
+    "saluran": "mobile",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-09-27T17:47:19+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-982a7aa6",
+    "id_partisipan": "PK-0018",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 36609962.09,
+    "saluran": "atm",
+    "unit_geografis": "Jakarta",
+    "event_time": "2024-08-25T15:38:47+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-378e421a",
+    "id_partisipan": "PK-0005",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 13161941.86,
+    "saluran": "web",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-03-04T04:12:07+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-64412f6a",
+    "id_partisipan": "PK-0004",
+    "kelas_layanan": "fashion",
+    "nilai_total": 2233326.77,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-12-18T23:12:34+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-081a42f7",
+    "id_partisipan": "PK-0009",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2497465.22,
+    "saluran": "atm",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-12-23T23:31:18+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-262a356c",
+    "id_partisipan": "PK-0034",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 2377815.0,
+    "saluran": "mobile",
+    "unit_geografis": "Jakarta",
+    "event_time": "2024-08-07T14:24:03+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-b22ff2f4",
+    "id_partisipan": "PK-0032",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 90789354.28,
+    "saluran": "atm",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-02-08T02:32:11+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-fee367bc",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 406006.29,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-06-10T10:36:48+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-afe4267e",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "fashion",
+    "nilai_total": 331414.18,
+    "saluran": "mobile",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-06-21T11:21:56+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-3de59816",
+    "id_partisipan": "PK-0002",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 7257985.72,
+    "saluran": "teller",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-07-02T12:02:02+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-148a18ba",
+    "id_partisipan": "PK-0003",
+    "kelas_layanan": "makanan",
+    "nilai_total": 2012290.25,
+    "saluran": "teller",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-11-23T21:32:58+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-01bdb68d",
+    "id_partisipan": "PK-0012",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 82597785.27,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-06-16T11:01:13+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-013cf03b",
+    "id_partisipan": "PK-0006",
+    "kelas_layanan": "fashion",
+    "nilai_total": 818283.02,
+    "saluran": "mobile",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-02-11T02:43:45+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-17421112",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 3801310.02,
+    "saluran": "web",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-04-23T07:28:35+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-f3553c94",
+    "id_partisipan": "PK-0005",
+    "kelas_layanan": "fashion",
+    "nilai_total": 1113552.54,
+    "saluran": "mobile",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-01-13T00:48:20+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-06332d40",
+    "id_partisipan": "PK-0010",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 8216821.86,
+    "saluran": "mobile",
+    "unit_geografis": "Surabaya",
+    "event_time": "2024-08-09T14:35:19+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-dc19499a",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "makanan",
+    "nilai_total": 139544.94,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-01-19T01:12:36+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-3bc7ff6a",
+    "id_partisipan": "PK-0030",
+    "kelas_layanan": "makanan",
+    "nilai_total": 812596.84,
+    "saluran": "atm",
+    "unit_geografis": "Yogyakarta",
+    "event_time": "2024-07-03T12:09:04+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-ff9dbbf3",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "fashion",
+    "nilai_total": 4818774.9,
+    "saluran": "teller",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-05-21T09:17:08+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-9217ff60",
+    "id_partisipan": "PK-0040",
+    "kelas_layanan": "makanan",
+    "nilai_total": 128725.65,
+    "saluran": "web",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-02-18T03:10:38+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-d9afb317",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 45869884.67,
+    "saluran": "atm",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-12-25T23:38:25+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-43a96fc4",
+    "id_partisipan": "PK-0031",
+    "kelas_layanan": "makanan",
+    "nilai_total": 597332.94,
+    "saluran": "atm",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-05-19T09:10:29+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-9695ecd5",
+    "id_partisipan": "PK-0037",
+    "kelas_layanan": "kesehatan",
+    "nilai_total": 1614198.08,
+    "saluran": "teller",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-03-17T05:02:47+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-1c8593ce",
+    "id_partisipan": "PK-0048",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 10288937.62,
+    "saluran": "teller",
+    "unit_geografis": "Balikpapan",
+    "event_time": "2024-08-04T14:14:10+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-80c0ca01",
+    "id_partisipan": "PK-0027",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 104748499.03,
+    "saluran": "mobile",
+    "unit_geografis": "Medan",
+    "event_time": "2024-12-13T22:50:42+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-8a61ef41",
+    "id_partisipan": "PK-0025",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 27932815.56,
+    "saluran": "mobile",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-09-23T17:31:30+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-534d0f30",
+    "id_partisipan": "PK-0015",
+    "kelas_layanan": "elektronik",
+    "nilai_total": 7564251.56,
+    "saluran": "teller",
+    "unit_geografis": "Semarang",
+    "event_time": "2024-08-29T15:52:54+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-5df4cca3",
+    "id_partisipan": "PK-0025",
+    "kelas_layanan": "makanan",
+    "nilai_total": 399097.44,
+    "saluran": "web",
+    "unit_geografis": "Denpasar",
+    "event_time": "2024-02-05T02:21:03+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-56ce32f7",
+    "id_partisipan": "PK-0001",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 23149447.97,
+    "saluran": "mobile",
+    "unit_geografis": "Makassar",
+    "event_time": "2024-10-22T19:27:37+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-5309cfba",
+    "id_partisipan": "PK-0010",
+    "kelas_layanan": "olahraga",
+    "nilai_total": 19271690.27,
+    "saluran": "web",
+    "unit_geografis": "Surabaya",
+    "event_time": "2024-07-22T13:23:13+00:00"
+  },
+  {
+    "id_aktivitas": "ACT-84a0c539",
+    "id_partisipan": "PK-0009",
+    "kelas_layanan": "otomotif",
+    "nilai_total": 971658.87,
+    "saluran": "mobile",
+    "unit_geografis": "Palembang",
+    "event_time": "2024-05-27T09:40:34+00:00"
+  }
+]

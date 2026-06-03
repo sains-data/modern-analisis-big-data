@@ -11,6 +11,17 @@
 
 - [ ] [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Docker + tarball `bigdata-spark` (lihat Chapter 12)
+- [ ] Referensi data — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data
+
+| Layer | Volume referensi |
+|-------|------------------|
+| Silver | **15.000 baris** |
+| Gold `tren_bulanan` | **12** bulan |
+| Gold `omzet_kategori` | **6** kategori |
+| Gold `segmentasi_rfm` | **~300** partisipan |
+| Gold `omzet_kota` | **10** kota |
 
 ## Referensi buku
 
@@ -49,10 +60,19 @@ Isi tabel observasi (buku §14.2.1):
 
 | Layer | Baris | Ukuran |
 |---|---|---|
-| Silver | ~15.000 | |
-| Gold: tren_bulanan | 12 | |
-| Gold: omzet_kategori | 5 | |
-| Gold: segmentasi_rfm | ~300 | |
+| Silver | **~15.000** | |
+| Gold: tren_bulanan | **12** | |
+| Gold: omzet_kategori | **6** | |
+| Gold: segmentasi_rfm | **~300** | |
+| Gold: omzet_kota | **10** | |
+
+### Regenerasi data referensi (opsional)
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch14_e2e
+bash scripts/sync_to_chapters.sh
+```
 
 Preview MoM di log Spark: kolom `mom_growth` per `periode`.
 

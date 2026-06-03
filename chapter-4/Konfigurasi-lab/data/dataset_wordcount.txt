@@ -1,6 +1,6 @@
-hadoop hdfs mapreduce yarn hadoop
-namenode datanode hadoop hdfs blok
-mapreduce mapper reducer hadoop yarn
-hdfs replikasi blok namenode hadoop
-yarn resourcemanager nodemanager hadoop
-mapreduce hadoop hdfs paralel terdistribusi
+partisipan aktivitas saluran mobile web partisipan jakarta
+elektronik fashion makanan aktivitas saluran mobile partisipan
+hadoop hdfs mapreduce partisipan aktivitas saluran bronze silver
+namenode datanode hdfs blok replikasi catatan aktivitas hadoop
+mapreduce mapper reducer aktivitas partisipan saluran mobile web
+qris marketplace saluran mobile aktivitas partisipan surabaya bandung medan

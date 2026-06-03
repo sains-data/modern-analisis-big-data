@@ -1,82 +1,82 @@
 [
   {
-    "event_id": "bdd640fb",
+    "event_id": "a1f04a35",
     "user_id": "usr-0001",
-    "product": "makanan",
-    "channel": "web",
-    "amount": 1123821.58,
-    "event_time": "2024-04-15T08:00:00+00:00"
+    "product": "elektronik",
+    "channel": "mobile",
+    "amount": 12759222.36,
+    "event_time": "2024-02-08T02:30:56+00:00"
   },
   {
-    "event_id": "bd9c66b3",
+    "event_id": "c817df48",
     "user_id": "usr-0002",
-    "product": "otomotif",
-    "channel": "mobile",
-    "amount": 2956557.64,
-    "event_time": "2024-04-15T08:00:15+00:00"
-  },
-  {
-    "event_id": "37f8a88b",
-    "user_id": "usr-0003",
     "product": "fashion",
-    "channel": "mobile",
-    "amount": 2810612.86,
-    "event_time": "2024-04-15T08:00:30+00:00"
-  },
-  {
-    "event_id": "8b8148f6",
-    "user_id": "usr-0004",
-    "product": "kesehatan",
-    "channel": "web",
-    "amount": 2251553.14,
-    "event_time": "2024-04-15T08:00:45+00:00"
-  },
-  {
-    "event_id": "01a9e71f",
-    "user_id": "usr-0005",
-    "product": "fashion",
-    "channel": "teller",
-    "amount": 1707850.08,
-    "event_time": "2024-04-15T08:01:00+00:00"
-  },
-  {
-    "event_id": "c37459ee",
-    "user_id": "usr-0006",
-    "product": "makanan",
-    "channel": "mobile",
-    "amount": 472801.76,
-    "event_time": "2024-04-15T08:01:15+00:00"
-  },
-  {
-    "event_id": "580d7b71",
-    "user_id": "usr-0007",
-    "product": "otomotif",
     "channel": "atm",
-    "amount": 4037570.08,
-    "event_time": "2024-04-15T08:01:30+00:00"
+    "amount": 8303799.62,
+    "event_time": "2024-06-23T11:27:11+00:00"
   },
   {
-    "event_id": "1ff49b78",
-    "user_id": "usr-0008",
-    "product": "kesehatan",
-    "channel": "mobile",
-    "amount": 2764682.75,
-    "event_time": "2024-04-15T08:01:45+00:00"
+    "event_id": "6e3b169b",
+    "user_id": "usr-0001",
+    "product": "olahraga",
+    "channel": "teller",
+    "amount": 8912129.81,
+    "event_time": "2024-07-09T12:31:29+00:00"
   },
   {
-    "event_id": "e2acf72f",
-    "user_id": "usr-0009",
+    "event_id": "25f5c727",
+    "user_id": "usr-0017",
     "product": "makanan",
     "channel": "web",
-    "amount": 3525813.46,
-    "event_time": "2024-04-15T08:02:00+00:00"
+    "amount": 1485112.71,
+    "event_time": "2024-08-22T15:25:11+00:00"
   },
   {
-    "event_id": "c5e7ce8a",
-    "user_id": "usr-0010",
+    "event_id": "364a078c",
+    "user_id": "usr-0001",
+    "product": "elektronik",
+    "channel": "teller",
+    "amount": 72502631.44,
+    "event_time": "2024-04-08T06:27:21+00:00"
+  },
+  {
+    "event_id": "41b5b0ab",
+    "user_id": "usr-0009",
+    "product": "elektronik",
+    "channel": "atm",
+    "amount": 24436575.55,
+    "event_time": "2024-02-26T03:41:52+00:00"
+  },
+  {
+    "event_id": "0c5f6c20",
+    "user_id": "usr-0019",
+    "product": "fashion",
+    "channel": "web",
+    "amount": 7489950.69,
+    "event_time": "2024-01-15T00:57:44+00:00"
+  },
+  {
+    "event_id": "f7e29613",
+    "user_id": "usr-0012",
     "product": "makanan",
-    "channel": "mobile",
-    "amount": 4278035.43,
-    "event_time": "2024-04-15T08:02:15+00:00"
+    "channel": "web",
+    "amount": 342502.24,
+    "event_time": "2024-12-15T22:58:59+00:00"
+  },
+  {
+    "event_id": "a66ce7ef",
+    "user_id": "usr-0002",
+    "product": "olahraga",
+    "channel": "teller",
+    "amount": 20428044.75,
+    "event_time": "2024-11-02T20:09:03+00:00"
+  },
+  {
+    "event_id": "15d62c4c",
+    "user_id": "usr-0027",
+    "product": "kesehatan",
+    "channel": "web",
+    "amount": 1882549.73,
+    "event_time": "2024-08-24T15:33:59+00:00"
   }
 ]

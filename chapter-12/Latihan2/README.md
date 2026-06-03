@@ -9,8 +9,18 @@
 
 ## Prasyarat
 
-- [ ] Latihan 1 — Silver di `/datalake/silver/transaksi/`
+- [ ] Latihan 1 — Silver di `/datalake/silver/transaksi/` (**15.000 baris**)
 - [ ] `viz-postgres` berjalan (`bash start-viz.sh`)
+- [ ] Volume Gold harapan — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data (Gold)
+
+| Output | Volume referensi |
+|--------|------------------|
+| `gold_tren_bulanan` | **12** baris |
+| `gold_tren_lanjutan` | **12** baris (+ MA3, MoM) |
+| `gold_omzet_kelas` / `omzet_kategori` | **6** kategori |
+| `gold_omzet_geografis` / `omzet_kota` | **10** kota |
 
 ## Referensi buku (§12.3)
 
@@ -57,9 +67,9 @@ Sesuaikan `PG_JDBC_URL` di `.env` jika koneksi gagal (lihat Konfigurasi-lab READ
 
 | Tabel PostgreSQL | Jumlah baris | Status |
 |---|---|---|
-| `tren_bulanan` | ~12 | |
-| `omzet_kategori` | ~5 | |
-| `omzet_kota` | ~10 | |
+| `tren_bulanan` | **~12** | |
+| `omzet_kategori` | **~6** | |
+| `omzet_kota` | **~10** | |
 
 ## Refleksi
 

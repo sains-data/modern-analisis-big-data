@@ -19,6 +19,16 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Docker Engine berjalan
 - [ ] Python 3.10 atau 3.11 terpasang (`bash ../Konfigurasi-lab/scripts/check_python.sh`)
 - [ ] Virtual environment sudah dibuat (`bash ../Konfigurasi-lab/scripts/setup_venv.sh`)
+- [ ] File contoh event — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md) (`sample_events.json`, 10 record)
+
+---
+
+## Referensi data
+
+| File | Volume | Topik |
+|------|--------|-------|
+| `data/sample_events.json` | **10 record** | Contoh payload `transaksi-stream` |
+| `data/referensi_schema.json` | — | Schema lengkap topic Kafka |
 
 ---
 

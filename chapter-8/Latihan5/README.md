@@ -10,6 +10,7 @@
 ## Prasyarat
 
 - [ ] Latihan 1–4 selesai
+- [ ] Silver Parquet 500 baris + benchmark selesai
 
 ## Bagian A — External Table ORC
 

@@ -39,6 +39,8 @@ Buka http://localhost:8088, lalu catat:
 
 ### 3) Bandingkan ukuran file HDFS
 
+Input CSV berisi **10 baris** skor kompetensi; output Parquet berisi 10 baris + kolom turunan (`nilai_akhir`, `grade`).
+
 ```bash
 cd ../Konfigurasi-lab
 bash scripts/compare_hdfs_sizes.sh

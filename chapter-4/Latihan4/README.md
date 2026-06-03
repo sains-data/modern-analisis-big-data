@@ -12,6 +12,21 @@
 - [ ] Latihan 3 selesai
 - [ ] Direktori `/user/latihan/input` siap
 
+## Referensi data
+
+File `data/dataset_wordcount.txt` — **6 baris** token (spasi-separated) dengan kosakata selaras entitas sintesis:
+
+| Token dominan | Frekuensi harapan |
+|---------------|-------------------|
+| `partisipan` | 6 |
+| `aktivitas` | 6 |
+| `saluran` | 5 |
+| `mobile` | 4 |
+| `hadoop` | 2 |
+| `hdfs` | 2 |
+
+Detail lengkap: [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
 ## Langkah Kerja
 
 ### 1) Siapkan dataset input
@@ -41,7 +56,8 @@ Atau manual di `bash login.sh` dengan `hdfs dfs -cat ...`
 
 ## Hasil yang Dicatat
 
-- Kata dengan frekuensi tertinggi
+- Kata dengan frekuensi tertinggi (`partisipan` / `aktivitas` — harapan 6)
+- Frekuensi kata `hadoop` dan `hdfs`
 - Status aplikasi YARN (`RUNNING -> SUCCEEDED`)
 - Persentase progres fase map dan reduce
 
@@ -49,6 +65,7 @@ Atau manual di `bash login.sh` dengan `hdfs dfs -cat ...`
 
 1. Kenapa fase reduce menunggu map selesai?
 2. Apa fungsi fase `shuffle and sort` dalam hasil akhir?
+3. Mengapa kosakata latihan WordCount selaras dengan Bab 3 (partisipan, aktivitas, saluran)?
 
 ---
 

@@ -2,6 +2,8 @@
 
 Praktik chapter ini mengintegrasikan **Apache Airflow** (orkestrasi), **Apache Atlas** (metadata & lineage), dan klaster **HDFS + Spark + Hive** (`bigdata-spark` dari Chapter 5).
 
+Dataset referensi **`transaksi_harian.csv`** (100 baris, ~3% invalid) dihasilkan generator sintesis [`synthetic-data/`](../synthetic-data/README.md) — entitas `catatan_aktivitas`. Runtime DAG memakai `generate_data.py` dengan seed per tanggal.
+
 Sumber materi: bagian **Sesi Praktik: Orkestrasi dan Tata Kelola Data** di `chapter-9.tex`.
 
 ## Komponen
@@ -31,7 +33,17 @@ chapter-9/
 | 3 | `bash scripts/setup_bigdata_spark.sh` |
 | 4 | Kerjakan Latihan 1 → 5 |
 
-Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
+
+## Data latihan
+
+| File | Volume | Catatan |
+|------|--------|---------|
+| `transaksi_harian.csv` | **100 baris** | Legacy: `id, nilai, kategori` |
+| `catatan_aktivitas_harian.csv` | 100 baris | Schema kanonik + anomali ~3% |
+| Silver (hasil ETL) | **~97 baris** | 3 baris invalid ditolak |
+
+Runtime DAG: `generate_data.py {{ ds }} 100` — pola invalid serupa, nilai berbeda per tanggal.
 
 ## Port & kredensial (dari host)
 

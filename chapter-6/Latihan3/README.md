@@ -12,6 +12,12 @@
 - [ ] Latihan 1–2 selesai
 - [ ] Data Silver tersedia di `/datalake/silver/transaksi/`
 
+## Referensi data
+
+- Silver: **12 baris** transaksi valid (dari 16 Bronze)
+- Pelanggan Bronze: **7 partisipan** (C001–C007, broadcast join)
+- Tidak ada transaksi orphan setelah validasi Silver (TRX011 sudah ditolak di Latihan 2)
+
 ## Referensi Lingkungan Lab
 
 | Path | Layer |

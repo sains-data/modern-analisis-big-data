@@ -2,6 +2,8 @@
 
 Praktik **Medallion Architecture berbasis Apache Arrow** di Python lokal (PyArrow → DuckDB → Polars). Tanpa klaster Spark/Hadoop.
 
+Dataset **identik Bab 6** — entitas sintesis `catatan_aktivitas` + `entitas_partisipan`. Detail: [KATALOG-DATA.md](KATALOG-DATA.md).
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -20,9 +22,12 @@ Praktik **Medallion Architecture berbasis Apache Arrow** di Python lokal (PyArro
 Konfigurasi-lab/
 ├── setup.sh
 ├── requirements.txt
+├── KATALOG-DATA.md
 ├── data/
-│   ├── transaksi.csv
-│   └── pelanggan.csv
+│   ├── transaksi.csv           ← 16 baris (legacy)
+│   ├── pelanggan.csv           ← 7 baris
+│   ├── catatan_aktivitas.csv   ← schema kanonik
+│   └── entitas_partisipan.csv
 ├── app/
 │   ├── paths.py
 │   ├── bronze_arrow.py
@@ -34,15 +39,18 @@ Konfigurasi-lab/
 │   ├── silver/transaksi/
 │   └── gold/
 └── scripts/
-    ├── verify_deps.sh
-    ├── setup_dirs.sh
-    ├── run_bronze.sh
-    ├── run_silver.sh
-    ├── run_gold.sh
-    ├── run_validasi.sh
-    ├── run_pipeline.sh
+    ├── run_bronze.sh … run_pipeline.sh
     └── verify_datalake.sh
 ```
+
+## Volume harapan
+
+| Layer | Baris |
+|-------|-------|
+| CSV `transaksi.csv` | 16 |
+| Bronze Parquet | 15 |
+| Silver | **12** |
+| Pelanggan | 7 |
 
 ## Setup pertama kali
 
@@ -58,20 +66,33 @@ bash scripts/verify_deps.sh
 
 | Perintah | Latihan | Engine |
 |---|---|---|
-| `bash scripts/verify_deps.sh` | 1 | — |
 | `bash scripts/run_bronze.sh` | 2 | PyArrow |
 | `bash scripts/run_silver.sh` | 3 | DuckDB |
 | `bash scripts/run_gold.sh` | 4 | Polars |
-| `bash scripts/run_validasi.sh` | 5 | PyArrow + DuckDB |
+| `bash scripts/run_validasi.sh` | 5 | DuckDB audit |
 | `bash scripts/run_pipeline.sh` | 2–5 (end-to-end) | semua |
-
-Verifikasi output:
 
 ```bash
 bash scripts/verify_datalake.sh
 ```
 
+## Regenerasi data sintesis
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch06_medallion
+bash scripts/sync_to_chapters.sh
+```
+
 ## Prasyarat konsep
 
-- Chapter 6: dataset transaksi/pelanggan dan konsep Medallion
-- Chapter 7: format kolumnar Arrow, zero-copy, lazy evaluation
+- Bab 6: konsep Medallion + anomali dataset (volume Silver 12 baris)
+- Bab 7: format kolumnar Arrow, zero-copy, lazy evaluation
+
+## Troubleshooting
+
+| Gejala | Solusi |
+|---|---|
+| Silver ≠ 12 baris | Regenerasi sync; reset `datalake/` lalu `run_pipeline.sh` |
+| Bronze ≠ 15 baris | Pastikan CSV 16 baris; dedup TRX001 di Bronze |
+| Omzet Silver ≠ Gold | Jalankan ulang `run_gold.sh` setelah Silver stabil |

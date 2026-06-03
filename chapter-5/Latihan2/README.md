@@ -53,4 +53,4 @@ Saat job berjalan, buka:
 
 ---
 
-*Latihan 2 selesai. Lanjut ke **Latihan 3 — DataFrame API: Analisis Nilai Mahasiswa**.*
+*Latihan 2 selesai. Lanjut ke **Latihan 3 — DataFrame API: Analisis Skor Kompetensi**.*

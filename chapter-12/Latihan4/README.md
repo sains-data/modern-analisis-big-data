@@ -10,6 +10,7 @@
 ## Prasyarat
 
 - [ ] Latihan 3 — keempat chart tersimpan
+- [ ] Data 12 bulan × 6 kategori × 10 kota — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Layout (sesuai buku §12-prak-4)
 

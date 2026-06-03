@@ -20,6 +20,8 @@ bash scripts/hdfs_management.sh
 
 ## Validasi — re-run WordCount
 
+Setelah manajemen HDFS, jalankan ulang WordCount. Output baru harus tetap menunjukkan frekuensi dominan **`partisipan`** (6) dan **`aktivitas`** (6).
+
 ```bash
 bash scripts/hdfs_management.sh --rerun-wordcount
 ```

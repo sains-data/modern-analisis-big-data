@@ -5,12 +5,25 @@
 
 - Menjalankan klaster Hadoop-Spark berbasis Docker
 - Memverifikasi HDFS dan YARN aktif
-- Menyiapkan dataset `mahasiswa.csv` di HDFS
+- Menyiapkan dataset skor kompetensi (`mahasiswa.csv`) di HDFS
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Tarball Hadoop & Spark ada di `vendor/bigdata-spark/` (lihat Konfigurasi-lab)
+- [ ] File `data/mahasiswa.csv` tersedia (**10 baris**) — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data
+
+| Item | Nilai |
+|------|-------|
+| File lokal | `Konfigurasi-lab/data/mahasiswa.csv` |
+| Volume | 10 partisipan |
+| Kolom | `nim`, `nama`, `nilai_uts`, `nilai_uas`, `nilai_tugas` |
+| Sumber | Generator sintesis Copula — entitas `skor_kompetensi` |
+| Entitas kanonik | `data/skor_kompetensi.csv` (`id_partisipan`, `skor_modul_a/b/c`) |
+
+Nama partisipan (Andi Saputra, Budi Santoso, …) selaras dengan Bab 3.
 
 ## Referensi Lingkungan Lab
 
@@ -33,11 +46,13 @@ bash start.sh
 bash scripts/verify_cluster.sh
 ```
 
-### 2) Upload data mahasiswa ke HDFS
+### 2) Upload data ke HDFS
 
 ```bash
 bash scripts/setup_hdfs_mahasiswa.sh
 ```
+
+Skrip mengunggah `mahasiswa.csv` ke `/user/lab/modul5/mahasiswa.csv`.
 
 Opsional — shell di dalam kontainer:
 
@@ -46,13 +61,15 @@ bash login.sh
 cat /tmp/bootstrap.log
 jps
 hdfs dfs -ls /user/lab/modul5/
+hdfs dfs -cat /user/lab/modul5/mahasiswa.csv
 ```
 
 ## Hasil yang Dicatat
 
 - Status daemon dari `jps`
 - Ringkasan `hdfs dfsadmin -report`
-- Konfirmasi file `mahasiswa.csv` ada di HDFS
+- Konfirmasi **10 baris** data di HDFS (preview `head -5`)
+- Contoh satu baris: `nim`, `nama`, tiga nilai skor
 
 ---
 

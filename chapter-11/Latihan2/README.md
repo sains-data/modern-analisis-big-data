@@ -1,10 +1,19 @@
 # Latihan 2 — Supervised Learning: Regresi dan Klasifikasi
-**Modul 9 · Machine Learning Big Data** | Estimasi waktu: **35 menit**
+**Chapter 11 · Machine Learning Big Data** | Estimasi waktu: **35 menit**
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
-- [ ] Latihan 1 selesai (data tersedia di Silver layer)
+- [ ] Latihan 1 selesai (10.000 baris di Silver layer)
+- [ ] Label `segmen` — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md): tinggi ~78%, menengah ~21%, rendah ~1%
+
+## Referensi data
+
+| Kolom | Peran |
+|-------|-------|
+| `total_nilai` | Target regresi |
+| `segmen` | Target klasifikasi (3 kelas, tidak seimbang) |
+| `kuantitas`, `harga_satuan`, `diskon`, `berat_kg`, `kategori`, `channel` | Fitur |
 
 ## Referensi Lingkungan Lab
 

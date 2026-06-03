@@ -10,7 +10,7 @@ KAFKA_SERVER = "localhost:9092"
 TOPIC_NAME = "transaksi-stream"
 
 CHANNELS = ["mobile", "web", "atm", "teller"]
-PRODUCTS = ["elektronik", "fashion", "makanan", "kesehatan", "otomotif"]
+PRODUCTS = ["elektronik", "fashion", "makanan", "kesehatan", "otomotif", "olahraga"]
 USER_IDS = [f"usr-{i:04d}" for i in range(1, 51)]
 
 producer = KafkaProducer(

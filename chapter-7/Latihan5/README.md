@@ -48,18 +48,26 @@ duckdb.sql(\"\"\"
 "
 ```
 
-**B — Bandingkan dengan Chapter 6:** catat startup time dan ukuran output Spark di HDFS vs pipeline lokal Arrow.
+**B — Bandingkan dengan Bab 6:**
+
+| Metrik | Bab 6 (Spark/HDFS) | Bab 7 (Arrow lokal) |
+|--------|-------------------|---------------------|
+| Baris Silver | 12 | 12 |
+| Dedup di | Silver | Bronze |
+| Storage | `/datalake/` HDFS | `datalake/` lokal |
+
+Catat startup time dan ukuran output.
 
 ## Tabel Pencatatan
 
-| Metrik | Nilai |
-|---|---|
-| Baris Bronze | |
-| Baris Silver | |
-| % baris ditolak | |
-| Omzet Silver | |
-| Omzet Gold (sum per_kategori) | |
-| Status konsistensi | |
+| Metrik | Harapan | Nilai Anda |
+|---|---|---|
+| Baris Bronze | 15 | |
+| Baris Silver | **12** | |
+| % baris ditolak (Silver) | 20% | |
+| Omzet Silver | (dari audit) | |
+| Omzet Gold (sum per_kategori) | = Omzet Silver | |
+| Status konsistensi | OK | |
 | Ukuran Bronze / Silver / Gold (byte) | |
 
 ## Pertanyaan Diskusi

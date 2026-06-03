@@ -1,10 +1,11 @@
 # Latihan 4 — Pipeline ML End-to-End
-**Modul 9 · Machine Learning Big Data** | Estimasi waktu: **15 menit**
+**Chapter 11 · Machine Learning Big Data** | Estimasi waktu: **15 menit**
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Latihan 1–3 selesai
+- [ ] Dataset & label — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Referensi Lingkungan Lab
 

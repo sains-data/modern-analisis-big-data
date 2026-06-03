@@ -1,10 +1,21 @@
 # Latihan 3 — Unsupervised Learning: K-Means Clustering
-**Modul 9 · Machine Learning Big Data** | Estimasi waktu: **20 menit**
+**Chapter 11 · Machine Learning Big Data** | Estimasi waktu: **20 menit**
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Latihan 1–2 selesai
+- [ ] Agregasi pelanggan — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md) · `Data/pelanggan_agregat.json` (**200 baris**)
+
+## Referensi data
+
+| Fitur agregat | Definisi |
+|---------------|----------|
+| `total_trx` | Jumlah transaksi per pelanggan |
+| `total_belanja` | Σ `total_nilai` |
+| `avg_belanja` | Rata-rata nilai transaksi |
+| `maks_belanja` | Transaksi terbesar |
+| `ragam_kategori` | Jumlah kategori unik |
 
 ## Referensi Lingkungan Lab
 

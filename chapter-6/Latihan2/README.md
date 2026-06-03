@@ -9,7 +9,18 @@
 
 ## Prasyarat
 
-- [ ] Latihan 1 selesai — data Bronze ada di `/datalake/bronze/transaksi/`
+- [ ] Latihan 1 selesai — **16 baris** Bronze di `/datalake/bronze/transaksi/`
+
+## Referensi volume harapan
+
+| Tahap | Baris | Keterangan |
+|-------|-------|------------|
+| Bronze (raw) | 16 | Termasuk duplikat TRX001 |
+| Setelah dedup | 15 | TRX001 satu kali |
+| Silver (valid) | **12** | TRX011, TRX012, TRX013 ditolak |
+| Ditolak | 4 | 1 duplikat + 3 invalid |
+
+Detail anomali: [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Referensi Lingkungan Lab
 
@@ -23,12 +34,15 @@
 
 ### 1) Tinjau skrip pipeline
 
-Buka dan pahami alur di `Konfigurasi-lab/app/pipeline_bronze_silver.py`:
+Alur `pipeline_bronze_silver.py`:
 - baca Bronze dengan `StructType` eksplisit
-- dedup, cast, trim, validasi (`jumlah > 0`, `kuantitas > 0`)
-- tulis Parquet terpartisi `tahun`, `bulan`
+- `dropDuplicates(["id_transaksi"])`
+- standarisasi: `lower(kategori)`, `initcap(kota)` — TRX014 `palembang` → `Palembang`
+- validasi: `id_pelanggan` not null, `jumlah > 0`, `kuantitas > 0`
+- kolom turunan: `total_nilai = jumlah × kuantitas`
+- tulis Parquet partisi `tahun`, `bulan`
 
-### 2) Jalankan pipeline (dari host)
+### 2) Jalankan pipeline
 
 ```bash
 cd sesi-praktikum/chapter-6/Konfigurasi-lab
@@ -41,18 +55,26 @@ Pantau job di http://localhost:8088 dan http://localhost:4040.
 
 ```bash
 bash scripts/spark_exec.sh "hdfs dfs -ls -R /datalake/silver/transaksi/"
-bash scripts/spark_exec.sh "hdfs dfs -du -h /datalake/silver/transaksi/"
+```
+
+Log pipeline harus menampilkan:
+
+```
+baris_masuk: 16
+baris_valid: 12
+baris_ditolak: 4
 ```
 
 ## Hasil yang Dicatat
 
-- Jumlah baris Bronze vs baris valid Silver
-- Baris yang ditolak beserta alasan (TRX011, TRX012, duplikat TRX001)
-- Struktur sub-direktori `tahun=.../bulan=...`
+- Jumlah baris Bronze (16) vs Silver (**12**)
+- Baris ditolak: TRX011 (FK kosong), TRX012 (negatif), TRX013 (qty 0), + duplikat TRX001
+- TRX014 lolos dengan kota `Palembang` setelah `initcap`
+- Struktur partisi `tahun=2024/bulan=...`
 
 ## Refleksi Singkat
 
-1. Dari 15 baris Bronze, berapa yang lolos validasi?
+1. Dari 16 baris Bronze, mengapa hanya 12 yang lolos (bukan 15)?
 2. Mengapa `StructType` lebih baik dari `inferSchema=True` di produksi?
 
 ---

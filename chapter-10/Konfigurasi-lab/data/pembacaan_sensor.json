@@ -1,0 +1,902 @@
+[
+  {
+    "event_id": "9421439f",
+    "sensor_id": "sensor-001",
+    "lokasi": "gudang-A",
+    "suhu": 20.33,
+    "kelembapan": 43.04,
+    "status": "normal",
+    "event_time": "2024-04-15T08:00:00+00:00"
+  },
+  {
+    "event_id": "bcc79c29",
+    "sensor_id": "sensor-002",
+    "lokasi": "gudang-B",
+    "suhu": 31.49,
+    "kelembapan": 66.73,
+    "status": "normal",
+    "event_time": "2024-04-15T08:00:15+00:00"
+  },
+  {
+    "event_id": "824f465a",
+    "sensor_id": "sensor-003",
+    "lokasi": "lantai-1",
+    "suhu": 25.99,
+    "kelembapan": 46.95,
+    "status": "normal",
+    "event_time": "2024-04-15T08:00:30+00:00"
+  },
+  {
+    "event_id": "4705955e",
+    "sensor_id": "sensor-004",
+    "lokasi": "lantai-2",
+    "suhu": 27.19,
+    "kelembapan": 68.02,
+    "status": "normal",
+    "event_time": "2024-04-15T08:00:45+00:00"
+  },
+  {
+    "event_id": "24951a32",
+    "sensor_id": "sensor-005",
+    "lokasi": "parkir",
+    "suhu": 36.83,
+    "kelembapan": 51.79,
+    "status": "warning",
+    "event_time": "2024-04-15T08:01:00+00:00"
+  },
+  {
+    "event_id": "2ce5e8f1",
+    "sensor_id": "sensor-006",
+    "lokasi": "gudang-A",
+    "suhu": 32.5,
+    "kelembapan": 75.37,
+    "status": "warning",
+    "event_time": "2024-04-15T08:01:15+00:00"
+  },
+  {
+    "event_id": "31191820",
+    "sensor_id": "sensor-007",
+    "lokasi": "gudang-B",
+    "suhu": 30.63,
+    "kelembapan": 64.38,
+    "status": "normal",
+    "event_time": "2024-04-15T08:01:30+00:00"
+  },
+  {
+    "event_id": "d8432f5e",
+    "sensor_id": "sensor-008",
+    "lokasi": "lantai-1",
+    "suhu": 29.03,
+    "kelembapan": 43.31,
+    "status": "normal",
+    "event_time": "2024-04-15T08:01:45+00:00"
+  },
+  {
+    "event_id": "bec9a947",
+    "sensor_id": "sensor-009",
+    "lokasi": "lantai-2",
+    "suhu": 25.01,
+    "kelembapan": 50.12,
+    "status": "normal",
+    "event_time": "2024-04-15T08:02:00+00:00"
+  },
+  {
+    "event_id": "961f026b",
+    "sensor_id": "sensor-010",
+    "lokasi": "parkir",
+    "suhu": 34.9,
+    "kelembapan": 87.95,
+    "status": "critical",
+    "event_time": "2024-04-15T08:02:15+00:00"
+  },
+  {
+    "event_id": "dbcec8b4",
+    "sensor_id": "sensor-011",
+    "lokasi": "gudang-A",
+    "suhu": 42.69,
+    "kelembapan": 48.78,
+    "status": "critical",
+    "event_time": "2024-04-15T08:02:30+00:00"
+  },
+  {
+    "event_id": "097e06d6",
+    "sensor_id": "sensor-012",
+    "lokasi": "gudang-B",
+    "suhu": 43.1,
+    "kelembapan": 67.42,
+    "status": "critical",
+    "event_time": "2024-04-15T08:02:45+00:00"
+  },
+  {
+    "event_id": "87b85403",
+    "sensor_id": "sensor-013",
+    "lokasi": "lantai-1",
+    "suhu": 33.56,
+    "kelembapan": 55.39,
+    "status": "normal",
+    "event_time": "2024-04-15T08:03:00+00:00"
+  },
+  {
+    "event_id": "5d2790c1",
+    "sensor_id": "sensor-014",
+    "lokasi": "lantai-2",
+    "suhu": 31.93,
+    "kelembapan": 73.97,
+    "status": "normal",
+    "event_time": "2024-04-15T08:03:15+00:00"
+  },
+  {
+    "event_id": "c3b78522",
+    "sensor_id": "sensor-015",
+    "lokasi": "parkir",
+    "suhu": 28.09,
+    "kelembapan": 57.34,
+    "status": "normal",
+    "event_time": "2024-04-15T08:03:30+00:00"
+  },
+  {
+    "event_id": "c7108b00",
+    "sensor_id": "sensor-016",
+    "lokasi": "gudang-A",
+    "suhu": 26.2,
+    "kelembapan": 59.87,
+    "status": "normal",
+    "event_time": "2024-04-15T08:03:45+00:00"
+  },
+  {
+    "event_id": "b4e83b76",
+    "sensor_id": "sensor-017",
+    "lokasi": "gudang-B",
+    "suhu": 44.38,
+    "kelembapan": 86.47,
+    "status": "critical",
+    "event_time": "2024-04-15T08:04:00+00:00"
+  },
+  {
+    "event_id": "5010c8ba",
+    "sensor_id": "sensor-018",
+    "lokasi": "lantai-1",
+    "suhu": 44.11,
+    "kelembapan": 88.04,
+    "status": "critical",
+    "event_time": "2024-04-15T08:04:15+00:00"
+  },
+  {
+    "event_id": "6e4ef675",
+    "sensor_id": "sensor-019",
+    "lokasi": "lantai-2",
+    "suhu": 27.12,
+    "kelembapan": 73.07,
+    "status": "normal",
+    "event_time": "2024-04-15T08:04:30+00:00"
+  },
+  {
+    "event_id": "0bff81e1",
+    "sensor_id": "sensor-020",
+    "lokasi": "parkir",
+    "suhu": 23.37,
+    "kelembapan": 41.32,
+    "status": "normal",
+    "event_time": "2024-04-15T08:04:45+00:00"
+  },
+  {
+    "event_id": "931f99e6",
+    "sensor_id": "sensor-001",
+    "lokasi": "gudang-A",
+    "suhu": 34.02,
+    "kelembapan": 75.19,
+    "status": "warning",
+    "event_time": "2024-04-15T08:05:00+00:00"
+  },
+  {
+    "event_id": "09713b20",
+    "sensor_id": "sensor-002",
+    "lokasi": "gudang-B",
+    "suhu": 36.77,
+    "kelembapan": 70.22,
+    "status": "warning",
+    "event_time": "2024-04-15T08:05:15+00:00"
+  },
+  {
+    "event_id": "b4e26263",
+    "sensor_id": "sensor-003",
+    "lokasi": "lantai-1",
+    "suhu": 27.54,
+    "kelembapan": 37.75,
+    "status": "normal",
+    "event_time": "2024-04-15T08:05:30+00:00"
+  },
+  {
+    "event_id": "5d1a4bcc",
+    "sensor_id": "sensor-004",
+    "lokasi": "lantai-2",
+    "suhu": 23.7,
+    "kelembapan": 52.86,
+    "status": "normal",
+    "event_time": "2024-04-15T08:05:45+00:00"
+  },
+  {
+    "event_id": "532f9173",
+    "sensor_id": "sensor-005",
+    "lokasi": "parkir",
+    "suhu": 35.12,
+    "kelembapan": 84.52,
+    "status": "warning",
+    "event_time": "2024-04-15T08:06:00+00:00"
+  },
+  {
+    "event_id": "ab6b464f",
+    "sensor_id": "sensor-006",
+    "lokasi": "gudang-A",
+    "suhu": 26.52,
+    "kelembapan": 47.91,
+    "status": "normal",
+    "event_time": "2024-04-15T08:06:15+00:00"
+  },
+  {
+    "event_id": "51bbbd93",
+    "sensor_id": "sensor-007",
+    "lokasi": "gudang-B",
+    "suhu": 41.65,
+    "kelembapan": 63.98,
+    "status": "critical",
+    "event_time": "2024-04-15T08:06:30+00:00"
+  },
+  {
+    "event_id": "56947cdb",
+    "sensor_id": "sensor-008",
+    "lokasi": "lantai-1",
+    "suhu": 34.02,
+    "kelembapan": 76.35,
+    "status": "warning",
+    "event_time": "2024-04-15T08:06:45+00:00"
+  },
+  {
+    "event_id": "50038bbc",
+    "sensor_id": "sensor-009",
+    "lokasi": "lantai-2",
+    "suhu": 37.81,
+    "kelembapan": 81.04,
+    "status": "warning",
+    "event_time": "2024-04-15T08:07:00+00:00"
+  },
+  {
+    "event_id": "93fa27de",
+    "sensor_id": "sensor-010",
+    "lokasi": "parkir",
+    "suhu": 41.88,
+    "kelembapan": 79.38,
+    "status": "critical",
+    "event_time": "2024-04-15T08:07:15+00:00"
+  },
+  {
+    "event_id": "edbef7de",
+    "sensor_id": "sensor-011",
+    "lokasi": "gudang-A",
+    "suhu": 21.91,
+    "kelembapan": 83.63,
+    "status": "warning",
+    "event_time": "2024-04-15T08:07:30+00:00"
+  },
+  {
+    "event_id": "5b47457b",
+    "sensor_id": "sensor-012",
+    "lokasi": "gudang-B",
+    "suhu": 35.88,
+    "kelembapan": 88.5,
+    "status": "critical",
+    "event_time": "2024-04-15T08:07:45+00:00"
+  },
+  {
+    "event_id": "9aefca75",
+    "sensor_id": "sensor-013",
+    "lokasi": "lantai-1",
+    "suhu": 29.07,
+    "kelembapan": 62.39,
+    "status": "normal",
+    "event_time": "2024-04-15T08:08:00+00:00"
+  },
+  {
+    "event_id": "569717c3",
+    "sensor_id": "sensor-014",
+    "lokasi": "lantai-2",
+    "suhu": 29.15,
+    "kelembapan": 63.45,
+    "status": "normal",
+    "event_time": "2024-04-15T08:08:15+00:00"
+  },
+  {
+    "event_id": "47ba784a",
+    "sensor_id": "sensor-015",
+    "lokasi": "parkir",
+    "suhu": 26.3,
+    "kelembapan": 79.35,
+    "status": "warning",
+    "event_time": "2024-04-15T08:08:30+00:00"
+  },
+  {
+    "event_id": "2c546368",
+    "sensor_id": "sensor-016",
+    "lokasi": "gudang-A",
+    "suhu": 30.15,
+    "kelembapan": 80.51,
+    "status": "warning",
+    "event_time": "2024-04-15T08:08:45+00:00"
+  },
+  {
+    "event_id": "1d78bac4",
+    "sensor_id": "sensor-017",
+    "lokasi": "gudang-B",
+    "suhu": 37.91,
+    "kelembapan": 71.62,
+    "status": "warning",
+    "event_time": "2024-04-15T08:09:00+00:00"
+  },
+  {
+    "event_id": "b6d16bab",
+    "sensor_id": "sensor-018",
+    "lokasi": "lantai-1",
+    "suhu": 38.53,
+    "kelembapan": 82.45,
+    "status": "warning",
+    "event_time": "2024-04-15T08:09:15+00:00"
+  },
+  {
+    "event_id": "9e0cc670",
+    "sensor_id": "sensor-019",
+    "lokasi": "lantai-2",
+    "suhu": 23.04,
+    "kelembapan": 36.32,
+    "status": "normal",
+    "event_time": "2024-04-15T08:09:30+00:00"
+  },
+  {
+    "event_id": "36ed1d92",
+    "sensor_id": "sensor-020",
+    "lokasi": "parkir",
+    "suhu": 39.52,
+    "kelembapan": 49.67,
+    "status": "warning",
+    "event_time": "2024-04-15T08:09:45+00:00"
+  },
+  {
+    "event_id": "17d7148b",
+    "sensor_id": "sensor-001",
+    "lokasi": "gudang-A",
+    "suhu": 41.41,
+    "kelembapan": 44.88,
+    "status": "critical",
+    "event_time": "2024-04-15T08:10:00+00:00"
+  },
+  {
+    "event_id": "c6e6c182",
+    "sensor_id": "sensor-002",
+    "lokasi": "gudang-B",
+    "suhu": 38.47,
+    "kelembapan": 78.76,
+    "status": "warning",
+    "event_time": "2024-04-15T08:10:15+00:00"
+  },
+  {
+    "event_id": "1adceb53",
+    "sensor_id": "sensor-003",
+    "lokasi": "lantai-1",
+    "suhu": 20.1,
+    "kelembapan": 70.1,
+    "status": "normal",
+    "event_time": "2024-04-15T08:10:30+00:00"
+  },
+  {
+    "event_id": "299372e8",
+    "sensor_id": "sensor-004",
+    "lokasi": "lantai-2",
+    "suhu": 29.6,
+    "kelembapan": 83.95,
+    "status": "warning",
+    "event_time": "2024-04-15T08:10:45+00:00"
+  },
+  {
+    "event_id": "3515de4e",
+    "sensor_id": "sensor-005",
+    "lokasi": "parkir",
+    "suhu": 31.3,
+    "kelembapan": 53.23,
+    "status": "normal",
+    "event_time": "2024-04-15T08:11:00+00:00"
+  },
+  {
+    "event_id": "c23f9dd6",
+    "sensor_id": "sensor-006",
+    "lokasi": "gudang-A",
+    "suhu": 28.65,
+    "kelembapan": 52.29,
+    "status": "normal",
+    "event_time": "2024-04-15T08:11:15+00:00"
+  },
+  {
+    "event_id": "d415f807",
+    "sensor_id": "sensor-007",
+    "lokasi": "gudang-B",
+    "suhu": 33.81,
+    "kelembapan": 52.56,
+    "status": "normal",
+    "event_time": "2024-04-15T08:11:30+00:00"
+  },
+  {
+    "event_id": "78b78563",
+    "sensor_id": "sensor-008",
+    "lokasi": "lantai-1",
+    "suhu": 44.45,
+    "kelembapan": 67.63,
+    "status": "critical",
+    "event_time": "2024-04-15T08:11:45+00:00"
+  },
+  {
+    "event_id": "7d18d30d",
+    "sensor_id": "sensor-009",
+    "lokasi": "lantai-2",
+    "suhu": 28.66,
+    "kelembapan": 44.55,
+    "status": "normal",
+    "event_time": "2024-04-15T08:12:00+00:00"
+  },
+  {
+    "event_id": "061d88bb",
+    "sensor_id": "sensor-010",
+    "lokasi": "parkir",
+    "suhu": 37.23,
+    "kelembapan": 71.56,
+    "status": "warning",
+    "event_time": "2024-04-15T08:12:15+00:00"
+  },
+  {
+    "event_id": "38d5c364",
+    "sensor_id": "sensor-011",
+    "lokasi": "gudang-A",
+    "suhu": 25.56,
+    "kelembapan": 47.14,
+    "status": "normal",
+    "event_time": "2024-04-15T08:12:30+00:00"
+  },
+  {
+    "event_id": "17cd3e1b",
+    "sensor_id": "sensor-012",
+    "lokasi": "gudang-B",
+    "suhu": 31.28,
+    "kelembapan": 83.33,
+    "status": "warning",
+    "event_time": "2024-04-15T08:12:45+00:00"
+  },
+  {
+    "event_id": "336052a7",
+    "sensor_id": "sensor-013",
+    "lokasi": "lantai-1",
+    "suhu": 21.39,
+    "kelembapan": 38.81,
+    "status": "normal",
+    "event_time": "2024-04-15T08:13:00+00:00"
+  },
+  {
+    "event_id": "44f84654",
+    "sensor_id": "sensor-014",
+    "lokasi": "lantai-2",
+    "suhu": 21.69,
+    "kelembapan": 56.79,
+    "status": "normal",
+    "event_time": "2024-04-15T08:13:15+00:00"
+  },
+  {
+    "event_id": "19b3d42f",
+    "sensor_id": "sensor-015",
+    "lokasi": "parkir",
+    "suhu": 22.5,
+    "kelembapan": 46.27,
+    "status": "normal",
+    "event_time": "2024-04-15T08:13:30+00:00"
+  },
+  {
+    "event_id": "c2c1f4c3",
+    "sensor_id": "sensor-016",
+    "lokasi": "gudang-A",
+    "suhu": 25.4,
+    "kelembapan": 54.87,
+    "status": "normal",
+    "event_time": "2024-04-15T08:13:45+00:00"
+  },
+  {
+    "event_id": "d01d9b9f",
+    "sensor_id": "sensor-017",
+    "lokasi": "gudang-B",
+    "suhu": 37.59,
+    "kelembapan": 84.21,
+    "status": "warning",
+    "event_time": "2024-04-15T08:14:00+00:00"
+  },
+  {
+    "event_id": "87001fdc",
+    "sensor_id": "sensor-018",
+    "lokasi": "lantai-1",
+    "suhu": 43.54,
+    "kelembapan": 75.47,
+    "status": "critical",
+    "event_time": "2024-04-15T08:14:15+00:00"
+  },
+  {
+    "event_id": "b1c1f618",
+    "sensor_id": "sensor-019",
+    "lokasi": "lantai-2",
+    "suhu": 21.51,
+    "kelembapan": 45.85,
+    "status": "normal",
+    "event_time": "2024-04-15T08:14:30+00:00"
+  },
+  {
+    "event_id": "804476a3",
+    "sensor_id": "sensor-020",
+    "lokasi": "parkir",
+    "suhu": 23.42,
+    "kelembapan": 34.91,
+    "status": "normal",
+    "event_time": "2024-04-15T08:14:45+00:00"
+  },
+  {
+    "event_id": "039fac5c",
+    "sensor_id": "sensor-001",
+    "lokasi": "gudang-A",
+    "suhu": 41.59,
+    "kelembapan": 77.84,
+    "status": "critical",
+    "event_time": "2024-04-15T08:15:00+00:00"
+  },
+  {
+    "event_id": "5719c7d8",
+    "sensor_id": "sensor-002",
+    "lokasi": "gudang-B",
+    "suhu": 31.22,
+    "kelembapan": 58.99,
+    "status": "normal",
+    "event_time": "2024-04-15T08:15:15+00:00"
+  },
+  {
+    "event_id": "734e56e9",
+    "sensor_id": "sensor-003",
+    "lokasi": "lantai-1",
+    "suhu": 25.66,
+    "kelembapan": 37.55,
+    "status": "normal",
+    "event_time": "2024-04-15T08:15:30+00:00"
+  },
+  {
+    "event_id": "88758908",
+    "sensor_id": "sensor-004",
+    "lokasi": "lantai-2",
+    "suhu": 34.94,
+    "kelembapan": 42.09,
+    "status": "normal",
+    "event_time": "2024-04-15T08:15:45+00:00"
+  },
+  {
+    "event_id": "1d03649c",
+    "sensor_id": "sensor-005",
+    "lokasi": "parkir",
+    "suhu": 28.81,
+    "kelembapan": 51.23,
+    "status": "normal",
+    "event_time": "2024-04-15T08:16:00+00:00"
+  },
+  {
+    "event_id": "33e98900",
+    "sensor_id": "sensor-006",
+    "lokasi": "gudang-A",
+    "suhu": 39.38,
+    "kelembapan": 71.45,
+    "status": "warning",
+    "event_time": "2024-04-15T08:16:15+00:00"
+  },
+  {
+    "event_id": "c029a31b",
+    "sensor_id": "sensor-007",
+    "lokasi": "gudang-B",
+    "suhu": 35.47,
+    "kelembapan": 60.15,
+    "status": "warning",
+    "event_time": "2024-04-15T08:16:30+00:00"
+  },
+  {
+    "event_id": "e550cef3",
+    "sensor_id": "sensor-008",
+    "lokasi": "lantai-1",
+    "suhu": 21.92,
+    "kelembapan": 33.74,
+    "status": "normal",
+    "event_time": "2024-04-15T08:16:45+00:00"
+  },
+  {
+    "event_id": "581d6d57",
+    "sensor_id": "sensor-009",
+    "lokasi": "lantai-2",
+    "suhu": 42.8,
+    "kelembapan": 40.34,
+    "status": "critical",
+    "event_time": "2024-04-15T08:17:00+00:00"
+  },
+  {
+    "event_id": "46c11e07",
+    "sensor_id": "sensor-010",
+    "lokasi": "parkir",
+    "suhu": 40.35,
+    "kelembapan": 73.63,
+    "status": "critical",
+    "event_time": "2024-04-15T08:17:15+00:00"
+  },
+  {
+    "event_id": "f6444a1a",
+    "sensor_id": "sensor-011",
+    "lokasi": "gudang-A",
+    "suhu": 30.69,
+    "kelembapan": 84.5,
+    "status": "warning",
+    "event_time": "2024-04-15T08:17:30+00:00"
+  },
+  {
+    "event_id": "1dfc831b",
+    "sensor_id": "sensor-012",
+    "lokasi": "gudang-B",
+    "suhu": 27.13,
+    "kelembapan": 78.04,
+    "status": "warning",
+    "event_time": "2024-04-15T08:17:45+00:00"
+  },
+  {
+    "event_id": "d4e031a4",
+    "sensor_id": "sensor-013",
+    "lokasi": "lantai-1",
+    "suhu": 31.78,
+    "kelembapan": 59.25,
+    "status": "normal",
+    "event_time": "2024-04-15T08:18:00+00:00"
+  },
+  {
+    "event_id": "015e0cc9",
+    "sensor_id": "sensor-014",
+    "lokasi": "lantai-2",
+    "suhu": 33.22,
+    "kelembapan": 61.83,
+    "status": "normal",
+    "event_time": "2024-04-15T08:18:15+00:00"
+  },
+  {
+    "event_id": "f0693096",
+    "sensor_id": "sensor-015",
+    "lokasi": "parkir",
+    "suhu": 30.84,
+    "kelembapan": 30.2,
+    "status": "normal",
+    "event_time": "2024-04-15T08:18:30+00:00"
+  },
+  {
+    "event_id": "e60a77ab",
+    "sensor_id": "sensor-016",
+    "lokasi": "gudang-A",
+    "suhu": 44.39,
+    "kelembapan": 84.95,
+    "status": "critical",
+    "event_time": "2024-04-15T08:18:45+00:00"
+  },
+  {
+    "event_id": "2bbfff09",
+    "sensor_id": "sensor-017",
+    "lokasi": "gudang-B",
+    "suhu": 28.71,
+    "kelembapan": 68.57,
+    "status": "normal",
+    "event_time": "2024-04-15T08:19:00+00:00"
+  },
+  {
+    "event_id": "d95dd14b",
+    "sensor_id": "sensor-018",
+    "lokasi": "lantai-1",
+    "suhu": 30.66,
+    "kelembapan": 46.33,
+    "status": "normal",
+    "event_time": "2024-04-15T08:19:15+00:00"
+  },
+  {
+    "event_id": "e4d96bca",
+    "sensor_id": "sensor-019",
+    "lokasi": "lantai-2",
+    "suhu": 21.96,
+    "kelembapan": 53.19,
+    "status": "normal",
+    "event_time": "2024-04-15T08:19:30+00:00"
+  },
+  {
+    "event_id": "647eb1c0",
+    "sensor_id": "sensor-020",
+    "lokasi": "parkir",
+    "suhu": 26.2,
+    "kelembapan": 68.73,
+    "status": "normal",
+    "event_time": "2024-04-15T08:19:45+00:00"
+  },
+  {
+    "event_id": "2a6c072a",
+    "sensor_id": "sensor-001",
+    "lokasi": "gudang-A",
+    "suhu": 33.29,
+    "kelembapan": 47.77,
+    "status": "normal",
+    "event_time": "2024-04-15T08:20:00+00:00"
+  },
+  {
+    "event_id": "ab02f27f",
+    "sensor_id": "sensor-002",
+    "lokasi": "gudang-B",
+    "suhu": 26.49,
+    "kelembapan": 48.02,
+    "status": "normal",
+    "event_time": "2024-04-15T08:20:15+00:00"
+  },
+  {
+    "event_id": "8c2dd315",
+    "sensor_id": "sensor-003",
+    "lokasi": "lantai-1",
+    "suhu": 25.24,
+    "kelembapan": 77.39,
+    "status": "warning",
+    "event_time": "2024-04-15T08:20:30+00:00"
+  },
+  {
+    "event_id": "66466293",
+    "sensor_id": "sensor-004",
+    "lokasi": "lantai-2",
+    "suhu": 44.94,
+    "kelembapan": 83.92,
+    "status": "critical",
+    "event_time": "2024-04-15T08:20:45+00:00"
+  },
+  {
+    "event_id": "8798d19c",
+    "sensor_id": "sensor-005",
+    "lokasi": "parkir",
+    "suhu": 42.08,
+    "kelembapan": 77.19,
+    "status": "critical",
+    "event_time": "2024-04-15T08:21:00+00:00"
+  },
+  {
+    "event_id": "f4985235",
+    "sensor_id": "sensor-006",
+    "lokasi": "gudang-A",
+    "suhu": 41.26,
+    "kelembapan": 46.2,
+    "status": "critical",
+    "event_time": "2024-04-15T08:21:15+00:00"
+  },
+  {
+    "event_id": "c7f2656d",
+    "sensor_id": "sensor-007",
+    "lokasi": "gudang-B",
+    "suhu": 42.56,
+    "kelembapan": 68.27,
+    "status": "critical",
+    "event_time": "2024-04-15T08:21:30+00:00"
+  },
+  {
+    "event_id": "fb8058f6",
+    "sensor_id": "sensor-008",
+    "lokasi": "lantai-1",
+    "suhu": 20.03,
+    "kelembapan": 38.55,
+    "status": "normal",
+    "event_time": "2024-04-15T08:21:45+00:00"
+  },
+  {
+    "event_id": "f61bf11e",
+    "sensor_id": "sensor-009",
+    "lokasi": "lantai-2",
+    "suhu": 37.67,
+    "kelembapan": 63.47,
+    "status": "warning",
+    "event_time": "2024-04-15T08:22:00+00:00"
+  },
+  {
+    "event_id": "16be2148",
+    "sensor_id": "sensor-010",
+    "lokasi": "parkir",
+    "suhu": 44.44,
+    "kelembapan": 58.0,
+    "status": "critical",
+    "event_time": "2024-04-15T08:22:15+00:00"
+  },
+  {
+    "event_id": "4492d5a4",
+    "sensor_id": "sensor-011",
+    "lokasi": "gudang-A",
+    "suhu": 38.51,
+    "kelembapan": 49.61,
+    "status": "warning",
+    "event_time": "2024-04-15T08:22:30+00:00"
+  },
+  {
+    "event_id": "ad3db5b1",
+    "sensor_id": "sensor-012",
+    "lokasi": "gudang-B",
+    "suhu": 40.71,
+    "kelembapan": 42.62,
+    "status": "critical",
+    "event_time": "2024-04-15T08:22:45+00:00"
+  },
+  {
+    "event_id": "850cf02e",
+    "sensor_id": "sensor-013",
+    "lokasi": "lantai-1",
+    "suhu": 37.77,
+    "kelembapan": 75.83,
+    "status": "warning",
+    "event_time": "2024-04-15T08:23:00+00:00"
+  },
+  {
+    "event_id": "420301a4",
+    "sensor_id": "sensor-014",
+    "lokasi": "lantai-2",
+    "suhu": 27.41,
+    "kelembapan": 58.14,
+    "status": "normal",
+    "event_time": "2024-04-15T08:23:15+00:00"
+  },
+  {
+    "event_id": "84ca04c3",
+    "sensor_id": "sensor-015",
+    "lokasi": "parkir",
+    "suhu": 38.45,
+    "kelembapan": 86.53,
+    "status": "critical",
+    "event_time": "2024-04-15T08:23:30+00:00"
+  },
+  {
+    "event_id": "b78b6fae",
+    "sensor_id": "sensor-016",
+    "lokasi": "gudang-A",
+    "suhu": 35.67,
+    "kelembapan": 80.71,
+    "status": "warning",
+    "event_time": "2024-04-15T08:23:45+00:00"
+  },
+  {
+    "event_id": "1c87579c",
+    "sensor_id": "sensor-017",
+    "lokasi": "gudang-B",
+    "suhu": 39.43,
+    "kelembapan": 43.69,
+    "status": "warning",
+    "event_time": "2024-04-15T08:24:00+00:00"
+  },
+  {
+    "event_id": "14b529f8",
+    "sensor_id": "sensor-018",
+    "lokasi": "lantai-1",
+    "suhu": 33.14,
+    "kelembapan": 70.73,
+    "status": "normal",
+    "event_time": "2024-04-15T08:24:15+00:00"
+  },
+  {
+    "event_id": "b5a3618d",
+    "sensor_id": "sensor-019",
+    "lokasi": "lantai-2",
+    "suhu": 28.29,
+    "kelembapan": 46.65,
+    "status": "normal",
+    "event_time": "2024-04-15T08:24:30+00:00"
+  },
+  {
+    "event_id": "82922c5e",
+    "sensor_id": "sensor-020",
+    "lokasi": "parkir",
+    "suhu": 20.83,
+    "kelembapan": 43.97,
+    "status": "normal",
+    "event_time": "2024-04-15T08:24:45+00:00"
+  }
+]

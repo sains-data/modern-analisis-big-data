@@ -17,9 +17,10 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 ## Prasyarat
 
 - [ ] Latihan 1 selesai dan DAG `latihan_pipeline_transaksi` berstatus success
-- [ ] Data tersedia di `hdfs:///datalake/bronze/latihan/`
+- [ ] Data tersedia di `hdfs:///datalake/bronze/latihan/` (**100 baris** per run)
 - [ ] Koneksi `spark_default` terdaftar (`docker exec modul7-airflow-scheduler airflow connections get spark_default`)
 - [ ] File `/opt/spark-jobs/latihan_etl.py` ada di `bigdata-spark` (via `setup_bigdata_spark.sh`)
+- [ ] Volume harapan ETL — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md): **100 raw → ~97 valid → 3 ditolak**
 
 ---
 
@@ -230,9 +231,9 @@ EOF
 
 | Metrik | Manual (`spark-submit`) | Via Airflow DAG |
 |---|---|---|
-| Baris raw | _..._ | _..._ |
-| Baris valid | _..._ | _..._ |
-| Baris ditolak | _..._ | _..._ |
+| Baris raw | _100_ | _100_ |
+| Baris valid | _~97_ | _~97_ |
+| Baris ditolak | _~3_ (~3%) | _~3_ (~3%) |
 | Persentase ditolak | _..._% | _..._% |
 | Jumlah file Silver | _..._ | _..._ |
 | Ukuran Silver | _..._ | _..._ |

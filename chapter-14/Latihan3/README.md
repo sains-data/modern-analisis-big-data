@@ -11,6 +11,16 @@
 
 - [ ] Latihan 1–2 selesai
 - [ ] Superset aktif (`bash start-viz.sh`)
+- [ ] Schema PG — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Tabel PostgreSQL (harapan)
+
+| Tabel | Baris |
+|-------|-------|
+| `tren_bulanan` | 12 |
+| `omzet_kategori` | 6 |
+| `omzet_kota` | 10 |
+| `segmentasi_rfm` | ~300 |
 
 ## Langkah kerja
 

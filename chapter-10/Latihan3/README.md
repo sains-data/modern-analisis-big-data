@@ -23,6 +23,17 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Java 11 terpasang (`java -version`)
 - [ ] PySpark terpasang di venv (`pip show pyspark` → versi 3.5.5)
 - [ ] Koneksi internet tersedia (unduh paket `spark-sql-kafka` pertama kali)
+- [ ] Seed historis opsional: `transaksi_historis.json` (**100 record**, out-of-order) — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+---
+
+## Referensi data
+
+| Sumber | Volume | Catatan |
+|--------|--------|---------|
+| Producer live | kontinu | UUID acak per event |
+| `transaksi_historis.json` | **100** | Late data / watermark |
+| Spark batch | `maxOffsetsPerTrigger=100` | Maks 100 event per micro-batch |
 
 ---
 

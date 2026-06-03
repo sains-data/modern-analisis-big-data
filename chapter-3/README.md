@@ -2,6 +2,8 @@
 
 Praktik **Data Lake** sederhana dengan MinIO (S3-compatible) dan Python, mengikuti pola **Medallion** (Bronze → Silver → Gold).
 
+Dataset latihan **`sample_users.csv`** (51 baris partisipan sintesis) dihasilkan oleh generator Copula di [`synthetic-data/`](../synthetic-data/README.md) dan disinkronkan ke `Konfigurasi-lab/raw-data/`.
+
 ## Alur cepat
 
 ```bash
@@ -13,7 +15,7 @@ docker exec -it bigdata-compute python aggregate.py
 docker exec -it bigdata-compute python verify_pipeline.py
 ```
 
-Panduan lengkap: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Panduan lengkap: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
 
 ## Latihan
 
@@ -25,6 +27,16 @@ Panduan lengkap: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
 | [Latihan 4](Latihan4/README.md) | Agregasi Silver → Gold |
 | [Latihan 5](Latihan5/README.md) | Verifikasi E2E & latihan lanjutan |
 
+## Data latihan
+
+| Item | Nilai |
+|------|-------|
+| File | `Konfigurasi-lab/raw-data/sample_users.csv` |
+| Volume Bronze | 51 baris |
+| Volume Silver (setelah dedup + imputasi) | 50 baris |
+| Volume Gold (agregat per kota) | 10 baris |
+| Anomali | 1 null `salary`, 1 pasang duplikat |
+
 ## File eksekusi (di `Konfigurasi-lab/`)
 
 | Path | Fungsi |
@@ -32,7 +44,8 @@ Panduan lengkap: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
 | `docker-compose.yml` | MinIO, `mc`, compute Python |
 | `start.sh` / `stop.sh` | Jalankan / hentikan stack |
 | `scripts/init_buckets.sh` | Buat bucket bronze/silver/gold |
-| `raw-data/sample_users.csv` | Data mentah latihan |
+| `raw-data/sample_users.csv` | Data mentah latihan (sintesis) |
+| `KATALOG-DATA.md` | Schema, anomali, volume harapan |
 | `app/upload_bronze.py` | Ingest ke Bronze |
 | `app/transform.py` | Bronze → Silver (Parquet) |
 | `app/aggregate.py` | Silver → Gold |

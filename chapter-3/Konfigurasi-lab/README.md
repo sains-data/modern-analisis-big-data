@@ -5,6 +5,8 @@ Praktik chapter ini membangun **data lake** sederhana berbasis Docker:
 - **Python container** — compute layer (`boto3`, `pandas`, `pyarrow`)
 - Alur **Medallion**: Bronze → Silver → Gold
 
+Dataset **`sample_users.csv`** (51 baris) dihasilkan generator sintesis Gaussian Copula — lihat [KATALOG-DATA.md](KATALOG-DATA.md).
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -23,6 +25,7 @@ Praktik chapter ini membangun **data lake** sederhana berbasis Docker:
 Konfigurasi-lab/
 ├── docker-compose.yml
 ├── start.sh / stop.sh
+├── KATALOG-DATA.md          ← schema & volume harapan
 ├── scripts/
 │   └── init_buckets.sh
 ├── app/
@@ -32,9 +35,20 @@ Konfigurasi-lab/
 │   ├── aggregate.py
 │   └── verify_pipeline.py
 ├── raw-data/
-│   └── sample_users.csv
-└── data/              ← volume persisten MinIO (gitignored)
+│   └── sample_users.csv     ← 51 baris (sintesis, seed 42)
+└── data/                    ← volume persisten MinIO (gitignored)
 ```
+
+## Data latihan (ringkas)
+
+| Kolom | Contoh |
+|-------|--------|
+| `id`, `name`, `age` | Profil partisipan |
+| `city` | Jakarta, Surabaya, … (10 kota) |
+| `salary` | Pendapatan Rp (~5,8 jt – 19,4 jt); baris 3 null |
+| `join_date` | 2018-01-01 s/d 2024-06-30 |
+
+Anomali sengaja: **null salary** (baris 3) dan **duplikat penuh** (baris 5 = baris 51).
 
 ## 1) Prasyarat
 
@@ -77,11 +91,20 @@ docker exec -it bigdata-compute python verify_pipeline.py
 
 Object yang dihasilkan:
 
-| Layer | Key |
-|---|---|
-| Bronze | `bronze/users/sample_users.csv` |
-| Silver | `silver/users/users_clean.parquet` |
-| Gold | `gold/summary/city_summary.parquet` |
+| Layer | Key | Volume harapan |
+|---|---|---|
+| Bronze | `bronze/users/sample_users.csv` | 51 baris |
+| Silver | `silver/users/users_clean.parquet` | 50 baris |
+| Gold | `gold/summary/city_summary.parquet` | 10 baris (per kota) |
+
+Contoh output `transform.py`:
+
+```
+Bronze: 51 baris, 6 kolom
+Silver: 50 baris setelah transformasi
+```
+
+Contoh output `aggregate.py`: tabel 10 kota dengan `avg_salary`, `total_karyawan`, `avg_usia`.
 
 ## 4) Perintah mc manual (opsional)
 
@@ -92,7 +115,17 @@ docker exec -it bigdata-mc mc alias set local http://minio:9000 admin admin123
 docker exec -it bigdata-mc mc ls local/bronze --recursive
 ```
 
-## 5) Hentikan stack
+## 5) Regenerasi data sintesis
+
+Jika file CSV perlu diperbarui dari generator pusat:
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch03_minio
+bash scripts/sync_to_chapters.sh
+```
+
+## 6) Hentikan stack
 
 ```bash
 bash stop.sh
@@ -107,4 +140,5 @@ Data MinIO tetap di folder `data/` sampai dihapus manual.
 | Compute gagal `connection refused` ke MinIO | Tunggu healthcheck MinIO hijau: `docker compose ps` |
 | `curl` healthcheck gagal | Pastikan image `minio/minio:latest` terbaru, atau jalankan ulang `docker compose up -d` |
 | Bucket tidak ada | `bash scripts/init_buckets.sh` |
-| `sample_users.csv` tidak ditemukan | Pastikan file ada di `raw-data/` dan volume ter-mount |
+| `sample_users.csv` tidak ditemukan | Pastikan file ada di `raw-data/` dan volume ter-mount; jalankan sync dari `synthetic-data/` |
+| Silver ≠ 50 baris | Pastikan CSV belum diubah manual; regenerasi via `synthetic-data/scripts/generate.sh ch03_minio` |

@@ -9,7 +9,17 @@
 
 ## Prasyarat
 
-- [ ] Latihan 1 selesai — `data/transaksi.csv` tersedia
+- [ ] Latihan 1 selesai — **16 baris** di `data/transaksi.csv`
+
+## Referensi volume harapan
+
+| Tahap | Baris |
+|-------|-------|
+| CSV input | 16 |
+| Bronze Parquet (setelah dedup) | **15** |
+| Duplikat dihapus | 1 (TRX001) |
+
+Di Bab 6, dedup dilakukan di Silver; di Bab 7 dedup di **Bronze** (`group_by id_transaksi`).
 
 ## Referensi Lingkungan Lab
 
@@ -23,7 +33,7 @@
 
 ### 1) Tinjau skrip Bronze
 
-Buka `Konfigurasi-lab/app/bronze_arrow.py` — perhatikan `read_csv`, `group_by` dedup, dan `write_table` dengan `write_statistics=True`.
+Buka `bronze_arrow.py` — `read_csv`, `group_by` dedup, `write_statistics=True`.
 
 ### 2) Jalankan
 
@@ -41,19 +51,20 @@ python -c "
 import pyarrow.parquet as pq
 from paths import BRONZE_BATCH
 t = pq.read_table(str(BRONZE_BATCH))
-print(t.schema, t.num_rows)
+print('Baris:', t.num_rows, '(harapan 15)')
+print(t.schema)
 "
 ```
 
 ## Hasil yang Dicatat
 
-- Jumlah baris sebelum/sesudah dedup
-- Null per kolom (terutama `id_pelanggan` untuk TRX011)
+- Baris sebelum dedup: **16** · sesudah: **15**
+- Null `id_pelanggan`: **1** (TRX011)
 - Ukuran file Parquet Bronze
 
 ## Refleksi Singkat
 
-1. Mengapa membaca CSV langsung ke Arrow lebih efisien daripada loop Python?
+1. Mengapa dedup di Bronze mengubah perhitungan rejection di Silver vs Bab 6?
 2. Apa manfaat `write_statistics=True` pada Parquet?
 
 ---

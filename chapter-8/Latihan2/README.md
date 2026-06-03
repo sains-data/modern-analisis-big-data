@@ -10,13 +10,14 @@
 ## Prasyarat
 
 - [ ] Latihan 1 selesai — Bronze di HDFS
+- [ ] Dataset 500 transaksi — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Referensi Lingkungan Lab
 
 | Item | Nilai |
 |---|---|
-| Input | `hdfs:///datalake/bronze/transaksi/` |
-| Output Silver | `hdfs:///datalake/silver/transaksi/` |
+| Input | `hdfs:///datalake/bronze/transaksi/` (500 baris) |
+| Output Silver | `hdfs:///datalake/silver/transaksi/` (**500 baris** valid) |
 | Hive DB | `datalake.transaksi` |
 | Script | `Konfigurasi-lab/app/hive_etl.py` |
 

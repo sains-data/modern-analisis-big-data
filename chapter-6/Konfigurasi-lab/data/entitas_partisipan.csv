@@ -1,0 +1,8 @@
+id_partisipan,nama,tipe_partisipan,unit_geografis,segmen,tanggal_bergabung,email,usia,pendapatan
+PK-0001,Andi Saputra,individu,Makassar,loyal,2023-12-01,pk-0001@lab.local,30,9865934
+PK-0002,Budi Santoso,organisasi_kecil,Denpasar,prioritas,2024-01-07,pk-0002@lab.local,54,15313496
+PK-0003,Sari Dewi,individu,Palembang,loyal,2023-10-04,pk-0003@lab.local,33,10674346
+PK-0004,Ahmad Rizky,individu,Denpasar,loyal,2018-08-25,pk-0004@lab.local,38,11277882
+PK-0005,Maria Chen,individu,Palembang,loyal,2023-03-19,pk-0005@lab.local,35,7317639
+PK-0006,Dewi Lestari,individu,Yogyakarta,prioritas,2023-01-07,pk-0006@lab.local,39,8416052
+PK-0007,Budi Hartono,organisasi_kecil,Denpasar,prioritas,2022-10-21,pk-0007@lab.local,39,13050644

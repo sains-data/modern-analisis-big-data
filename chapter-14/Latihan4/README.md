@@ -10,6 +10,7 @@
 ## Prasyarat
 
 - [ ] Latihan 3 — dashboard dengan chart RFM + MoM
+- [ ] Data pipeline — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Langkah kerja
 

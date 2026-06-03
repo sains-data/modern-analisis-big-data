@@ -2,6 +2,8 @@
 
 Praktik **integrasi**: Spark Medallion (Silver → Gold) → **DuckDB** (analitik gaya Trino) → PostgreSQL → **Superset** (dashboard dari Bab 12).
 
+Dataset **15.000 transaksi** + tabel Gold dihasilkan generator sintesis [`synthetic-data/`](../synthetic-data/README.md) — modul `ch14_e2e` (mewarisi `ch12_viz`).
+
 ## Alur cepat
 
 ```bash
@@ -16,7 +18,19 @@ bash scripts/verify_postgres.sh
 # http://localhost:8088 — tambah chart RFM + MoM (Latihan 3–4)
 ```
 
-Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
+
+## Data latihan
+
+| Layer | Volume | Catatan |
+|-------|--------|---------|
+| Silver | **15.000** | 300 partisipan, 12 bulan 2024 |
+| Gold tren | **12** | + `mom_growth`, `ma3_omzet` di Parquet |
+| Gold kategori | **6** | |
+| Gold kota | **10** | |
+| Gold RFM | **~300** | Chart Pie Latihan 3 |
+
+Runtime: `seed_silver.py` → HDFS; referensi CSV di `Konfigurasi-lab/data/`.
 
 ## Latihan ↔ Tahap buku
 

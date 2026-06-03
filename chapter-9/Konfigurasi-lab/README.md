@@ -7,6 +7,10 @@
 >
 > Pola instalasi Airflow/Atlas **mengacu** pada repositori [`Data-Lakehouse-Metadata`](../../../../Data-Lakehouse-Metadata) — image resmi, port host `18681` / `22100`, backend Atlas JanusGraph + Solr (bukan paket biner Atlas embedded BerkeleyDB).
 
+Dataset referensi **100 catatan aktivitas harian** dari generator [`synthetic-data/`](../../synthetic-data/README.md). Detail: **[KATALOG-DATA.md](KATALOG-DATA.md)**.
+
+> Runtime pipeline memanggil `scripts/lab/generate_data.py` (seed per `{{ ds }}`). File di `data/` = referensi statis volume, schema, dan anomali.
+
 ---
 
 ## Daftar Isi
@@ -45,6 +49,10 @@ Konfigurasi-lab/
 ├── docker-compose.yml       ← ZK, Kafka, HBase, Solr, Atlas, Airflow, Postgres
 ├── start.sh / stop.sh
 ├── .env.example             ← override port jika bentrok
+├── data/
+│   ├── transaksi_harian.csv           # 100 baris (legacy)
+│   └── catatan_aktivitas_harian.csv   # schema kanonik
+├── KATALOG-DATA.md
 ├── airflow/
 │   └── Dockerfile           ← apache/airflow:2.9.1-python3.10 + provider Spark/Hive
 ├── atlas-conf/              ← atlas-application.properties, hbase-site.xml

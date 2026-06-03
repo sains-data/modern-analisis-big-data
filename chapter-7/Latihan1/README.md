@@ -5,19 +5,31 @@
 
 - Menyiapkan virtual environment Python dengan PyArrow, DuckDB, dan Polars
 - Membuat struktur folder `data/` dan `datalake/`
-- Menyiapkan dataset transaksi dan pelanggan (sama seperti Bab 6, dengan anomali)
+- Menyiapkan dataset catatan aktivitas & partisipan (identik Bab 6, anomali terkontrol)
 
 ## Prasyarat
 
 - [ ] Setup lab — [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Python 3.10+ terpasang
+- [ ] File data tersedia — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data
+
+| File | Volume | Catatan |
+|------|--------|---------|
+| `data/transaksi.csv` | **16 baris** | Legacy + anomali |
+| `data/pelanggan.csv` | **7 baris** | C001–C007 = PK-0001–PK-0007 |
+| `data/catatan_aktivitas.csv` | 16 baris | Schema kanonik |
+| `data/entitas_partisipan.csv` | 7 baris | Schema kanonik |
+
+Dataset disinkronkan dari generator sintesis Copula (export Bab 6/7).
 
 ## Referensi Lingkungan Lab
 
 | Path | Peran |
 |---|---|
 | `Konfigurasi-lab/data/transaksi.csv` | Sumber mentah |
-| `Konfigurasi-lab/data/pelanggan.csv` | Dimensi pelanggan |
+| `Konfigurasi-lab/data/pelanggan.csv` | Dimensi partisipan |
 | `Konfigurasi-lab/datalake/bronze/` | Output setelah Latihan 2 |
 | `Konfigurasi-lab/datalake/silver/` | Output setelah Latihan 3 |
 | `Konfigurasi-lab/datalake/gold/` | Output setelah Latihan 4 |
@@ -36,27 +48,26 @@ bash scripts/setup_dirs.sh
 
 ```bash
 bash scripts/verify_deps.sh
+wc -l data/transaksi.csv data/pelanggan.csv
 ```
 
-Data CSV sudah tersedia di `data/` (15 baris transaksi + anomali). Tidak perlu `cat` manual.
+Harapan: **17** dan **8** baris (`wc -l` termasuk header) = 16 + 7 data.
 
-### 3) Inspeksi anomali (opsional)
+### 3) Inspeksi anomali
 
-Buka `data/transaksi.csv` dan identifikasi duplikat TRX001, TRX011, TRX012, inkonsistensi kota.
-
-## Anomali untuk Diuji di Pipeline
-
-| Masalah | Contoh |
-|---|---|
-| Duplikasi | TRX001 |
-| ID pelanggan kosong | TRX011 |
-| Nilai negatif / kuantitas 0 | TRX011, TRX012 |
-| Inkonsistensi kota | `JAKARTA`, `yogyakarta` |
+| ID | Anomali |
+|----|---------|
+| TRX001 | Duplikat (baris 1 & 16) |
+| TRX011 | `id_pelanggan` kosong |
+| TRX012 | `jumlah` negatif |
+| TRX013 | `kuantitas` = 0 |
+| TRX014 | `kota` = `palembang` (lowercase) |
 
 ## Refleksi Singkat
 
-1. Mengapa pipeline Arrow ini dijalankan lokal, bukan di YARN?
+1. Mengapa pipeline Arrow dijalankan lokal, bukan di YARN?
 2. Apa perbedaan path `data/` vs `datalake/bronze/`?
+3. Apa perbedaan dedup di Bronze (Bab 7) vs Silver (Bab 6)?
 
 ---
 

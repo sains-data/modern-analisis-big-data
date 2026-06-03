@@ -10,6 +10,17 @@
 
 - [ ] Latihan 1–2 selesai
 - [ ] Klaster berjalan (`bash start.sh`)
+- [ ] File `data/latihan.txt` tersedia (7 kalimat — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md))
+
+## Referensi data
+
+File `latihan.txt` memuat narasi tentang:
+- Platform **partisipan** dan **saluran** interaksi
+- **HDFS**, blok 128MB, NameNode, DataNode
+- Pipeline **bronze → silver → gold**
+- **Unit geografis** Jakarta, Surabaya, Bandung
+
+Kosakata ini selaras dengan dataset sintesis Bab 3+.
 
 ## Langkah Kerja
 
@@ -30,11 +41,13 @@ Manual di dalam kontainer (`bash login.sh`) — sama seperti di atas dengan `hdf
 - Lokasi blok pada DataNode
 - Jumlah `live datanodes`
 - Ringkasan `Configured Capacity`, `DFS Used`, `DFS Remaining`
+- Satu kalimat dari isi file yang berhasil di-`cat`
 
 ## Refleksi Singkat
 
 1. Kenapa file kecil tetap menempati 1 blok HDFS?
 2. Jelaskan prinsip `write-once, read-many` pada HDFS.
+3. Bagaimana file teks ini terhubung dengan pipeline medallion di Bab 3?
 
 ---
 

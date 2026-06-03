@@ -1,8 +1,8 @@
 id_pelanggan,nama,email,segmen,tanggal_daftar
-C001,Andi Saputra,andi@email.com,Premium,2023-01-15
-C002,Budi Hartono,budi@email.com,Regular,2023-03-20
-C003,Citra Dewi,citra@email.com,Premium,2023-02-10
-C004,Dimas Pratama,dimas@email.com,Regular,2023-06-01
-C005,Eka Rahayu,eka@email.com,Premium,2023-04-25
-C006,Fajar Nugroho,fajar@email.com,Regular,2023-08-12
-C007,Gita Lestari,gita@email.com,VIP,2022-11-30
+C001,Andi Saputra,pk-0001@lab.local,Premium,2023-12-01
+C002,Budi Santoso,pk-0002@lab.local,VIP,2024-01-07
+C003,Sari Dewi,pk-0003@lab.local,Premium,2023-10-04
+C004,Ahmad Rizky,pk-0004@lab.local,Premium,2018-08-25
+C005,Maria Chen,pk-0005@lab.local,Premium,2023-03-19
+C006,Dewi Lestari,pk-0006@lab.local,VIP,2023-01-07
+C007,Budi Hartono,pk-0007@lab.local,VIP,2022-10-21

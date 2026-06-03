@@ -10,6 +10,7 @@
 
 - [ ] Ikuti [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Docker aktif di mesin lokal
+- [ ] File `raw-data/sample_users.csv` tersedia (51 baris sintesis — lihat [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md))
 
 ## Langkah Kerja
 

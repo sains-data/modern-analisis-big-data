@@ -2,6 +2,10 @@
 
 Pipeline **visualisasi end-to-end** sesuai Bab 12: Spark (HDFS Gold) → PostgreSQL → **Apache Superset**.
 
+Dataset referensi **15.000 transaksi** + 5 tabel Gold dari generator [`synthetic-data/`](../../synthetic-data/README.md) (Gaussian Copula). Detail: **[KATALOG-DATA.md](KATALOG-DATA.md)**.
+
+> Runtime: skrip Spark di `app/` menulis ke HDFS. File `data/*.csv` = referensi statis untuk inspeksi volume & schema.
+
 ## Komponen (sesuai buku)
 
 | Komponen | Versi / nama |
@@ -28,6 +32,14 @@ Konfigurasi-lab/
 ├── docker-compose-viz.yml
 ├── start-viz.sh / stop-viz.sh
 ├── start-spark.sh / stop-spark.sh / build-spark.sh
+├── data/
+│   ├── silver_transaksi.csv          # 15.000 baris
+│   ├── gold_tren_bulanan.csv         # 12 bulan
+│   ├── gold_tren_lanjutan.csv        # MA3, MoM
+│   ├── gold_omzet_kelas.csv          # 6 kategori
+│   ├── gold_omzet_geografis.csv      # 10 kota
+│   └── gold_segmentasi_rfm.csv       # 300 partisipan
+├── KATALOG-DATA.md
 ├── app/
 │   ├── buat_data_viz.py          # 15.000 baris, 12 bulan
 │   ├── persiapan_analitik.py     # Gold: tren_bulanan, omzet_*
@@ -63,9 +75,9 @@ bash scripts/verify_postgres.sh
 
 | Tabel | Sumber HDFS | Perkiraan baris |
 |---|---|---|
-| `tren_bulanan` | `gold/tren_lanjutan/` | 12 (12 bulan 2024) |
-| `omzet_kategori` | `gold/omzet_kategori/` | 5 kategori |
-| `omzet_kota` | `gold/omzet_kota/` | 10 kota |
+| `tren_bulanan` | `gold/tren_lanjutan/` | **12** (12 bulan 2024) |
+| `omzet_kategori` | `gold/omzet_kategori/` | **6** kategori |
+| `omzet_kota` | `gold/omzet_kota/` | **10** kota |
 
 ## JDBC dari Spark ke PostgreSQL
 

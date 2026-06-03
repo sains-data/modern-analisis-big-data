@@ -89,9 +89,9 @@
         "tinggi": "total_nilai ≥ 1.000.000"
       },
       "distribusi": {
-        "menengah": 2110,
-        "tinggi": 7762,
-        "rendah": 128
+        "tinggi": 7854,
+        "menengah": 2053,
+        "rendah": 93
       },
       "catatan": "Kelas tidak seimbang: tinggi >> menengah > rendah — relevan untuk diskusi Precision/Recall"
     },
@@ -204,14 +204,14 @@
   },
   "statistik_deskriptif": {
     "kuantitas": {
-      "mean": 10.45,
+      "mean": 10.46,
       "min": 1,
       "max": 20
     },
     "harga_satuan": {
-      "mean": 590819.28,
-      "min": 25068.1,
-      "max": 2399847.45
+      "mean": 1232537.56,
+      "min": 15012.81,
+      "max": 8459770.96
     },
     "diskon": {
       "mean": 0.15,
@@ -219,28 +219,28 @@
       "max": 0.3
     },
     "total_nilai": {
-      "mean": 5238263.25,
-      "min": 18078.81,
-      "max": 45543907.06
+      "mean": 10583796.89,
+      "min": 17987.24,
+      "max": 137963250.11
     },
     "distribusi_kategori": {
-      "olahraga": 1716,
-      "otomotif": 1732,
-      "kesehatan": 1642,
-      "fashion": 1624,
-      "elektronik": 1622,
-      "makanan": 1664
+      "olahraga": 1622,
+      "elektronik": 1677,
+      "fashion": 1652,
+      "makanan": 1638,
+      "kesehatan": 1676,
+      "otomotif": 1735
     },
     "distribusi_channel": {
-      "mobile": 2519,
-      "web": 2482,
-      "atm": 2460,
-      "teller": 2539
+      "atm": 2478,
+      "mobile": 2487,
+      "web": 2501,
+      "teller": 2534
     },
     "distribusi_segmen": {
-      "menengah": 2110,
-      "tinggi": 7762,
-      "rendah": 128
+      "tinggi": 7854,
+      "menengah": 2053,
+      "rendah": 93
     }
   },
   "nilai_null_per_kolom": {

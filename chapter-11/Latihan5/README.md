@@ -1,10 +1,11 @@
 # Latihan 5 — Eksplorasi: Regularisasi, Kedalaman Pohon, dan Diskusi
-**Modul 9 · Machine Learning Big Data** | Estimasi waktu: **10 menit**
+**Chapter 11 · Machine Learning Big Data** | Estimasi waktu: **10 menit**
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Latihan 1–4 selesai
+- [ ] Referensi schema — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Referensi Lingkungan Lab
 

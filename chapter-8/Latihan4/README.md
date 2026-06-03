@@ -10,13 +10,13 @@
 ## Prasyarat
 
 - [ ] Latihan 1–3 selesai
-- [ ] Data Silver tersedia
+- [ ] Data Silver tersedia (500 baris Parquet)
 
 ## Referensi Lingkungan Lab
 
 | Item | Nilai |
 |---|---|
-| Input | `hdfs:///datalake/silver/transaksi/` |
+| Input | `hdfs:///datalake/silver/transaksi/` (500 baris) |
 | Output benchmark | `hdfs:///datalake/benchmark/` |
 | Script | `Konfigurasi-lab/app/format_benchmark.py` |
 
@@ -44,9 +44,9 @@ bash scripts/run_format_benchmark.sh
 ## Ringkasan Pipeline
 
 ```text
-Bronze (CSV HDFS) → Spark ETL → Silver (Parquet)
-       → Hive external table → Query SQL
-       → Spark agregasi → HBase profil_pelanggan
+Bronze (500 CSV HDFS) → Spark ETL → Silver (500 Parquet)
+       → Hive external table → Query SQL (6 kategori × 10 kota)
+       → Spark agregasi → HBase profil_pelanggan (49 baris)
 ```
 
 ## Refleksi Singkat

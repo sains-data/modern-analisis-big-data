@@ -2,6 +2,10 @@
 
 Konfigurasi ini menyelesaikan mismatch Python dengan memaksa environment ke Python **3.10/3.11**, karena `pyspark==3.5.5` tidak aman dipakai di Python 3.12.
 
+Dataset seed JSON dari generator [`synthetic-data/`](../../synthetic-data/README.md) (Gaussian Copula). Detail mapping: **[KATALOG-DATA.md](KATALOG-DATA.md)**.
+
+> Runtime: `scripts/producer_transaksi.py` menghasilkan event live dengan schema yang sama. File `data/*.json` = seed statis untuk `seed_kafka.py`.
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -11,6 +15,20 @@ Konfigurasi ini menyelesaikan mismatch Python dengan memaksa environment ke Pyth
 | Spark UI | http://localhost:4040 (saat job Spark berjalan) |
 | Python venv | `.venv` (Python 3.10 atau 3.11) |
 | Topic latihan | `transaksi-stream` (3 partisi), `sensor-iot` (2), `penjualan-agregat` (1) |
+| Data seed | `data/transaksi_historis.json` (100), `sensor_iot_historis.json` (100) |
+
+## Struktur data
+
+```
+data/
+├── transaksi_historis.json              # 100 event (legacy Kafka)
+├── sample_events.json                   # 10 contoh
+├── sensor_iot_historis.json             # 100 event sensor
+├── transaksi_duplikat_test.json         # 50 event, 10 duplikat ID
+├── catatan_aktivitas_streaming.json     # schema kanonik
+├── pembacaan_sensor.json                # schema kanonik
+└── referensi_schema.json
+```
 
 ## 1) Jalankan stack Kafka
 

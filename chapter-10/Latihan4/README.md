@@ -22,6 +22,7 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Producer Python masih aktif di Terminal 1
 - [ ] Virtual environment aktif (`source ../Konfigurasi-lab/.venv/bin/activate`)
 - [ ] Checkpoint tersimpan di `/tmp/checkpoints/streaming-agregasi/`
+- [ ] Data seed — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ---
 

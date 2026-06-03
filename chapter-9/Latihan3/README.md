@@ -18,8 +18,9 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 
 - [ ] Latihan 1 dan 2 selesai
 - [ ] Atlas berjalan: `curl -u admin:admin http://localhost:22100/api/atlas/admin/status` → HTTP 200
-- [ ] Data Silver tersedia: `docker exec bigdata-spark hdfs dfs -ls /datalake/silver/latihan/`
+- [ ] Data Silver tersedia (~**97 baris**): `docker exec bigdata-spark hdfs dfs -ls /datalake/silver/latihan/`
 - [ ] Python `requests` tersedia di host (`python3 -c "import requests"`)
+- [ ] Schema Bronze/Silver — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ---
 

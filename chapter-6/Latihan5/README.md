@@ -33,7 +33,7 @@ bash scripts/run_sql_silver.sh
 
 ## Pertanyaan Diskusi
 
-1. Apakah strategi membuang baris invalid (TRX011, TRX012) sudah tepat? Alternatif apa yang bisa diusulkan?
+1. Apakah strategi membuang baris invalid (TRX011, TRX012, TRX013) sudah tepat? Alternatif apa yang bisa diusulkan (mis. quarantine table, flag `is_valid`)?
 2. Apa yang terjadi jika DataFrame pelanggan 500 MB tetap di-broadcast?
 3. Kata kunci apa di `explain()` yang membedakan query wide vs narrow?
 4. Mengapa data Bronze tidak boleh dimodifikasi setelah ditulis?

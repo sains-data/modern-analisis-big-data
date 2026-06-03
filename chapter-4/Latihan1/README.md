@@ -10,6 +10,7 @@
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] File `hadoop-3.4.1.tar.gz` ada di `Konfigurasi-lab/vendor/bigdata-hadoop/`
+- [ ] File data teks tersedia di `Konfigurasi-lab/data/` — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Langkah Kerja
 

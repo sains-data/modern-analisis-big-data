@@ -1,51 +1,51 @@
 id_pelanggan,nama,segmen,kota_asal
-PLG-0001,Pelanggan-0001,Premium,Jakarta
-PLG-0002,Pelanggan-0002,Regular,Medan
-PLG-0003,Pelanggan-0003,Basic,Makassar
-PLG-0004,Pelanggan-0004,Regular,Makassar
-PLG-0005,Pelanggan-0005,Regular,Bandung
-PLG-0006,Pelanggan-0006,Premium,Medan
-PLG-0007,Pelanggan-0007,Regular,Bandung
-PLG-0008,Pelanggan-0008,Regular,Bandung
-PLG-0009,Pelanggan-0009,Basic,Jakarta
-PLG-0010,Pelanggan-0010,Premium,Medan
-PLG-0011,Pelanggan-0011,Basic,Jakarta
-PLG-0012,Pelanggan-0012,Premium,Bandung
-PLG-0013,Pelanggan-0013,Premium,Jakarta
-PLG-0014,Pelanggan-0014,Basic,Jakarta
-PLG-0015,Pelanggan-0015,Regular,Makassar
-PLG-0016,Pelanggan-0016,Basic,Jakarta
-PLG-0017,Pelanggan-0017,Premium,Jakarta
-PLG-0018,Pelanggan-0018,Regular,Medan
-PLG-0019,Pelanggan-0019,Premium,Makassar
-PLG-0020,Pelanggan-0020,Premium,Jakarta
-PLG-0021,Pelanggan-0021,Premium,Makassar
-PLG-0022,Pelanggan-0022,Regular,Bandung
-PLG-0023,Pelanggan-0023,Basic,Makassar
-PLG-0024,Pelanggan-0024,Regular,Makassar
-PLG-0025,Pelanggan-0025,Basic,Surabaya
-PLG-0026,Pelanggan-0026,Premium,Surabaya
-PLG-0027,Pelanggan-0027,Premium,Makassar
-PLG-0028,Pelanggan-0028,Premium,Medan
-PLG-0029,Pelanggan-0029,Regular,Surabaya
-PLG-0030,Pelanggan-0030,Premium,Makassar
-PLG-0031,Pelanggan-0031,Basic,Bandung
-PLG-0032,Pelanggan-0032,Basic,Medan
-PLG-0033,Pelanggan-0033,Basic,Medan
-PLG-0034,Pelanggan-0034,Premium,Surabaya
-PLG-0035,Pelanggan-0035,Basic,Medan
-PLG-0036,Pelanggan-0036,Basic,Surabaya
-PLG-0037,Pelanggan-0037,Basic,Medan
-PLG-0038,Pelanggan-0038,Regular,Bandung
-PLG-0039,Pelanggan-0039,Regular,Medan
-PLG-0040,Pelanggan-0040,Premium,Makassar
-PLG-0041,Pelanggan-0041,Regular,Bandung
-PLG-0042,Pelanggan-0042,Premium,Surabaya
-PLG-0043,Pelanggan-0043,Basic,Bandung
-PLG-0044,Pelanggan-0044,Regular,Jakarta
-PLG-0045,Pelanggan-0045,Basic,Medan
-PLG-0046,Pelanggan-0046,Regular,Makassar
-PLG-0047,Pelanggan-0047,Basic,Bandung
-PLG-0048,Pelanggan-0048,Regular,Bandung
-PLG-0049,Pelanggan-0049,Regular,Bandung
-PLG-0050,Pelanggan-0050,Regular,Jakarta
+PLG-0001,Andi Saputra,Premium,Makassar
+PLG-0002,Budi Santoso,Basic,Denpasar
+PLG-0003,Sari Dewi,Premium,Palembang
+PLG-0004,Ahmad Rizky,Premium,Denpasar
+PLG-0005,Maria Chen,Premium,Palembang
+PLG-0006,Dewi Lestari,Basic,Yogyakarta
+PLG-0007,Budi Hartono,Basic,Denpasar
+PLG-0008,Citra Dewi,Premium,Balikpapan
+PLG-0009,Dimas Pratama,Premium,Palembang
+PLG-0010,Eka Rahayu,Basic,Surabaya
+PLG-0011,Fajar Nugroho,Premium,Bandung
+PLG-0012,Gita Lestari,Premium,Denpasar
+PLG-0013,Hendra Wijaya,Premium,Semarang
+PLG-0014,Indah Permata,Basic,Palembang
+PLG-0015,Joko Santoso,Premium,Semarang
+PLG-0016,Kartika Sari,Basic,Yogyakarta
+PLG-0017,Lukman Hakim,Premium,Medan
+PLG-0018,Maya Putri,Basic,Jakarta
+PLG-0019,Nanda Pratama,Basic,Denpasar
+PLG-0020,Oki Ramadhan,Basic,Denpasar
+PLG-0021,Pelanggan-0021,Basic,Bandung
+PLG-0022,Pelanggan-0022,Basic,Palembang
+PLG-0023,Pelanggan-0023,Premium,Palembang
+PLG-0024,Pelanggan-0024,Basic,Surabaya
+PLG-0025,Pelanggan-0025,Basic,Denpasar
+PLG-0026,Pelanggan-0026,Premium,Makassar
+PLG-0027,Pelanggan-0027,Basic,Medan
+PLG-0028,Pelanggan-0028,Premium,Bandung
+PLG-0029,Pelanggan-0029,Basic,Semarang
+PLG-0030,Pelanggan-0030,Premium,Yogyakarta
+PLG-0031,Pelanggan-0031,Premium,Denpasar
+PLG-0032,Pelanggan-0032,Premium,Yogyakarta
+PLG-0033,Pelanggan-0033,Basic,Semarang
+PLG-0034,Pelanggan-0034,Basic,Jakarta
+PLG-0035,Pelanggan-0035,Regular,Balikpapan
+PLG-0036,Pelanggan-0036,Basic,Jakarta
+PLG-0037,Pelanggan-0037,Basic,Semarang
+PLG-0038,Pelanggan-0038,Premium,Bandung
+PLG-0039,Pelanggan-0039,Basic,Denpasar
+PLG-0040,Pelanggan-0040,Basic,Semarang
+PLG-0041,Pelanggan-0041,Basic,Balikpapan
+PLG-0042,Pelanggan-0042,Premium,Makassar
+PLG-0043,Pelanggan-0043,Basic,Medan
+PLG-0044,Pelanggan-0044,Basic,Surabaya
+PLG-0045,Pelanggan-0045,Regular,Surabaya
+PLG-0046,Pelanggan-0046,Regular,Surabaya
+PLG-0047,Pelanggan-0047,Premium,Palembang
+PLG-0048,Pelanggan-0048,Basic,Balikpapan
+PLG-0049,Pelanggan-0049,Basic,Medan
+PLG-0050,Pelanggan-0050,Premium,Medan

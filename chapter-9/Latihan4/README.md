@@ -19,6 +19,7 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Latihan 1–3 selesai
 - [ ] Entitas Atlas `transaksi_bronze` dan `transaksi_silver` terdaftar
 - [ ] Skrip `/opt/spark-jobs/latihan_etl.py` dan `pipeline_gold.py` ada di `bigdata-spark`
+- [ ] Silver ~97 baris, Gold agregat per kategori — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 - [ ] (Opsional Latihan 4) HiveServer2 exposed di port `10000` — lihat [Konfigurasi-lab §3.2](../Konfigurasi-lab/README.md#32--opsional-expose-hiveserver2-untuk-latihan-4)
 
 ---

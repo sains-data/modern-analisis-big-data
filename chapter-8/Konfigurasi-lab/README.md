@@ -2,6 +2,8 @@
 
 Praktik **Hadoop + Spark + Hive + HBase** (`bigdata-spark`, Docker): Bronze CSV di HDFS → Silver Parquet → Hive SQL → profil HBase.
 
+Dataset **500 transaksi** + **50 pelanggan** dari generator [`synthetic-data/`](../../synthetic-data/README.md) (Gaussian Copula). Detail mapping: **[KATALOG-DATA.md](KATALOG-DATA.md)**.
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -30,7 +32,11 @@ Praktik **Hadoop + Spark + Hive + HBase** (`bigdata-spark`, Docker): Bronze CSV 
 ```
 Konfigurasi-lab/
 ├── build.sh / start.sh / login.sh / stop.sh
-├── data/transaksi.csv, pelanggan.csv   # 500 + 50 baris
+├── data/
+│   ├── transaksi.csv, pelanggan.csv      # 500 + 50 baris (legacy)
+│   ├── catatan_aktivitas.csv             # schema kanonik
+│   └── entitas_partisipan.csv
+├── KATALOG-DATA.md                       # mapping & volume harapan
 ├── app/
 │   ├── hive_etl.py
 │   ├── spark_ke_hbase.py

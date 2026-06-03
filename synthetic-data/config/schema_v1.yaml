@@ -1,0 +1,301 @@
+# Schema kanonik v1 — sintesis Copula-Based (Gaussian)
+# Istilah netral; tidak merujuk label domain industri.
+
+version: "1.0"
+random_seed: 42
+copula:
+  type: gaussian
+  marginal_method: empirical
+  pseudo_obs_method: rank
+  psd_correction: eigenvalue_clip
+
+entities:
+
+  partisipan:
+    table: entitas_partisipan
+    primary_key: id_partisipan
+    columns:
+      id_partisipan:
+        type: string
+        format: "PK-{seq:04d}"
+        copula: false
+      nama:
+        type: string
+        source: name_pool
+        copula: false
+      tipe_partisipan:
+        type: categorical
+        values: [individu, organisasi_kecil, organisasi_menengah, platform]
+        copula: true
+        block: A
+      unit_geografis:
+        type: categorical
+        values: [Jakarta, Surabaya, Bandung, Medan, Semarang, Makassar, Palembang, Denpasar, Yogyakarta, Balikpapan]
+        copula: true
+        block: A
+      segmen:
+        type: ordinal
+        values: [regular, loyal, prioritas]
+        encoding: [1, 2, 3]
+        copula: true
+        block: A
+      tanggal_bergabung:
+        type: date
+        range: ["2018-01-01", "2024-06-30"]
+        copula: true
+        block: A
+        transform: epoch_offset
+      email:
+        type: string
+        derived_from: id_partisipan
+        copula: false
+
+  aktivitas:
+    table: catatan_aktivitas
+    primary_key: id_aktivitas
+    foreign_keys:
+      id_partisipan: partisipan.id_partisipan
+      id_unit_layanan: unit_layanan.id_unit
+    columns:
+      id_aktivitas:
+        type: string
+        format: "ACT-{uuid8}"
+        copula: false
+      id_partisipan:
+        type: string
+        fk: partisipan
+        copula: false
+        assign: weighted_by_frequency
+      id_unit_layanan:
+        type: string
+        fk: unit_layanan
+        copula: false
+      tanggal:
+        type: date
+        copula: true
+        block: B
+        transform: epoch_offset
+      event_time:
+        type: datetime
+        tz: UTC
+        derived_from: tanggal
+        copula: false
+      kelas_layanan:
+        type: categorical
+        values: [elektronik, fashion, makanan, kesehatan, otomotif, olahraga]
+        copula: true
+        block: B
+      nama_item:
+        type: string
+        lookup_by: kelas_layanan
+        copula: false
+      saluran:
+        type: categorical
+        values: [mobile, web, atm, teller]
+        copula: true
+        block: B
+      kuantitas:
+        type: integer
+        range: [1, 20]
+        copula: true
+        block: B
+        post: round
+      harga_satuan:
+        type: float
+        unit: IDR
+        copula: true
+        block: B
+        transform: log
+      rasio_penyesuaian:
+        type: float
+        range: [0.0, 0.3]
+        copula: true
+        block: B
+        post: clip
+      nilai_total:
+        type: float
+        unit: IDR
+        derived: "kuantitas * harga_satuan * (1 - rasio_penyesuaian)"
+        copula: false
+      berat_unit:
+        type: float
+        unit: kg
+        range: [0.1, 10.0]
+        copula: true
+        block: B
+        transform: log
+      unit_geografis:
+        type: categorical
+        inherit_from: id_partisipan
+        copula: false
+      status:
+        type: categorical
+        values: [sukses, pending, gagal]
+        default_weights: [0.95, 0.03, 0.02]
+        copula: false
+
+  unit_layanan:
+    table: unit_layanan
+    primary_key: id_unit
+    columns:
+      id_unit:
+        type: string
+        format: "UL-{seq:03d}"
+        copula: false
+      nama_unit:
+        type: string
+        source: merchant_pool
+        copula: false
+      kelas_layanan:
+        type: categorical
+        values: [elektronik, fashion, makanan, kesehatan, otomotif, olahraga]
+        copula: false
+      unit_geografis:
+        type: categorical
+        values: [Jakarta, Surabaya, Bandung, Medan, Semarang, Makassar, Palembang, Denpasar, Yogyakarta, Balikpapan]
+        copula: false
+      skala_operasi:
+        type: ordinal
+        values: [kecil, sedang, besar]
+        encoding: [1, 2, 3]
+        copula: false
+
+  skor_kompetensi:
+    table: skor_kompetensi
+    primary_key: id_partisipan
+    foreign_keys:
+      id_partisipan: partisipan.id_partisipan
+    columns:
+      id_partisipan:
+        type: string
+        fk: partisipan
+        copula: false
+      nama:
+        type: string
+        inherit_from: id_partisipan
+        copula: false
+      skor_modul_a:
+        type: float
+        range: [0, 100]
+        copula: true
+        block: C
+      skor_modul_b:
+        type: float
+        range: [0, 100]
+        copula: true
+        block: C
+      skor_modul_c:
+        type: float
+        range: [0, 100]
+        copula: true
+        block: C
+
+  sensor:
+    table: pembacaan_sensor
+    primary_key: event_id
+    columns:
+      event_id:
+        type: string
+        format: "EVT-{uuid8}"
+        copula: false
+      sensor_id:
+        type: string
+        format: "sensor-{seq:03d}"
+        copula: false
+      lokasi:
+        type: categorical
+        values: [gudang-A, gudang-B, lantai-1, lantai-2, parkir]
+        copula: false
+      suhu:
+        type: float
+        unit: celsius
+        range: [20.0, 45.0]
+        copula: true
+        block: D
+      kelembapan:
+        type: float
+        unit: percent
+        range: [30.0, 90.0]
+        copula: true
+        block: D
+      status:
+        type: categorical
+        values: [normal, warning, critical]
+        derived_from: [suhu, kelembapan]
+        copula: false
+      event_time:
+        type: datetime
+        tz: UTC
+        copula: false
+
+copula_blocks:
+  A:
+    description: Profil partisipan
+    variables: [tipe_partisipan, unit_geografis, segmen, tanggal_bergabung]
+  B:
+    description: Catatan aktivitas (core)
+    variables: [log_harga_satuan, kuantitas, rasio_penyesuaian, offset_waktu, kelas_layanan, saluran, log_berat_unit]
+  C:
+    description: Skor kompetensi trivariat
+    variables: [skor_modul_a, skor_modul_b, skor_modul_c]
+  D:
+    description: Sensor bivariat
+    variables: [suhu, kelembapan]
+    target_correlation: 0.4
+
+module_exports:
+  ch03_minio:
+    entity: partisipan
+    n_rows: 50
+    columns: [id_partisipan, nama, usia, unit_geografis, pendapatan, tanggal_bergabung]
+    anomalies: [duplicate, null_pendapatan]
+  ch04_hadoop:
+    format: text
+    files: [latihan.txt, dataset_wordcount.txt]
+    description: Teks HDFS + WordCount — kosakata selaras entitas sintesis (partisipan, aktivitas, saluran)
+  ch05_spark:
+    entity: skor_kompetensi
+    n_rows: 10
+  ch06_medallion:
+    entities: [partisipan, aktivitas]
+    n_rows: {partisipan: 7, aktivitas: 15}
+    anomalies: aktivitas_controlled
+  ch08_storage:
+    entities: [partisipan, aktivitas]
+    n_rows: {partisipan: 50, aktivitas: 500}
+  ch09_orchestration:
+    entity: aktivitas
+    n_rows: 100
+    columns_subset: [id_aktivitas, nilai_total, kelas_layanan]
+    bad_row_rate: 0.03
+  ch10_streaming:
+    entities: [aktivitas, sensor]
+    n_rows: {aktivitas: 100, sensor: 100}
+    alias: streaming_legacy
+  ch11_ml:
+    entity: aktivitas
+    n_rows: 10000
+    n_partisipan: 200
+    label: segmen_from_nilai_total
+  ch12_viz:
+    entity: aktivitas
+    n_rows: 15000
+    n_partisipan: 300
+    partitions: [tahun, bulan]
+  ch14_e2e:
+    inherits: ch12_viz
+    gold: [tren_bulanan, omzet_kelas, omzet_geografis, segmentasi_rfm]
+
+streaming_alias:
+  id_partisipan: user_id
+  kelas_layanan: product
+  nilai_total: amount
+  saluran: channel
+
+anomalies_controlled:
+  ch06:
+    - {type: duplicate_pk, count: 1}
+    - {type: null_fk, count: 1}
+    - {type: negative_nilai, count: 1}
+    - {type: zero_kuantitas, count: 1}
+    - {type: casing_geografis, count: 1}

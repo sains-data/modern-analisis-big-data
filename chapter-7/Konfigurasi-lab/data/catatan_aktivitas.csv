@@ -1,0 +1,17 @@
+id_aktivitas,id_partisipan,tanggal,kelas_layanan,nama_item,saluran,kuantitas,harga_satuan,nilai_total,unit_geografis,status
+ACT-ca19aab2,PK-0001,2024-04-29,makanan,Kopi,web,11,45151.7,439092.85,Makassar,sukses
+ACT-6b965177,PK-0004,2024-11-19,fashion,Sepatu,web,13,321886.59,3246271.64,Denpasar,sukses
+ACT-076872cd,PK-0004,2024-09-21,makanan,Snack,teller,2,122564.51,240988.35,Denpasar,sukses
+ACT-5bac2da9,PK-0007,2024-11-03,kesehatan,Obat Flu,teller,10,176210.71,1383426.71,Denpasar,sukses
+ACT-7cdc2788,PK-0001,2024-01-21,kesehatan,Termometer,mobile,5,195753.2,865320.99,Makassar,sukses
+ACT-b8ac319e,PK-0002,2024-08-16,makanan,Gula,atm,7,114587.57,738394.2,Denpasar,sukses
+ACT-e2404efa,PK-0002,2024-05-21,otomotif,Ban,web,4,1274721.61,4703920.35,Denpasar,sukses
+ACT-abfbbc47,PK-0001,2024-11-09,elektronik,Mouse,mobile,11,5160376.92,44954290.35,Makassar,sukses
+ACT-2f9e6772,PK-0001,2024-02-14,otomotif,Filter Udara,atm,7,2238966.29,13157899.2,Makassar,sukses
+ACT-116b87b1,PK-0002,2024-03-14,makanan,Beras,atm,3,122680.33,300741.06,Denpasar,sukses
+ACT-b914354a,,2024-03-10,makanan,Minyak,mobile,11,68009.63,568057.01,Makassar,sukses
+ACT-12179c61,PK-0004,2024-02-13,fashion,Topi,web,18,-150000,-150000,Denpasar,sukses
+ACT-2928278f,PK-0002,2024-09-08,fashion,Kemeja,mobile,0,608349.66,9357880.37,Denpasar,sukses
+ACT-a8b462bb,PK-0005,2024-01-29,otomotif,Filter Udara,mobile,12,185727.21,1886415.48,palembang,sukses
+ACT-dab5914f,PK-0004,2024-04-27,elektronik,Headphone,mobile,18,427489.43,7556887.6,Denpasar,sukses
+ACT-ca19aab2,PK-0001,2024-04-29,makanan,Kopi,web,11,45151.7,439092.85,Makassar,sukses

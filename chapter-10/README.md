@@ -2,6 +2,8 @@
 
 Praktik chapter ini membangun pipeline **streaming end-to-end**: producer Python → **Apache Kafka** (KRaft) → **Spark Structured Streaming** (windowing, checkpoint).
 
+Dataset seed JSON dihasilkan generator sintesis [`synthetic-data/`](../synthetic-data/README.md) — entitas `catatan_aktivitas` + `sensor` dengan alias kolom Kafka.
+
 Sumber materi: bagian **Sesi Praktik: Pipeline Streaming Kafka–Spark End-to-End** di `chapter-10.tex`.
 
 ## Komponen
@@ -18,7 +20,7 @@ Sumber materi: bagian **Sesi Praktik: Pipeline Streaming Kafka–Spark End-to-En
 ```
 chapter-10/
 ├── Konfigurasi-lab/     ← docker-compose Kafka, skrip producer/Spark
-├── Data/                ← JSON seed & referensi schema
+├── Data/                ← JSON seed legacy (salinan)
 ├── Latihan1/ … Latihan5/
 └── README.md
 ```
@@ -32,7 +34,18 @@ bash scripts/setup_venv.sh && source .venv/bin/activate
 # Latihan 1 → 5 (semua dari folder Konfigurasi-lab/)
 ```
 
-Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
+
+## Data latihan
+
+| File | Volume | Catatan |
+|------|--------|---------|
+| `transaksi_historis.json` | **100 record** | Seed topic `transaksi-stream` |
+| `sample_events.json` | 10 record | Contoh schema Latihan 1–2 |
+| `sensor_iot_historis.json` | **100 record** | Seed topic `sensor-iot` |
+| `transaksi_duplikat_test.json` | 50 record (**40 unik**) | 10 `event_id` duplikat — Latihan 5 |
+
+Runtime producer: `scripts/producer_transaksi.py` — schema sama, nilai acak per event.
 
 ## Port & layanan
 

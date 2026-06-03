@@ -22,6 +22,16 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Stack Kafka masih berjalan
 - [ ] Virtual environment aktif (`source ../Konfigurasi-lab/.venv/bin/activate`)
 - [ ] Producer Python aktif (atau bisa dijalankan ulang)
+- [ ] Dataset uji duplikat — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md): **50 event**, **10 duplikat** `event_id`
+
+---
+
+## Referensi data
+
+| File | Volume | Penggunaan |
+|------|--------|------------|
+| `transaksi_duplikat_test.json` | 50 (**40 unik**) | Bagian B — delivery semantics |
+| `sensor_iot_historis.json` | **100** | Seed topic `sensor-iot` (eksplorasi) |
 
 ---
 
@@ -133,7 +143,7 @@ python scripts/seed_kafka.py \
   --delay 0.0
 ```
 
-File ini berisi 50 event dengan 10 `event_id` duplikat. Detail ada di [Data/README.md](../Data/README.md).
+File ini berisi **50 event** dengan **10 `event_id` duplikat** (40 unik). Detail ada di [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md).
 
 ---
 

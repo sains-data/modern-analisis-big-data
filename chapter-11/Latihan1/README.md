@@ -1,11 +1,20 @@
 # Latihan 1 — Persiapan Data dan Eksplorasi Awal
-**Modul 9 · Machine Learning Big Data** | Estimasi waktu: **10 menit**
+**Chapter 11 · Machine Learning Big Data** | Estimasi waktu: **10 menit**
 
 ## Prasyarat
 
 - [ ] Setup lab selesai — lihat [Konfigurasi-lab/README.md](../Konfigurasi-lab/README.md)
 - [ ] Kontainer `bigdata-spark` berjalan
 - [ ] HDFS UI (`http://localhost:9870`) dan YARN UI (`http://localhost:8088`) dapat diakses
+- [ ] Referensi data — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data
+
+| Sumber | Volume | Catatan |
+|--------|--------|---------|
+| HDFS Silver | **10.000 baris** | Runtime (`init_data.sh`) |
+| `Data/transaksi_ml.csv` | 10.000 | Referensi statis copula |
+| Partisipan unik | **200** | `usr-0001` … `usr-0200` |
 
 ## Referensi Lingkungan Lab
 
@@ -57,10 +66,10 @@ df.groupBy("kategori").count().orderBy(F.col("count").desc()).show()
 
 ## Pencatatan Hasil
 
-- Jumlah baris dataset
-- Jumlah kolom
+- Jumlah baris dataset (**10.000**)
+- Jumlah kolom (**9** di Silver; `segmen` dihitung saat ML)
 - Ukuran data Silver di HDFS
-- Distribusi kategori transaksi
+- Distribusi kategori transaksi (6 kelas)
 
 ---
 

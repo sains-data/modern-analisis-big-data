@@ -10,6 +10,16 @@
 ## Prasyarat
 
 - [ ] Latihan 1 selesai — Gold Parquet di HDFS
+- [ ] Volume Gold — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Referensi data (DuckDB)
+
+| Tabel lokal (`data/gold/`) | Baris referensi |
+|----------------------------|-----------------|
+| `tren_bulanan` | 12 |
+| `omzet_kategori` | 6 |
+| `segmentasi_rfm` | 300 |
+| `omzet_kota` | 10 |
 
 ## Referensi
 

@@ -166,7 +166,7 @@ Jawab singkat (3–5 kalimat per pertanyaan):
 
 Setelah lima latihan, lengkapi pernyataan:
 
-> "Chapter 9 mengintegrasikan **___** (orkestrasi), **___** (komputasi via bigdata-spark), dan **___** (governance metadata). Airflow diakses di port **___** dengan kredensial **___** / **___**. Atlas diakses di port **___** dengan backend **___** + **___** (bukan BerkeleyDB embedded). Pipeline E2E menunjukkan pola **___** untuk paralelisasi task independen."
+> "Chapter 9 mengintegrasikan **Airflow** (orkestrasi), **Spark/HDFS/Hive** (komputasi via bigdata-spark), dan **Apache Atlas** (governance metadata). Dataset harian **100 baris** (~**97 valid** setelah ETL) berasal dari generator sintesis dengan **~3%** baris invalid. Airflow diakses di port **18681** dengan kredensial **airflow** / **airflow**. Atlas diakses di port **22100** dengan backend **JanusGraph** + **Solr** (bukan BerkeleyDB embedded). Pipeline E2E menunjukkan pola **fan-out / fan-in** untuk paralelisasi task independen."
 
 ---
 

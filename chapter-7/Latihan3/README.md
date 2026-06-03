@@ -3,14 +3,25 @@
 
 ## Tujuan
 
-- Membaca Parquet Bronze dan CSV pelanggan ke Arrow (via DuckDB)
+- Membaca Parquet Bronze dan CSV partisipan ke Arrow (via DuckDB)
 - Mendaftarkan Arrow Table sebagai view zero-copy (`con.register`)
 - Menulis Silver sebagai Parquet terpartisi Hive (`tahun`, `bulan`)
 
 ## Prasyarat
 
-- [ ] Latihan 2 selesai — Bronze Parquet tersedia
-- [ ] `data/pelanggan.csv` tersedia
+- [ ] Latihan 2 selesai — Bronze **15 baris** di `batch_001.parquet`
+- [ ] `data/pelanggan.csv` — **7 partisipan**
+
+## Referensi volume harapan
+
+| Tahap | Baris | Ditolak |
+|-------|-------|---------|
+| Bronze input | 15 | — |
+| Silver output | **12** | TRX011, TRX012, TRX013 |
+| % valid | 80% | 3 dari 15 |
+
+Validasi SQL: `id_pelanggan` not null, `jumlah > 0`, `kuantitas > 0`, tanggal valid.  
+TRX014 (`palembang`) **lolos** — `INITCAP` → `Palembang`.
 
 ## Referensi Lingkungan Lab
 
@@ -25,13 +36,19 @@
 
 ### 1) Tinjau skrip Silver
 
-Buka `Konfigurasi-lab/app/silver_arrow.py` — SQL validasi, join pelanggan, partisi hive via `pyarrow.dataset.write_dataset`.
+`silver_arrow.py` — INNER JOIN pelanggan, `TRY_CAST` tanggal, `total_nilai = jumlah × kuantitas`.
 
 ### 2) Jalankan
 
 ```bash
 cd sesi-praktikum/chapter-7/Konfigurasi-lab
 bash scripts/run_silver.sh
+```
+
+Log harus menampilkan:
+
+```json
+{"baris_bronze": 15, "baris_silver": 12, "ditolak": 3, "pct_valid": 80.0}
 ```
 
 ### 3) Verifikasi partisi Silver
@@ -43,14 +60,14 @@ find datalake/silver/transaksi -name "*.parquet" | head
 
 ## Hasil yang Dicatat
 
-- Baris Bronze vs Silver dan persentase ditolak
-- Struktur folder `tahun=.../bulan=.../`
-- Contoh satu baris hasil join (nama + segmen)
+- Bronze 15 → Silver **12** (bandingkan Bab 6: 16 → 12)
+- Struktur `tahun=2024/bulan=.../`
+- Contoh baris join: `nama_pelanggan`, `segmen`, `total_nilai`
 
 ## Refleksi Singkat
 
 1. Apakah `con.register()` menyalin data atau zero-copy?
-2. Mengapa `TRY_CAST` dipakai untuk tanggal?
+2. Mengapa hasil akhir Silver (12 baris) sama dengan Bab 6 meski dedup di tahap berbeda?
 
 ---
 

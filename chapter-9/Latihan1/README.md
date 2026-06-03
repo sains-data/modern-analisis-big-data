@@ -22,6 +22,18 @@ Setelah menyelesaikan latihan ini, mahasiswa mampu:
 - [ ] Airflow UI dapat diakses di `http://localhost:18681` (login: `airflow / airflow`)
 - [ ] `bash scripts/setup_bigdata_spark.sh` sudah dijalankan
 - [ ] Direktori `Konfigurasi-lab/dags/` sudah ada
+- [ ] File data referensi — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+---
+
+## Referensi data
+
+| File | Volume | Entitas kanonik |
+|------|--------|-----------------|
+| `data/transaksi_harian.csv` | **100 baris** | `catatan_aktivitas` (subset) |
+| `data/catatan_aktivitas_harian.csv` | 100 baris | `catatan_aktivitas` (lengkap) |
+
+Task DAG memanggil `generate_data.py {{ ds }} 100` (bukan file statis). Referensi di atas untuk inspeksi schema dan anomali ~3% (3 baris invalid → **97 valid** setelah ETL).
 
 ---
 
@@ -247,6 +259,18 @@ Catat path dan isi file pada **Tabel 1.1**.
 
 ---
 
+### Langkah 1.9 — Regenerasi data referensi (opsional)
+
+Untuk memperbarui file statis di `Konfigurasi-lab/data/` (bukan output runtime DAG):
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch09_orchestration
+bash scripts/sync_to_chapters.sh
+```
+
+---
+
 ## Tabel Pencatatan Hasil
 
 ### Tabel 1.1 — Informasi Eksekusi DAG
@@ -256,7 +280,8 @@ Catat path dan isi file pada **Tabel 1.1**.
 | Run ID DAG | _..._ |
 | Tanggal eksekusi (`ds`) | _..._ |
 | Nama file CSV yang dibuat | `/tmp/transaksi_` _..._ `.csv` (di bigdata-spark) |
-| Jumlah baris di file CSV (termasuk header) | _..._ |
+| Jumlah baris di file CSV (termasuk header) | _101_ (100 data + header) |
+| Jumlah baris valid (setelah minus header & invalid) | _~97_ (3 baris ~3% invalid) |
 | Path HDFS tempat file disimpan | _..._ |
 | Apakah file CSV terlihat di HDFS? | Ya / Tidak |
 

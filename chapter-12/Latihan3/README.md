@@ -11,6 +11,15 @@
 
 - [ ] Latihan 2 — tabel PostgreSQL terisi
 - [ ] Superset: http://localhost:8088 (`admin` / `admin`)
+- [ ] Schema tabel — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
+
+## Dataset Superset
+
+| Tabel PG | Baris | Chart utama |
+|----------|-------|-------------|
+| `tren_bulanan` | 12 | Line (omzet + MA3) |
+| `omzet_kategori` | 6 | Bar / Donut |
+| `omzet_kota` | 10 | Table ranking |
 
 ## Langkah kerja (sesuai §12-prak-3)
 

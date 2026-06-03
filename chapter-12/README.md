@@ -2,6 +2,8 @@
 
 Praktik **pipeline visualisasi**: Spark → HDFS Gold → PostgreSQL → **Apache Superset** (5 tahap sesuai buku).
 
+Dataset **15.000 transaksi** + tabel Gold dihasilkan generator sintesis [`synthetic-data/`](../synthetic-data/README.md) — entitas `catatan_aktivitas`.
+
 ## Alur cepat
 
 ```bash
@@ -15,7 +17,19 @@ bash scripts/verify_postgres.sh
 # Buka http://localhost:8088 — latihan Superset (Tahap 3–5)
 ```
 
-Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)**
+Detail: **[Konfigurasi-lab/README.md](Konfigurasi-lab/README.md)** · **[KATALOG-DATA.md](Konfigurasi-lab/KATALOG-DATA.md)**
+
+## Data latihan
+
+| Layer | Volume | Catatan |
+|-------|--------|---------|
+| Silver | **15.000 baris** | 300 partisipan, 12 bulan 2024 |
+| Gold tren | **12 baris** | + `gold_tren_lanjutan` (MA3, MoM) |
+| Gold kategori | **6 baris** | 6 kelas layanan |
+| Gold geografis | **10 baris** | 10 kota |
+| Gold RFM | **300 baris** | Segmentasi partisipan |
+
+Runtime: `buat_data_viz.py` → HDFS; referensi CSV di `Konfigurasi-lab/data/`.
 
 ## Latihan ↔ Tahap buku
 

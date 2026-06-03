@@ -1,6 +1,7 @@
-Hadoop adalah framework big data terdistribusi.
-HDFS menyimpan data dalam blok berukuran 128MB.
-MapReduce memproses data secara paralel di klaster.
-YARN mengelola sumber daya pada setiap node.
-NameNode menyimpan metadata sistem berkas HDFS.
-DataNode menyimpan blok data aktual di setiap node.
+Platform partisipan mencatat aktivitas transaksi melalui berbagai saluran interaksi.
+HDFS menyimpan catatan mentah dalam blok berukuran 128MB di klaster terdistribusi.
+MapReduce memproses log aktivitas partisipan secara paralel pada setiap node.
+Pipeline bronze silver gold mengolah data dari ingest mentah hingga ringkasan analitik.
+NameNode menyimpan metadata lokasi blok file sistem terdistribusi HDFS.
+DataNode menyimpan replikasi blok catatan aktivitas di setiap node fisik klaster.
+Unit geografis Jakarta Surabaya Bandung menerima volume aktivitas partisipan tertinggi.

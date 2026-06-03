@@ -2,6 +2,8 @@
 
 Praktik **PySpark pada YARN** dengan klaster Hadoop + Spark (`bigdata-spark`, Docker).
 
+Dataset **`mahasiswa.csv`** (10 baris) berasal dari entitas sintesis **`skor_kompetensi`** — kosakata dan nama partisipan selaras Bab 3+. Detail: [KATALOG-DATA.md](KATALOG-DATA.md).
+
 ## Referensi Lingkungan
 
 | Item | Nilai |
@@ -20,11 +22,14 @@ Praktik **PySpark pada YARN** dengan klaster Hadoop + Spark (`bigdata-spark`, Do
 ```
 Konfigurasi-lab/
 ├── build.sh / start.sh / login.sh / stop.sh
+├── KATALOG-DATA.md          ← schema & mapping skor kompetensi
 ├── app/
 │   ├── hitung_pi.py
 │   ├── hitung_pi_cache.py
 │   └── analisis_nilai.py
-├── data/mahasiswa.csv
+├── data/
+│   ├── mahasiswa.csv        ← 10 baris (format legacy lab)
+│   └── skor_kompetensi.csv  ← 10 baris (schema kanonik)
 └── scripts/
     ├── ensure_spark_repo.sh
     ├── verify_cluster.sh
@@ -34,6 +39,17 @@ Konfigurasi-lab/
     ├── run_hitung_pi_cache.sh
     └── compare_hdfs_sizes.sh
 ```
+
+## Data latihan (ringkas)
+
+| Kolom legacy | Kolom kanonik | Keterangan |
+|--------------|---------------|------------|
+| `nim` | `id_partisipan` | Alias `2021001` = `PK-0001` |
+| `nilai_uts` | `skor_modul_a` | Modul fintech |
+| `nilai_uas` | `skor_modul_b` | Modul operasional |
+| `nilai_tugas` | `skor_modul_c` | Modul analitik data |
+
+Distribusi grade setelah `analisis_nilai.py`: A=1, B=2, C=3, D=3, E=1.
 
 ## Setup pertama kali
 
@@ -65,8 +81,24 @@ bash scripts/setup_hdfs_mahasiswa.sh
 | `SLICES=8 bash scripts/run_hitung_pi.sh` | 5A |
 | `bash scripts/run_hitung_pi_cache.sh` | 5B |
 
+## Regenerasi data sintesis
+
+```bash
+cd sesi-praktikum/synthetic-data
+bash scripts/generate.sh ch05_spark
+bash scripts/sync_to_chapters.sh
+```
+
 ## Hentikan klaster
 
 ```bash
 bash stop.sh
 ```
+
+## Troubleshooting
+
+| Gejala | Solusi |
+|---|---|
+| `mahasiswa.csv` tidak ditemukan | Sync dari `synthetic-data/`; cek `data/` |
+| Grade tidak sesuai harapan | Pastikan CSV belum diubah manual; regenerasi `ch05_spark` |
+| HDFS upload gagal | `bash scripts/copy_spark_jobs.sh` lalu `setup_hdfs_mahasiswa.sh` |

@@ -12,6 +12,7 @@
 
 - [ ] Latihan 1–4 selesai
 - [ ] Database `Analitik E-Commerce` terhubung
+- [ ] Kolom `mom_growth_pct`, `ma3_omzet` di `tren_bulanan` — [KATALOG-DATA.md](../Konfigurasi-lab/KATALOG-DATA.md)
 
 ## Langkah 5.1 — Query dari buku
 

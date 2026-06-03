@@ -11,6 +11,11 @@
 
 - [ ] Latihan 3 selesai — Silver terpartisi di `datalake/silver/transaksi/`
 
+## Referensi data
+
+- Silver: **12 baris** valid (sama Bab 6)
+- Gold agregat dari 12 transaksi × 7 partisipan
+
 ## Referensi Lingkungan Lab
 
 | Output | Path |

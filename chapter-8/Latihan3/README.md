@@ -9,15 +9,15 @@
 
 ## Prasyarat
 
-- [ ] Latihan 2 selesai — Silver Parquet tersedia
+- [ ] Latihan 2 selesai — Silver Parquet tersedia (500 baris)
 - [ ] HBase Thrift aktif (port `9090` di dalam kontainer)
 
 ## Referensi Lingkungan Lab
 
 | Item | Nilai |
 |---|---|
-| Input | `hdfs:///datalake/silver/transaksi/` |
-| Tabel HBase | `profil_pelanggan` |
+| Input | `hdfs:///datalake/silver/transaksi/` (500 baris) |
+| Tabel HBase | `profil_pelanggan` (**49 profil** — PLG-0046 tanpa transaksi) |
 | Script | `Konfigurasi-lab/app/spark_ke_hbase.py` |
 | HBase UI | http://localhost:16010 |
 
@@ -50,8 +50,8 @@ get 'profil_pelanggan', 'PLG-0001'
 
 ## Hasil yang Dicatat
 
-- Jumlah profil yang ditulis
-- Contoh 3 baris dari `scan`
+- Jumlah profil yang ditulis (**~49**)
+- Contoh 3 baris dari `scan` (mis. `get 'profil_pelanggan', 'PLG-0001'` — pelanggan dengan transaksi terbanyak)
 - Perbandingan use case: kapan Hive vs HBase?
 
 ## Refleksi Singkat
