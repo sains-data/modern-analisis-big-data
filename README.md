@@ -18,8 +18,7 @@ Seluruh kode praktikum, skrip konfigurasi lingkungan (Docker, Hadoop, Spark, Kaf
 Clone praktikum:
 
 ```bash
-git clone https://github.com/sains-data/praktikum-analisis-big-data.git
-cd praktikum-analisis-big-data/sesi-praktikum
+git clone https://github.com/sains-data/modern-analisis-big-data.git
 ```
 
 Disarankan memberi **star** pada kedua repositori agar mendapat notifikasi pembaruan modul dan kompatibilitas versi stack.
