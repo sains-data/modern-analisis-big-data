@@ -6,7 +6,7 @@ Bab ini menyajikan **studi kasus berbasis masalah nyata** (PBL + Scrum 3 sprint)
 
 | Folder | Domain | Judul (ringkas) |
 |---|---|---|
-| [studi-kasus-kebencanaan](studi-kasus-kebencanaan/README.md) | Kebencanaan | Peringatan dini banjir DAS Musi |
+| [studi-kasus-kebencanaan](studi-kasus-kebencanaan/README.md) | Kebencanaan | Peringatan dini banjir DAS Musi — **[instruksi eksperimen](studi-kasus-kebencanaan/eksperimen/README.md)** ✅ kode |
 | [studi-kasus-lingkungan](studi-kasus-lingkungan/README.md) | Lingkungan | Monitoring karhutla & akuntabilitas konsesi Riau |
 | [studi-kasus-kesehatan](studi-kasus-kesehatan/README.md) | Kesehatan | Analitik stunting & prioritas desa Sumatera Utara |
 | [studi-kasus-konservasi](studi-kasus-konservasi/README.md) | Konservasi | Pemantauan KEL, edge ML, konflik gajah–manusia |
@@ -20,7 +20,8 @@ Saat ini tersedia: **enam studi kasus** (dokumentasi lengkap; implementasi tekni
 ```
 studi-kasus-<domain>/
 ├── README.md                 # Halaman utama studi kasus
-├── arsitektur-lab/           # Lingkungan Docker, Kafka, lakehouse
+├── eksperimen/               # Instruksi praktikum (mulai di sini) — kebencanaan ✅
+├── arsitektur-lab/           # Eksekusi kode / Docker / Kafka
 ├── data/                     # Katalog sumber data + medallion Bronze/Silver/Gold
 ├── analitik/                 # Pipeline streaming/batch, model, query
 └── output/                   # Deliverable ke pemangku kebijakan

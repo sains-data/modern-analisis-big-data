@@ -2,6 +2,8 @@
 
 Stack **Kafka + MinIO** + pipeline Python (geopandas) yang meniru logika Spark/Sedona Bab 17.
 
+> **Pertama kali?** Baca dulu [../eksperimen/README.md](../eksperimen/README.md) — urutan langkah dan tugas di folder `eksperimen/` dijelaskan di sana. **Eksekusi kode dimulai di folder ini.**
+
 ## Komponen
 
 | Layanan | Port | Fungsi |

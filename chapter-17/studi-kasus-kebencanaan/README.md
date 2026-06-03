@@ -20,11 +20,18 @@ Tim ditugaskan **BPBD Provinsi Sumatera Selatan** merancang prototipe sistem per
 | 2 | **Siapa** terdampak? | Spatial join genangan × kelurahan + populasi BPS |
 | 3 | **Ke mana** mengungsi? | KNN join routing evakuasi (jalan tidak tergenang) |
 
+## Mulai praktikum
+
+**→ [eksperimen/](eksperimen/README.md)** — instruksi lengkap: dari folder mana menjalankan kode, urutan langkah, dan apa yang harus dicatat di folder eksperimen.
+
+Titik eksekusi kode: `arsitektur-lab/` (bukan folder `eksperimen/`).
+
 ## Navigasi folder
 
 | Folder | Isi | Dokumen detail |
 |---|---|---|
-| [arsitektur-lab](arsitektur-lab/README.md) | Stack Docker, Kafka, Spark, MinIO/Iceberg | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
+| **[eksperimen](eksperimen/README.md)** | **Instruksi & checklist praktikum** | [INSTRUKSI-EKSPERIMEN.md](eksperimen/INSTRUKSI-EKSPERIMEN.md) |
+| [arsitektur-lab](arsitektur-lab/README.md) | Stack Docker, Kafka, MinIO — **jalankan skrip di sini** | [PANDUAN-ARSITEKTUR-LAB.md](arsitektur-lab/PANDUAN-ARSITEKTUR-LAB.md) |
 | [data](data/README.md) | Katalog open data + medallion | [KATALOG-DATA.md](data/KATALOG-DATA.md) |
 | [analitik](analitik/README.md) | Streaming, batch Sedona, model | [PANDUAN-ANALITIK.md](analitik/PANDUAN-ANALITIK.md) |
 | [output](output/README.md) | Empat artefak ke BPBD/BNPB | [PANDUAN-OUTPUT.md](output/PANDUAN-OUTPUT.md) |
