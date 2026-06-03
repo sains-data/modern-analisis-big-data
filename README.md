@@ -13,7 +13,7 @@ Seluruh kode praktikum, skrip konfigurasi lingkungan (Docker, Hadoop, Spark, Kaf
 | Repositori | Peran |
 |---|---|
 | **[github.com/sains-data/praktikum-analisis-big-data](https://github.com/sains-data/praktikum-analisis-big-data)** | **Praktikum** — folder `sesi-praktikum/` (repositori ini) |
-| **[github.com/sains-data/modern-analisis-big-data](https://github.com/sains-data/modern-analisis-big-data)** | **Buku** — sumber LaTeX, teori Bab 1–17, diagram, dan rujukan konsep |
+| **[github.com/sains-data/modern-analisis-big-data](https://github.com/sains-data/modern-analisis-big-data)** | **Buku** — sumber sesi praktik |
 
 Clone praktikum:
 
@@ -188,7 +188,7 @@ Beberapa bab memakai klaster Hadoop/Spark eksternal (repo [`sains-data/bigdata-h
 
 ## Panduan pelaksanaan (ringkas)
 
-Ketentuan resmi praktikum (asisten, praktikan, penilaian, alur 120 menit) tercantum lengkap di **[preface.tex](preface.tex)** — bagian *Panduan Pelaksanaan Praktikum*.
+Ketentuan resmi praktikum (asisten, praktikan, penilaian, alur 120 menit) tercantum lengkap di Pendahuluan bagian *Panduan Pelaksanaan Praktikum*.
 
 **Nilai akhir praktikum (ringkas):**
 
@@ -210,5 +210,3 @@ Ekosistem big data berubah cepat (Iceberg, lakehouse, streaming, observability).
 
 **Ardika Satria** · **Luluk Muthoharoh** · **Febri Dwi Irawati**  
 Program Studi Sains Data, Institut Teknologi Sumatera (ITERA) · Lampung Selatan, 2026
-
-Kata pengantar lengkap: [preface.tex](preface.tex).
