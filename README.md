@@ -1,6 +1,6 @@
 # Sesi Praktikum — Analisis Big Data: Teori dan Praktik
 
-Repositori ini berisi **kode, konfigurasi lab, dataset contoh, dan panduan latihan** untuk mata kuliah **Analisis Big Data** di Program Studi Sains Data, Institut Teknologi Sumatera (ITERA). Materi praktikum menyertai buku *Analisis Big Data: Teori dan Praktik* (Ardika Satria · Luluk Muthoharoh · Febri Dwi Irawati).
+Repositori ini berisi **kode, konfigurasi lab, dataset contoh, dan panduan latihan** untuk mata kuliah **Analisis Big Data** di Program Studi Sains Data, Institut Teknologi Sumatera (ITERA). Materi praktikum menyertai buku *Modern Analisis Big Data: Teori dan Praktik* (Ardika Satria · Luluk Muthoharoh · Febri Dwi Irawati).
 
 Pembaca diasumsikan sudah memahami **Python**, **basis data relasional**, dan penggunaan dasar **Linux**. Setiap bab praktikum membangun kompetensi sebelumnya: dari arsitektur dan Hadoop, pemrosesan Spark, penyimpanan lakehouse, streaming dan ML, hingga analitik spasial dan studi kasus terapan di Sumatera.
 
